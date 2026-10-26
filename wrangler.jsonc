@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "portfolio",
+  "compatibility_date": "2026-10-26",
+  "build": {
+    "command": "npm run build && node --input-type=module -e \"import fs from 'node:fs'; fs.cpSync('dist/output_resource', 'dist/output', { recursive: true });\""
+  },
+  "assets": {
+    "directory": "./dist/output",
+    "not_found_handling": "single-page-application"
+  }
+}
