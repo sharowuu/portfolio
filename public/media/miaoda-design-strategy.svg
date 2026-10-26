@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="691 32 724 676" fill="none"><rect x="691" y="32" width="724" height="676" rx="50" fill="#D4DBC9" fill-opacity="0.5" />
+<path d="M792 209C792 202.373 797.373 197 804 197H940C946.627 197 952 202.373 952 209V229C952 235.627 946.627 241 940 241H804C797.373 241 792 235.627 792 229V209Z" fill="white" fill-opacity="0.7" />
+<text fill="#1F2329" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="16" letter-spacing="0em"><tspan x="816" y="224.76">需求触发与表达</tspan></text>
+<path d="M792 414C792 407.373 797.373 402 804 402H940C946.627 402 952 407.373 952 414V434C952 440.627 946.627 446 940 446H804C797.373 446 792 440.627 792 434V414Z" fill="white" fill-opacity="0.7" />
+<text fill="#1F2329" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="16" letter-spacing="0em"><tspan x="830" y="429.76">AI 执行开发</tspan></text>
+<path d="M792 591C792 584.373 797.373 579 804 579H940C946.627 579 952 584.373 952 591V611C952 617.627 946.627 623 940 623H804C797.373 623 792 617.627 792 611V591Z" fill="white" fill-opacity="0.7" />
+<text fill="#1F2329" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="16" letter-spacing="0em"><tspan x="840" y="606.76">测试预览</tspan></text>
+<path d="M1123 152C1123 145.373 1128.37 140 1135 140H1239C1245.63 140 1251 145.373 1251 152V164C1251 170.627 1245.63 176 1239 176H1135C1128.37 176 1123 170.627 1123 164V152Z" fill="white" fill-opacity="0.7" />
+<text fill="#1F2329" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="16" letter-spacing="0em"><tspan x="1147" y="163.76">引导式创建</tspan></text>
+<path d="M1123 358C1123 351.373 1128.37 346 1135 346H1271C1277.63 346 1283 351.373 1283 358V370C1283 376.627 1277.63 382 1271 382H1135C1128.37 382 1123 376.627 1123 370V358Z" fill="white" fill-opacity="0.7" />
+<text fill="#1F2329" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="16" letter-spacing="0em"><tspan x="1147" y="369.76">分阶段交付成果</tspan></text>
+<path d="M1123 564C1123 557.373 1128.37 552 1135 552H1255C1261.63 552 1267 557.373 1267 564V576C1267 582.627 1261.63 588 1255 588H1135C1128.37 588 1123 582.627 1123 576V564Z" fill="white" fill-opacity="0.7" />
+<text fill="#1F2329" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="16" letter-spacing="0em"><tspan x="1147" y="575.76">真实测试预览</tspan></text>
+<path d="M1123 212C1123 205.373 1128.37 200 1135 200H1223C1229.63 200 1235 205.373 1235 212V224C1235 230.627 1229.63 236 1223 236H1135C1128.37 236 1123 230.627 1123 224V212Z" fill="white" fill-opacity="0.7" />
+<text fill="#1F2329" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="16" letter-spacing="0em"><tspan x="1147" y="223.76">场景区分</tspan></text>
+<path d="M1123 418C1123 411.373 1128.37 406 1135 406H1223C1229.63 406 1235 411.373 1235 418V430C1235 436.627 1229.63 442 1223 442H1135C1128.37 442 1123 436.627 1123 430V418Z" fill="white" fill-opacity="0.7" />
+<text fill="#1F2329" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="16" letter-spacing="0em"><tspan x="1147" y="429.76">进度可见</tspan></text>
+<path d="M1123 624C1123 617.373 1128.37 612 1135 612H1223C1229.63 612 1235 617.373 1235 624V636C1235 642.627 1229.63 648 1223 648H1135C1128.37 648 1123 642.627 1123 636V624Z" fill="white" fill-opacity="0.7" />
+<text fill="#1F2329" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="16" letter-spacing="0em"><tspan x="1147" y="635.76">快速修复</tspan></text>
+<path d="M1123 272C1123 265.373 1128.37 260 1135 260H1239C1245.63 260 1251 265.373 1251 272V284C1251 290.627 1245.63 296 1239 296H1135C1128.37 296 1123 290.627 1123 284V272Z" fill="white" fill-opacity="0.7" />
+<text fill="#1F2329" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="16" letter-spacing="0em"><tspan x="1147" y="283.76">结构化澄清</tspan></text>
+<path d="M1123 478C1123 471.373 1128.37 466 1135 466H1303C1309.63 466 1315 471.373 1315 478V490C1315 496.627 1309.63 502 1303 502H1135C1128.37 502 1123 496.627 1123 490V478Z" fill="white" fill-opacity="0.7" />
+<text fill="#1F2329" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="16" letter-spacing="0em"><tspan x="1147" y="489.76">关键节点用户可介入</tspan></text>
+<path d="M983 219.052C995.5 219.052 1021.3 217.835 1034.5 190.483C1047.7 163.132 1078.68 158.168 1092.52 159.104" stroke="url(#paint0_linear_220_5822)" />
+<path d="M983 218.948C995.5 218.948 1021.3 220.165 1034.5 247.517C1047.7 274.868 1078.68 279.832 1092.52 278.896" stroke="url(#paint1_linear_220_5822)" />
+<path d="M983 424.052C995.5 424.052 1021.3 422.835 1034.5 395.483C1047.7 368.132 1078.68 363.168 1092.52 364.104" stroke="url(#paint2_linear_220_5822)" />
+<path d="M983 423.948C995.5 423.948 1021.3 425.165 1034.5 452.517C1047.7 479.868 1078.68 484.832 1092.52 483.896" stroke="url(#paint3_linear_220_5822)" />
+<path d="M982.762 600.82C995.316 600.82 1021.23 600.195 1034.49 586.158C1047.74 572.121 1078.86 569.573 1092.76 570.054" stroke="url(#paint4_linear_220_5822)" />
+<path d="M982.762 600.82C995.316 600.82 1021.23 601.43 1034.49 615.125C1047.74 628.82 1078.86 631.305 1092.76 630.836" stroke="url(#paint5_linear_220_5822)" />
+<defs>
+<linearGradient id="paint0_linear_220_5822" x1="993" y1="219.52" x2="1092.5" y2="219.52" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" />
+<stop offset="1" stop-color="white" stop-opacity="0.4" />
+</linearGradient>
+<linearGradient id="paint1_linear_220_5822" x1="993" y1="218.48" x2="1092.5" y2="218.48" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" />
+<stop offset="1" stop-color="white" stop-opacity="0.4" />
+</linearGradient>
+<linearGradient id="paint2_linear_220_5822" x1="993" y1="424.52" x2="1092.5" y2="424.52" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" />
+<stop offset="1" stop-color="white" stop-opacity="0.4" />
+</linearGradient>
+<linearGradient id="paint3_linear_220_5822" x1="993" y1="423.48" x2="1092.5" y2="423.48" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" />
+<stop offset="1" stop-color="white" stop-opacity="0.4" />
+</linearGradient>
+<linearGradient id="paint4_linear_220_5822" x1="992.805" y1="601.06" x2="1092.74" y2="601.06" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" />
+<stop offset="1" stop-color="white" stop-opacity="0.4" />
+</linearGradient>
+<linearGradient id="paint5_linear_220_5822" x1="992.805" y1="600.586" x2="1092.74" y2="600.586" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" />
+<stop offset="1" stop-color="white" stop-opacity="0.4" />
+</linearGradient>
+<clipPath id="clip0_220_5822">
+<rect width="1440" height="900" fill="white" />
+</clipPath>
+</defs>
+</svg>

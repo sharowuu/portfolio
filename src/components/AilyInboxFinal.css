@@ -1,0 +1,22 @@
+/* Figma 688:31222. Card origin 684,32, size 724×676.
+   Local geometry: before x47/y274 233×656; after x318/y274 233×656;
+   settings x539/y330 165×268.5. Images are clipped by the outer card. */
+.miaoda-project-hero.aily-inbox-final{background:#e9e9e9;color:#1f2329;container-type:inline-size}
+.aily-inbox-problem,.aily-inbox-principle{position:absolute;left:calc(100% * 50 / 724);right:calc(100% * 50 / 724)}
+.aily-inbox-problem{top:calc(100% * 52 / 676)}.aily-inbox-principle{top:calc(100% * 132 / 676)}
+.aily-inbox-final h2{margin:0 0 2.1cqw;font-family:'PingFang SC',sans-serif;font-size:2.21cqw;line-height:1.5;font-weight:600;color:#000}
+.aily-inbox-final p{margin:0;font-family:'PingFang SC',sans-serif;font-size:2.21cqw;line-height:1.5;font-weight:400;color:#1f2329;letter-spacing:-.01em}
+.aily-inbox-principle p+p{margin-top:0}
+.miaoda-project-hero>img.aily-inbox-label{position:absolute;z-index:3;top:calc(100% * 241 / 676);display:block;height:calc(100% * 28 / 676);object-fit:contain;object-position:left center;border-radius:0;pointer-events:none;user-select:none}
+.miaoda-project-hero>img.aily-inbox-label-before{left:calc(100% * 47 / 724);width:calc(100% * 116 / 724)}
+.miaoda-project-hero>img.aily-inbox-label-after{left:calc(100% * 317 / 724);width:calc(100% * 108 / 724)}
+.aily-inbox-column{position:absolute;top:calc(100% * 274 / 676);width:calc(100% * 233 / 724);height:calc(100% * 656 / 676);overflow:hidden;background:#fff;border-radius:12px}
+.aily-inbox-column-before{left:calc(100% * 47 / 724)}.aily-inbox-column-after{left:calc(100% * 318 / 724)}
+.aily-inbox-column img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;user-select:none;pointer-events:none}
+.aily-inbox-settings{position:absolute;left:calc(100% * 539 / 724);top:calc(100% * 330 / 676);width:calc(100% * 165 / 724);height:calc(100% * 268.5 / 676);padding:2.2cqw 1.65cqw;border:.5px solid #dee0e3;border-radius:1.105cqw;background:#fff;color:#1f2329;box-sizing:border-box}
+.aily-inbox-settings h3{margin:0 0 1.1cqw;font-family:'PingFang SC',sans-serif;font-size:1.657cqw;line-height:1.5;font-weight:400;color:#8f959e}
+.aily-inbox-option{display:flex;align-items:center;gap:1.105cqw;height:4.42cqw;font-family:'PingFang SC',sans-serif;font-size:1.934cqw;line-height:1.5;white-space:nowrap}
+.aily-inbox-check{display:grid;place-items:center;width:2.21cqw;height:2.21cqw;flex:0 0 auto;border:.5px solid #d2d5d8;border-radius:.5525cqw;color:#fff}
+.aily-inbox-check.is-checked{border-color:#1f2329;background:#1f2329}.aily-inbox-check svg{width:1.45cqw;height:1.45cqw;stroke-width:2}
+.aily-inbox-settings hr{height:.5px;border:0;margin:.55cqw 0 1.65cqw;background:#dee0e3}
+@media(max-width:768px){.aily-inbox-final h2,.aily-inbox-final p{font-size:max(9px,2.21cqw)}.aily-inbox-settings h3{font-size:max(7px,1.657cqw)}.aily-inbox-option{font-size:max(7px,1.934cqw)}}

@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="899" height="676" viewBox="0 0 899 676" fill="none">
+<g clip-path="url(#clip0_181_3093)">
+<path d="M145.5 395.383C88.8609 425.442 24 426.383 -2 426.383V442.383H868V330.5C868 330.5 822.5 323.5 805.5 312C779.5 301 763.875 275.572 731.5 274C680 271.5 654 381.383 586.5 381.383C519 381.383 507 314.883 466 314.883C425 314.883 400.607 381.383 358.5 381.383C312.5 381.383 276.233 351.383 243.5 351.383C210.767 351.383 197.317 367.884 145.5 395.383Z" fill="url(#paint0_linear_181_3093)" />
+<path d="M50 300C50 296.686 52.6863 294 56 294H140C143.314 294 146 296.686 146 300V312C146 315.314 143.314 318 140 318H56C52.6863 318 50 315.314 50 312V300Z" fill="black" />
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="58" y="309.6">我该从哪里开始？</tspan></text>
+<path d="M53.25 318L53.25 319.469M53.25 412L53.25 410.531M53.25 322.406L53.25 325.344M53.25 328.281L53.25 331.219M53.25 334.156L53.25 337.094M53.25 340.031L53.25 342.969M53.25 345.906L53.25 348.844M53.25 351.781L53.25 354.719M53.25 357.656L53.25 360.594M53.25 363.531L53.25 366.469M53.25 369.406L53.25 372.344M53.25 375.281L53.25 378.219M53.25 381.156L53.25 384.094M53.25 387.031L53.25 389.969M53.25 392.906L53.25 395.844M53.25 398.781L53.25 401.719M53.25 404.656L53.25 407.594" stroke-width="0.5" stroke="black" />
+<path d="M56.75 415C56.75 417.071 55.0711 418.75 53 418.75C50.9289 418.75 49.25 417.071 49.25 415C49.25 412.929 50.9289 411.25 53 411.25C55.0711 411.25 56.75 412.929 56.75 415Z" fill="black" stroke-width="1.5" stroke="white" />
+<path d="M150 268C150 264.686 152.686 262 156 262H233C236.314 262 239 264.686 239 268V280C239 283.314 236.314 286 233 286H156C152.686 286 150 283.314 150 280V268Z" fill="black" />
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="158" y="277.6">AI 理解的对吗？</tspan></text>
+<path d="M153.25 286L153.25 287.469M153.25 380L153.25 378.531M153.25 290.406L153.25 293.344M153.25 296.281L153.25 299.219M153.25 302.156L153.25 305.094M153.25 308.031L153.25 310.969M153.25 313.906L153.25 316.844M153.25 319.781L153.25 322.719M153.25 325.656L153.25 328.594M153.25 331.531L153.25 334.469M153.25 337.406L153.25 340.344M153.25 343.281L153.25 346.219M153.25 349.156L153.25 352.094M153.25 355.031L153.25 357.969M153.25 360.906L153.25 363.844M153.25 366.781L153.25 369.719M153.25 372.656L153.25 375.594" stroke-width="0.5" stroke="black" />
+<path d="M156.75 383C156.75 385.071 155.071 386.75 153 386.75C150.929 386.75 149.25 385.071 149.25 383C149.25 380.929 150.929 379.25 153 379.25C155.071 379.25 156.75 380.929 156.75 383Z" fill="black" stroke-width="1.5" stroke="white" />
+<path d="M243 241C243 237.686 245.686 235 249 235H363C366.314 235 369 237.686 369 241V253C369 256.314 366.314 259 363 259H249C245.686 259 243 256.314 243 253V241Z" fill="black" />
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="251" y="250.6">计划是否覆盖真实流程？</tspan></text>
+<path d="M246.25 259L246.25 260.469M246.25 353L246.25 351.531M246.25 263.406L246.25 266.344M246.25 269.281L246.25 272.219M246.25 275.156L246.25 278.094M246.25 281.031L246.25 283.969M246.25 286.906L246.25 289.844M246.25 292.781L246.25 295.719M246.25 298.656L246.25 301.594M246.25 304.531L246.25 307.469M246.25 310.406L246.25 313.344M246.25 316.281L246.25 319.219M246.25 322.156L246.25 325.094M246.25 328.031L246.25 330.969M246.25 333.906L246.25 336.844M246.25 339.781L246.25 342.719M246.25 345.656L246.25 348.594" stroke-width="0.5" stroke="black" />
+<path d="M249.75 356C249.75 358.071 248.071 359.75 246 359.75C243.929 359.75 242.25 358.071 242.25 356C242.25 353.929 243.929 352.25 246 352.25C248.071 352.25 249.75 353.929 249.75 356Z" fill="black" stroke-width="1.5" stroke="white" />
+<path d="M373 257C373 253.686 375.686 251 379 251H453C456.314 251 459 253.686 459 257V285C459 288.314 456.314 291 453 291H379C375.686 291 373 288.314 373 285V257Z" fill="black" />
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="381" y="266.6">它现在做什么？
+</tspan><tspan x="381" y="282.6">我能介入吗？</tspan></text>
+<path d="M376.25 291L376.25 292.469M376.25 385L376.25 383.531M376.25 295.406L376.25 298.344M376.25 301.281L376.25 304.219M376.25 307.156L376.25 310.094M376.25 313.031L376.25 315.969M376.25 318.906L376.25 321.844M376.25 324.781L376.25 327.719M376.25 330.656L376.25 333.594M376.25 336.531L376.25 339.469M376.25 342.406L376.25 345.344M376.25 348.281L376.25 351.219M376.25 354.156L376.25 357.094M376.25 360.031L376.25 362.969M376.25 365.906L376.25 368.844M376.25 371.781L376.25 374.719M376.25 377.656L376.25 380.594" stroke-width="0.5" stroke="black" />
+<path d="M379.75 388C379.75 390.071 378.071 391.75 376 391.75C373.929 391.75 372.25 390.071 372.25 388C372.25 385.929 373.929 384.25 376 384.25C378.071 384.25 379.75 385.929 379.75 388Z" fill="black" stroke-width="1.5" stroke="white" />
+<path d="M463 209C463 205.686 465.686 203 469 203H573C576.314 203 579 205.686 579 209V221C579 224.314 576.314 227 573 227H469C465.686 227 463 224.314 463 221V209Z" fill="black" />
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="471" y="218.6">终于跑通真实任务了！</tspan></text>
+<path d="M466.25 227L466.25 228.469M466.25 321L466.25 319.531M466.25 231.406L466.25 234.344M466.25 237.281L466.25 240.219M466.25 243.156L466.25 246.094M466.25 249.031L466.25 251.969M466.25 254.906L466.25 257.844M466.25 260.781L466.25 263.719M466.25 266.656L466.25 269.594M466.25 272.531L466.25 275.469M466.25 278.406L466.25 281.344M466.25 284.281L466.25 287.219M466.25 290.156L466.25 293.094M466.25 296.031L466.25 298.969M466.25 301.906L466.25 304.844M466.25 307.781L466.25 310.719M466.25 313.656L466.25 316.594" stroke-width="0.5" stroke="black" />
+<path d="M469.75 324C469.75 326.071 468.071 327.75 466 327.75C463.929 327.75 462.25 326.071 462.25 324C462.25 321.929 463.929 320.25 466 320.25C468.071 320.25 469.75 321.929 469.75 324Z" fill="black" stroke-width="1.5" stroke="white" />
+<path d="M583 253C583 249.686 585.686 247 589 247H733C736.314 247 739 249.686 739 253V265C739 268.314 736.314 271 733 271H589C585.686 271 583 268.314 583 265V253Z" fill="black" />
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="591" y="262.6">权限和真实用户会不会出问题？</tspan></text>
+<path d="M586.25 271L586.25 272.469M586.25 365L586.25 363.531M586.25 275.406L586.25 278.344M586.25 281.281L586.25 284.219M586.25 287.156L586.25 290.094M586.25 293.031L586.25 295.969M586.25 298.906L586.25 301.844M586.25 304.781L586.25 307.719M586.25 310.656L586.25 313.594M586.25 316.531L586.25 319.469M586.25 322.406L586.25 325.344M586.25 328.281L586.25 331.219M586.25 334.156L586.25 337.094M586.25 340.031L586.25 342.969M586.25 345.906L586.25 348.844M586.25 351.781L586.25 354.719M586.25 357.656L586.25 360.594" stroke-width="0.5" stroke="black" />
+<path d="M589.75 368C589.75 370.071 588.071 371.75 586 371.75C583.929 371.75 582.25 370.071 582.25 368C582.25 365.929 583.929 364.25 586 364.25C588.071 364.25 589.75 365.929 589.75 368Z" fill="black" stroke-width="1.5" stroke="white" />
+<path d="M743 178C743 174.686 745.686 172 749 172H863C866.314 172 869 174.686 869 178V190C869 193.314 866.314 196 863 196H749C745.686 196 743 193.314 743 190V178Z" fill="black" />
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="751" y="187.6">这个应用可以持续变好！</tspan></text>
+<path d="M746.25 196L746.25 197.469M746.25 290L746.25 288.531M746.25 200.406L746.25 203.344M746.25 206.281L746.25 209.219M746.25 212.156L746.25 215.094M746.25 218.031L746.25 220.969M746.25 223.906L746.25 226.844M746.25 229.781L746.25 232.719M746.25 235.656L746.25 238.594M746.25 241.531L746.25 244.469M746.25 247.406L746.25 250.344M746.25 253.281L746.25 256.219M746.25 259.156L746.25 262.094M746.25 265.031L746.25 267.969M746.25 270.906L746.25 273.844M746.25 276.781L746.25 279.719M746.25 282.656L746.25 285.594" stroke-width="0.5" stroke="black" />
+<path d="M749.75 293C749.75 295.071 748.071 296.75 746 296.75C743.929 296.75 742.25 295.071 742.25 293C742.25 290.929 743.929 289.25 746 289.25C748.071 289.25 749.75 290.929 749.75 293Z" fill="black" stroke-width="1.5" stroke="white" />
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="48" y="433.6">期待</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="150" y="402.6">确定</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="243" y="371.6">控制感</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="373" y="406.6">焦虑</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="456" y="342.6">惊喜</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="576" y="395.6">谨慎</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="743" y="316.6">成就感</tspan></text>
+</g>
+<defs>
+<filter id="filter0_ddd_181_3093" x="30" y="439" width="200" height="89" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="2" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_181_3093" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect2_dropShadow_181_3093" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="effect1_dropShadow_181_3093" result="effect2_dropShadow_181_3093" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect3_dropShadow_181_3093" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="effect2_dropShadow_181_3093" result="effect3_dropShadow_181_3093" />
+<feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_181_3093" result="shape" />
+</filter>
+<filter id="filter1_ddd_181_3093" x="351" y="414" width="251" height="89" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="2" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_181_3093" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect2_dropShadow_181_3093" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="effect1_dropShadow_181_3093" result="effect2_dropShadow_181_3093" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect3_dropShadow_181_3093" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="effect2_dropShadow_181_3093" result="effect3_dropShadow_181_3093" />
+<feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_181_3093" result="shape" />
+</filter>
+<filter id="filter2_ddd_181_3093" x="441" y="345" width="224" height="89" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="2" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_181_3093" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect2_dropShadow_181_3093" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="effect1_dropShadow_181_3093" result="effect2_dropShadow_181_3093" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect3_dropShadow_181_3093" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="effect2_dropShadow_181_3093" result="effect3_dropShadow_181_3093" />
+<feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_181_3093" result="shape" />
+</filter>
+<linearGradient id="paint0_linear_181_3093" x1="503.501" y1="352.882" x2="503.501" y2="442.382" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" />
+<stop offset="1" stop-color="white" stop-opacity="0" />
+</linearGradient>
+<clipPath id="clip0_181_3093">
+<rect width="899" height="676" rx="50" fill="white" />
+</clipPath>
+<clipPath id="clip1_181_3093">
+<rect width="16" height="7" fill="white" transform="matrix(-1 0 0 1 66 447)" />
+</clipPath>
+<clipPath id="clip2_181_3093">
+<rect width="16" height="7" fill="white" transform="matrix(-1 0 0 1 387 422)" />
+</clipPath>
+<clipPath id="clip3_181_3093">
+<rect width="16" height="7" fill="white" transform="matrix(-1 0 0 1 477 353)" />
+</clipPath>
+<clipPath id="clip4_181_3093">
+<path d="M40 580C40 573.373 45.3726 568 52 568H867C873.627 568 879 573.373 879 580V620C879 626.627 873.627 632 867 632H52C45.3726 632 40 626.627 40 620V580Z" fill="white" />
+</clipPath>
+</defs>
+</svg>

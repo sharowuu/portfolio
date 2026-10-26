@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="899" height="676" viewBox="0 0 899 676" fill="none">
+<g clip-path="url(#clip0_181_3093)">
+<rect width="899" height="676" rx="50" fill="#D4DDE9" fill-opacity="0.5" />
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="14" letter-spacing="0em"><tspan x="50" y="118.04">需求触发</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="14" letter-spacing="0em"><tspan x="150" y="118.04">表达与澄清</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="14" letter-spacing="0em"><tspan x="243" y="118.04">计划确认</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="14" letter-spacing="0em"><tspan x="373" y="118.04">AI 开发</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="14" letter-spacing="0em"><tspan x="463" y="118.04">测试预览</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="14" letter-spacing="0em"><tspan x="583" y="118.04">发布分享</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="14" letter-spacing="0em"><tspan x="743" y="118.04">使用运营</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="50" y="139.6">判断是否适合
+</tspan><tspan x="50" y="155.6">选择创建起点</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="150" y="139.6">描述业务问题
+</tspan><tspan x="150" y="155.6">确认角色与流程</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="243" y="139.6">检查范围
+</tspan><tspan x="243" y="155.6">确认开发计划</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="373" y="139.6">观察进度
+</tspan><tspan x="373" y="155.6">处理中途变化</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="463" y="139.6">完成真实任务
+</tspan><tspan x="463" y="155.6">发现并修改问题</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="583" y="139.6">确认权限
+</tspan><tspan x="583" y="155.6">邀请s真实用户</tspan></text>
+<text fill="#646A73" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="10" letter-spacing="0em"><tspan x="743" y="139.6">观察效果和数据
+</tspan><tspan x="743" y="155.6">持续迭代应用</tspan></text>
+<!-- figma-stage-arrows -->
+<path d="M130.209 112.74C130.375 112.874 130.375 113.126 130.209 113.26L126.764 116.028C126.546 116.204 126.222 116.048 126.222 115.769L126.222 110.231C126.222 109.952 126.546 109.796 126.764 109.972L130.209 112.74Z" fill="#2B2F36"/>
+<path d="M234.209 112.74C234.375 112.874 234.375 113.126 234.209 113.26L230.764 116.028C230.546 116.204 230.222 116.048 230.222 115.769L230.222 110.231C230.222 109.952 230.546 109.796 230.764 109.972L234.209 112.74Z" fill="#2B2F36"/>
+<path d="M338.209 112.74C338.375 112.874 338.375 113.126 338.209 113.26L334.764 116.028C334.546 116.204 334.222 116.048 334.222 115.769L334.222 110.231C334.222 109.952 334.546 109.796 334.764 109.972L338.209 112.74Z" fill="#2B2F36"/>
+<path d="M443.209 112.74C443.375 112.874 443.375 113.126 443.209 113.26L439.764 116.028C439.546 116.204 439.222 116.048 439.222 115.769L439.222 110.231C439.222 109.952 439.546 109.796 439.764 109.972L443.209 112.74Z" fill="#2B2F36"/>
+<path d="M553.209 112.74C553.375 112.874 553.375 113.126 553.209 113.26L549.764 116.028C549.546 116.204 549.222 116.048 549.222 115.769L549.222 110.231C549.222 109.952 549.546 109.796 549.764 109.972L553.209 112.74Z" fill="#2B2F36"/>
+<path d="M706.209 112.74C706.375 112.874 706.375 113.126 706.209 113.26L702.764 116.028C702.546 116.204 702.222 116.048 702.222 115.769L702.222 110.231C702.222 109.952 702.546 109.796 702.764 109.972L706.209 112.74Z" fill="#2B2F36"/>
+<!-- /figma-stage-arrows -->
+</g>
+<defs>
+<filter id="filter0_ddd_181_3093" x="30" y="439" width="200" height="89" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="2" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_181_3093" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect2_dropShadow_181_3093" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="effect1_dropShadow_181_3093" result="effect2_dropShadow_181_3093" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect3_dropShadow_181_3093" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="effect2_dropShadow_181_3093" result="effect3_dropShadow_181_3093" />
+<feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_181_3093" result="shape" />
+</filter>
+<filter id="filter1_ddd_181_3093" x="351" y="414" width="251" height="89" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="2" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_181_3093" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect2_dropShadow_181_3093" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="effect1_dropShadow_181_3093" result="effect2_dropShadow_181_3093" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect3_dropShadow_181_3093" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="effect2_dropShadow_181_3093" result="effect3_dropShadow_181_3093" />
+<feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_181_3093" result="shape" />
+</filter>
+<filter id="filter2_ddd_181_3093" x="441" y="345" width="224" height="89" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="2" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_181_3093" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect2_dropShadow_181_3093" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="effect1_dropShadow_181_3093" result="effect2_dropShadow_181_3093" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect3_dropShadow_181_3093" />
+<feOffset dy="2" />
+<feGaussianBlur stdDeviation="4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.137255 0 0 0 0 0.160784 0 0 0 0.02 0" />
+<feBlend mode="normal" in2="effect2_dropShadow_181_3093" result="effect3_dropShadow_181_3093" />
+<feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_181_3093" result="shape" />
+</filter>
+<linearGradient id="paint0_linear_181_3093" x1="503.501" y1="352.882" x2="503.501" y2="442.382" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" />
+<stop offset="1" stop-color="white" stop-opacity="0" />
+</linearGradient>
+<clipPath id="clip0_181_3093">
+<rect width="899" height="676" rx="50" fill="white" />
+</clipPath>
+<clipPath id="clip1_181_3093">
+<rect width="16" height="7" fill="white" transform="matrix(-1 0 0 1 66 447)" />
+</clipPath>
+<clipPath id="clip2_181_3093">
+<rect width="16" height="7" fill="white" transform="matrix(-1 0 0 1 387 422)" />
+</clipPath>
+<clipPath id="clip3_181_3093">
+<rect width="16" height="7" fill="white" transform="matrix(-1 0 0 1 477 353)" />
+</clipPath>
+<clipPath id="clip4_181_3093">
+<path d="M40 580C40 573.373 45.3726 568 52 568H867C873.627 568 879 573.373 879 580V620C879 626.627 873.627 632 867 632H52C45.3726 632 40 626.627 40 620V580Z" fill="white" />
+</clipPath>
+</defs>
+</svg>

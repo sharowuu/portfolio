@@ -1,0 +1,114 @@
+[
+  {
+    "project": 1,
+    "section": 1,
+    "source": "https://assets.gabrielbeaugonin.com/lightship-01-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-1-1.mp4",
+    "bytes": 3447786
+  },
+  {
+    "project": 1,
+    "section": 2,
+    "source": "https://assets.gabrielbeaugonin.com/lightship-02-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-1-2.mp4",
+    "bytes": 1673319
+  },
+  {
+    "project": 1,
+    "section": 3,
+    "source": "https://assets.gabrielbeaugonin.com/lightship-03-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-1-3.mp4",
+    "bytes": 378160
+  },
+  {
+    "project": 1,
+    "section": 4,
+    "source": "https://assets.gabrielbeaugonin.com/lightship-04-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-1-4.mp4",
+    "bytes": 2594941
+  },
+  {
+    "project": 2,
+    "section": 1,
+    "source": "https://assets.gabrielbeaugonin.com/coercive-control-01-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-2-1.mp4",
+    "bytes": 1345285
+  },
+  {
+    "project": 2,
+    "section": 2,
+    "source": "https://assets.gabrielbeaugonin.com/coercive-control-02-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-2-2.mp4",
+    "bytes": 1670161
+  },
+  {
+    "project": 2,
+    "section": 3,
+    "source": "https://assets.gabrielbeaugonin.com/coercive-control-03-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-2-3.mp4",
+    "bytes": 515580
+  },
+  {
+    "project": 2,
+    "section": 4,
+    "source": "https://assets.gabrielbeaugonin.com/coercive-control-04-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-2-4.mp4",
+    "bytes": 1002132
+  },
+  {
+    "project": 3,
+    "section": 1,
+    "source": "https://assets.gabrielbeaugonin.com/mcalpine-01-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-3-1.mp4",
+    "bytes": 1690814
+  },
+  {
+    "project": 3,
+    "section": 2,
+    "source": "https://assets.gabrielbeaugonin.com/mcalpine-02-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-3-2.mp4",
+    "bytes": 378477
+  },
+  {
+    "project": 3,
+    "section": 3,
+    "source": "https://assets.gabrielbeaugonin.com/mcalpine-03-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-3-3.mp4",
+    "bytes": 449104
+  },
+  {
+    "project": 3,
+    "section": 4,
+    "source": "https://assets.gabrielbeaugonin.com/mcalpine-04-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-3-4.mp4",
+    "bytes": 679255
+  },
+  {
+    "project": 4,
+    "section": 1,
+    "source": "https://assets.gabrielbeaugonin.com/candiac-01-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-4-1.mp4",
+    "bytes": 1097852
+  },
+  {
+    "project": 4,
+    "section": 2,
+    "source": "https://assets.gabrielbeaugonin.com/candiac-02-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-4-2.mp4",
+    "bytes": 399430
+  },
+  {
+    "project": 4,
+    "section": 3,
+    "source": "https://assets.gabrielbeaugonin.com/candiac-03-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-4-3.mp4",
+    "bytes": 209525
+  },
+  {
+    "project": 4,
+    "section": 4,
+    "source": "https://assets.gabrielbeaugonin.com/candiac-04-mobile.mp4",
+    "local": "/Users/bytedance/DoubaoWork/chats/2026-10-21/new-chat/personal-portfolio/public/media/reference-4-4.mp4",
+    "bytes": 192795
+  }
+]

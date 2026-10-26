@@ -1,0 +1,47 @@
+/* Figma 660:42967 (card origin 684,32) / 667:50832 (local card coordinates).
+   Card 724×676; title x50 y76; video x50 y138, 624×351, radius20.
+   The outer background and pagination never translate with the case track. */
+.miaoda-core-design.aily-cases {
+  --aily-case-surface: #e9e9e9;
+  --aily-case-video-surface: #fff;
+  --aily-case-ink: #000;
+  --aily-case-muted: #b1b1b1;
+  --aily-case-control: #8f959e;
+  background: var(--aily-case-surface);
+  container-type: inline-size;
+  isolation: isolate;
+}
+.aily-cases-viewport {position:absolute;inset:0;overflow:hidden;touch-action:pan-y;cursor:grab;user-select:none}
+.aily-cases-viewport:active {cursor:grabbing}
+.aily-cases-viewport:focus {outline:none}
+.aily-cases-viewport:focus-visible {outline:2px solid var(--aily-case-control);outline-offset:-6px;border-radius:inherit}
+.aily-cases-track {display:flex;height:100%;width:100%;will-change:transform}
+.aily-case {flex:0 0 100%;position:relative;min-width:0;height:100%}
+.aily-case h2 {position:absolute;left:calc(100% * 50 / 724);right:calc(100% * 50 / 724);top:calc(100% * 76 / 676);margin:0;font-family:'PingFang SC',sans-serif;font-weight:400;font-size:2.21cqw;line-height:1.5;color:var(--aily-case-ink);user-select:text;cursor:text}
+.aily-case-media {position:absolute;left:calc(100% * 50 / 724);top:calc(100% * 138 / 676);width:calc(100% * 624 / 724);aspect-ratio:var(--aily-case-media-ratio);height:auto;max-height:calc(100% * 391 / 676);background:var(--aily-case-video-surface);border-radius:2.7625cqw;overflow:hidden}
+.aily-case-placeholder {display:grid;place-items:center;width:100%;height:100%;font-family:'PingFang SC',sans-serif;font-size:1.934cqw;line-height:1.5;color:var(--aily-case-muted)}
+.miaoda-core-design.aily-cases .aily-case-media>.core-design-video {position:absolute;inset:0;width:100%;height:100%;border:0;outline:0;border-radius:inherit;background:transparent;box-shadow:none}
+.miaoda-core-design.aily-cases .aily-case-media .case-video-trigger{border:0;outline:0;background:transparent;box-shadow:none;clip-path:inset(0 round 2.7625cqw);transform:translateZ(0)}
+.miaoda-core-design.aily-cases .aily-case-media .case-video-trigger>video{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border:0;outline:0;background:transparent;box-shadow:none;transform:scale(1.01) translateZ(0);backface-visibility:hidden}
+.aily-case-controls {position:absolute;top:calc(100% * 581 / 676);left:50%;translate:-50% -50%;display:grid;grid-template-columns:44px minmax(44px,8.6rem) 44px;align-items:center;z-index:3}
+.aily-case-arrow {position:relative;display:grid;place-items:center;width:44px;height:44px;padding:0;color:var(--aily-case-control);border-radius:50%;background:none}
+.aily-case-arrow::before {content:'';position:absolute;width:3.315cqw;height:3.315cqw;border-radius:50%;background:var(--aily-case-video-surface);z-index:-1;transition:scale .45s cubic-bezier(.32,0,0,1)}
+.aily-case-arrow svg {width:1.658cqw;height:1.658cqw;min-width:9px;min-height:9px;stroke-width:1.5}
+.aily-case-arrow:hover:not(:disabled)::before {scale:1.08}
+.aily-case-arrow:disabled {opacity:.5;cursor:default}
+.aily-case-dots {display:flex;justify-content:center;align-items:center;gap:1.105cqw}
+.aily-case-dots button {position:relative;display:grid;place-items:center;height:44px;min-width:18px;padding:0;background:none}
+.aily-case-dots span {width:1.105cqw;height:1.105cqw;border-radius:100px;background:var(--aily-case-video-surface);opacity:.5;transition:width .55s cubic-bezier(.32,0,0,1),opacity .3s}
+.aily-case-dots [aria-current=true] span {width:3.591cqw;opacity:1}
+@media(max-width:768px) {
+  .aily-case h2 {font-size:max(12px,2.21cqw)}
+  .aily-case-placeholder {font-size:max(10px,1.934cqw)}
+  .aily-case-controls {grid-template-columns:44px 70px 44px}
+  .aily-case-arrow::before {width:24px;height:24px}
+  .aily-case-arrow svg {width:12px;height:12px}
+  .aily-case-dots span {height:6px;width:6px}
+  .aily-case-dots [aria-current=true] span {width:20px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .aily-case-dots span,.aily-case-arrow::before {transition:none}
+}

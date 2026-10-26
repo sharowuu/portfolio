@@ -1,0 +1,12 @@
+/* Figma 678:55865. Full frame 1440×900; right card origin 684,32.
+   Local card coordinates: copy x50; video x50/y244, 624×391, radius20. */
+.miaoda-project-hero.aily-core-two{background:#e9e9e9;color:#1f2329;container-type:inline-size}
+.aily-core-two-problem,.aily-core-two-principle{position:absolute;left:calc(100% * 50 / 724);right:calc(100% * 50 / 724)}
+.aily-core-two-problem{top:calc(100% * 44 / 676)}
+.aily-core-two-principle{top:calc(100% * 152 / 676)}
+.aily-core-two h2{margin:0 0 8px;font-family:'PingFang SC',sans-serif;font-size:2.21cqw;line-height:1.5;font-weight:600;color:#000}
+.aily-core-two p{margin:0;font-family:'PingFang SC',sans-serif;font-size:2.21cqw;line-height:1.5;font-weight:400;color:#1f2329;letter-spacing:-.01em}
+.aily-core-two-media{position:absolute;left:calc(100% * 50 / 724);top:calc(100% * 256 / 676);width:calc(100% * 624 / 724);height:calc(100% * 391 / 676);border:0;outline:0;border-radius:2.7625cqw;background:transparent;box-shadow:none;overflow:hidden}
+.aily-core-two-media>.core-design-video{position:absolute;inset:0;width:100%;height:100%;border:0;outline:0;border-radius:inherit;background:transparent;box-shadow:none;clip-path:inset(0 round 2.7625cqw);transform:translateZ(0)}
+.aily-core-two-media .case-video-trigger>video{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border:0;outline:0;background:transparent;box-shadow:none;transform:scale(1.01) translateZ(0);backface-visibility:hidden}
+@media(max-width:768px){.aily-core-two h2,.aily-core-two p{font-size:max(10px,2.21cqw)}.aily-core-two-media{font-size:max(9px,1.934cqw)}}
