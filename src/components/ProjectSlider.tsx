@@ -32,7 +32,7 @@ export default function ProjectSlider(){
        <motion.div layoutId={current&&home?`project-${p.id}`:undefined} className="card-surface" style={{borderRadius:32}} transition={{layout:{duration:1.2,ease:motionSettings.ease}}}>
         <Link to={`/project/${p.id}`} tabIndex={current&&home?0:-1} aria-label={`打开${p.title}`} onClick={e=>{if(dragging.current.moved||!introDone){e.preventDefault();return;}if(!current){e.preventDefault();setCursor(key)}}}>
          <motion.div className="cover-content" animate={{opacity:current?1:0}} transition={{duration:.3}}>
-          {p.id==='project-4'?<div className="feishu-card-home-cover" aria-label="飞书卡片项目封面"><img src={asset(p.cover)} alt=""/><video src={asset('media/feishu-card-editor.mp4')} muted loop playsInline autoPlay/></div>:<Media image={p.cover} video={p.video} active={current&&home} title={p.title}/>} {!p.coverContainsTitle&&<span className="cover-title">{p.title}</span>}{p.reference&&<span className="reference-label">参考画面 · 待替换</span>}
+          {p.id==='project-4'?<div className="feishu-card-home-cover" aria-label="飞书卡片项目封面"><img src={asset(p.cover)} alt="" loading={current?'eager':'lazy'} decoding="async"/>{current&&home?<video src={asset('media/feishu-card-editor.mp4')} muted loop playsInline autoPlay/>:null}</div>:<Media image={p.cover} video={p.video} active={current&&home} title={p.title} strictLoad/>} {!p.coverContainsTitle&&<span className="cover-title">{p.title}</span>}{p.reference&&<span className="reference-label">参考画面 · 待替换</span>}
          </motion.div>
         </Link>
        </motion.div>

@@ -1,9 +1,10 @@
 // EXPORTS: IProject{id,title,category,cover,video,sections,website}, ISection{title,text,image,video}, profile, projects, asset, motionSettings
+import { OPTIMIZED_MEDIA } from './optimized-media';
 export interface ISection { title: string; text: string; image?: string; video?: string }
 export interface IProject { id: string; title: string; category: string; cover: string; video?: string; sections: ISection[]; website: string; detailLayout?: 'miaoda' | 'beauty' | 'aily' | 'feishu-card'; reference?: boolean; coverContainsTitle?: boolean }
 export interface ICareerItem { period: string; organization: string; role: string; highlights: string[]; logo: string }
 const BASE = (import.meta.env.MIAODA_CLIENT_BASE_PATH || '').replace(/\/$/, '') + '/';
-export const asset = (path: string) => `${BASE}${path.replace(/^\//, '')}`;
+export const asset = (path: string) => { const norm = path.replace(/^\//, ''); return `${BASE}${OPTIMIZED_MEDIA[norm] ?? norm}`; };
 export const motionSettings = {
   ease: [0.32, 0, 0, 1] as [number, number, number, number],
   easeOut: [0.215, 0.61, 0.355, 1] as [number, number, number, number],
