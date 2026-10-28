@@ -205,8 +205,8 @@
 /* Feishu Card project — Figma 610:33495 */
 .feishu-card-project-page{min-height:calc(100dvh + 70.8rem);padding:calc((100dvh - 67.6rem)/2) 3.2rem 3.2rem 68.4rem}
 .feishu-card-project-sections{width:72.4rem;display:flex;flex-direction:column;gap:3.2rem}
-.feishu-card-visual{position:relative;width:72.4rem;height:67.6rem;overflow:hidden;border-radius:5rem;background:#FFE9C2}
-.feishu-card-overview{background:#F0EBE2;color:#000}
+.feishu-card-visual{position:relative;width:72.4rem;height:67.6rem;overflow:hidden;border-radius:5rem;background:#E4F5F3}
+.feishu-card-overview{background:#EAEDEE;color:#000}
 .feishu-card-overview-content{height:100%;padding:5rem;display:flex;flex-direction:column;font-family:'PingFang SC',sans-serif;color:#000}
 .feishu-card-overview-content p,.feishu-card-overview-content h2{margin:0;color:inherit;letter-spacing:0}
 .feishu-card-overview-content p{font-size:1.6rem;line-height:2.4rem;font-weight:400}
@@ -216,21 +216,16 @@
 .feishu-card-overview-content h2{margin-bottom:1.2rem;font-size:1.8rem;line-height:2.7rem;font-weight:600}
 .feishu-card-overview-content h2 strong{font-weight:600}.feishu-card-project-sections>.feishu-card-progress-note{align-self:flex-start;margin:-1.6rem 0 0 5rem;font-family:'PingFang SC',sans-serif;font-size:12px;line-height:18px;color:#747474;font-weight:400}
 .feishu-card-visual>img{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit}
-.feishu-card-editor-video{position:absolute;left:calc(100% * 57 / 724);top:calc(100% * 157 / 676);width:calc(100% * 609 / 724);height:calc(100% * 381 / 676);z-index:2;overflow:hidden;border-radius:1.2rem;background:#fff;box-shadow:0 2rem 4rem #818D9933}
-.feishu-card-editor-video .core-design-video{position:relative;inset:auto;width:100%;height:100%;border-radius:inherit}
-.feishu-card-editor-video .case-video-trigger>video{width:100%;height:100%;object-fit:cover;background:#fff}
-.feishu-card-editor-video .case-video-expand{right:1.6rem;bottom:1.6rem}
-.feishu-card-home-cover{position:relative;width:100%;height:100%;overflow:hidden;background:#FFE9C2}
+.feishu-card-home-cover{position:relative;width:100%;height:100%;overflow:hidden;background:#E4F5F3}
 .feishu-card-home-cover>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
-.feishu-card-home-cover>video{position:absolute;left:calc(100% * 99 / 1194);top:calc(100% * 281 / 1224);width:calc(100% * 998 / 1194);height:calc(100% * 624 / 1224);object-fit:cover;border-radius:.7rem;background:#fff;pointer-events:none}
 .header-feishu-card{left:20rem;justify-content:flex-start;gap:0}
 .header-feishu-card .identity{position:absolute;top:19rem;width:43rem;transform:none!important}
 .feishu-card-header-intro{position:relative;width:43rem;color:#1f2329}
-.feishu-card-header-title{display:flex;align-items:center;gap:1.2rem}
-.feishu-card-header-title svg{display:block;width:3.4rem;height:3.4rem;flex:0 0 auto}
+.feishu-card-header-title{display:flex;align-items:center;gap:.8rem}
+.feishu-card-header-title img{display:block;width:3.8rem;height:3rem;object-fit:contain;flex:0 0 auto}
 .feishu-card-header-title h1{padding:0!important;font-size:2.4rem!important;line-height:3.4rem!important;font-weight:400!important;color:#000}
 .feishu-card-header-intro>span{display:block;margin:-.3rem 0 0 4.6rem;font-family:'Monument Extended',sans-serif;font-size:1.8rem;line-height:2rem;color:#D8DADC4D}
-.header-feishu-card .identity .feishu-card-header-intro p{width:43rem;margin-top:5.1rem;font-size:1.6rem;line-height:2.4rem;color:#646A73}
-.feishu-card-header-intro time{display:block;margin-top:2.8rem;font-size:1.6rem;line-height:2.4rem;color:#646A73;opacity:.6}
+.header-feishu-card .identity .feishu-card-header-intro p{width:37rem;margin-top:4rem;font-size:1.6rem;line-height:2.4rem;color:#646A73}
+.feishu-card-header-intro time{display:block;margin-top:2.8rem;font-size:1.6rem;line-height:2.4rem;color:#646A73}
 .header-feishu-card .control-dock{position:absolute;top:51.4rem;left:0;transform:none;gap:1.2rem}
 @media(max-width:768px){.feishu-card-project-page{padding:22rem 2rem 13rem}.feishu-card-project-sections{width:100%;gap:2rem}.feishu-card-visual{width:100%;height:auto;aspect-ratio:724/676;border-radius:3.2rem}.feishu-card-overview-content{padding:3.2rem}.feishu-card-overview-content p{font-size:1.1rem;line-height:1.65rem}.feishu-card-overview-content .feishu-card-overview-lead{margin-bottom:2rem}.feishu-card-overview-content .feishu-card-overview-kicker{margin-bottom:1rem}.feishu-card-overview-content section+section{margin-top:1rem}.feishu-card-overview-content h2{margin-bottom:.5rem;font-size:1.2rem;line-height:1.7rem}.header-feishu-card{left:0}.header-feishu-card .identity{top:8rem;width:calc(100vw - 8rem);text-align:left}.feishu-card-header-title{justify-content:center}.feishu-card-header-intro{width:100%}.header-feishu-card .identity .feishu-card-header-intro p{width:100%;margin-top:1.6rem;font-size:1.25rem;line-height:1.8rem;text-align:center}.feishu-card-header-intro>span{margin-left:0;text-align:center;font-size:1.2rem}.feishu-card-header-intro time{text-align:center;margin-top:1.2rem;font-size:1.25rem}.header-feishu-card .control-dock{top:auto;left:4rem;bottom:4rem}}

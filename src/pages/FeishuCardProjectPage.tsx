@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Image } from '@/components/ui/image';
 import { asset, motionSettings } from '@/data/portfolio';
 import useCardSnap from '@/hooks/useCardSnap';
-import CaseVideo from '@/components/CaseVideo';
 
 export default function FeishuCardProjectPage() {
   const mainRef = useRef<HTMLElement>(null);
@@ -17,12 +16,9 @@ export default function FeishuCardProjectPage() {
           layoutId="project-project-4"
           initial={false}
           transition={{ layout: { duration: 1.2, ease: motionSettings.ease } }}
-          aria-label="飞书卡片项目视频占位"
+          aria-label="飞书卡片项目主视觉"
         >
-          <Image src={asset('media/feishu-card-visual.png')} alt="飞书卡片项目视频容器" loading="eager" />
-          <div className="feishu-card-editor-video">
-            <CaseVideo src="media/feishu-card-editor.mp4" active title="飞书卡片编辑器" displayRatio={16 / 10} />
-          </div>
+          <Image src={asset('media/optimized/feishu-card-visual-v2.webp')} alt="飞书卡片编辑界面、响应式布局与性能看板" loading="eager" />
         </motion.section>
         <motion.section
           className="feishu-card-visual feishu-card-overview"

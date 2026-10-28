@@ -106,7 +106,7 @@ export const projects: IProject[] = [
     sections: [{ title: 'Aily 工作伙伴', text: '探索人与 Agent 协同办公，让 AI 持续工作，让人掌握关键节点。\n\n项目时间：2026.04 — 2026.10', image: 'media/aily-hero.png' }, { title: '项目背景', text: '随着 AI 从即时问答走向任务执行，人与 AI 的协作开始超出单次对话：一项工作需要持续迭代，多项工作需要并行管理，不同 Agent 的能力与工作方式也需要被理解和配置。Aily 从个人助手转向企业办公场景的 AI 工作台，旨在将飞书中的轻量 Bot 延伸为可持续的工作协作。\n\n我的范围：主导自动化任务、伙伴管理、个人伙伴详情页框架与详细配置、主动工作以及 Inbox 的体验设计。', image: '' }],
   },
   {
-    id:'project-4', title:'飞书卡片', category:'卡片生成与消费体验设计', cover:'media/feishu-card-cover.png', video:'media/feishu-card-editor.mp4', website:'https://open.larkoffice.com/cardkit', detailLayout:'feishu-card', reference:false, coverContainsTitle:true,
-    sections:[{title:'飞书卡片',text:'飞书卡片是一个覆盖从卡片生成到消费完整链路的产品体系，既关注卡片如何被创建，也关注它如何被触达、展示和使用。\n\n项目时间：2022 - 2023',image:'media/feishu-card-visual.png'}]
+    id:'project-4', title:'飞书卡片', category:'卡片生成与消费体验设计', cover:'media/optimized/feishu-card-cover-v4.webp', website:'https://open.larkoffice.com/cardkit', detailLayout:'feishu-card', reference:false, coverContainsTitle:true,
+    sections:[{title:'飞书卡片',text:'飞书卡片是一个覆盖从卡片生成到消费完整链路的产品体系，既关注卡片如何被创建，也关注它如何被触达、展示和使用。\n\n项目时间：2022 - 2023',image:'media/optimized/feishu-card-visual-v2.webp'}]
   },
 ];

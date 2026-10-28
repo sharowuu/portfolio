@@ -3,7 +3,7 @@ import path from 'node:path';
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
-import { OPTIMIZED_MEDIA } from './src/data/optimized-media';
+import { OPTIMIZED_MEDIA } from './src/data/optimized-media.ts';
 
 // ── 妙搭部署协议（参考《妙搭应用构建产物规范》）─────────────────────────
 // 构建期环境变量（托管构建时由部署链路自动注入；本地开发不需要，缺省回退）：
