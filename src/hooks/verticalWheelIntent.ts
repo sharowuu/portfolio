@@ -1,6 +1,7 @@
 // Vertical input is sampled even while a card is moving. A decaying trackpad tail
 // remains one gesture; a new push, reversal, or sustained wheel can keep moving.
 export class VerticalWheelIntent {
+  constructor(private singleStep = false) {}
   private lastInput = -Infinity;
   private lastTrigger = -Infinity;
   private direction = 0;
@@ -16,9 +17,9 @@ export class VerticalWheelIntent {
     const gap = now - this.lastInput;
     const elapsed = now - this.lastTrigger;
     const reversed = this.direction !== 0 && direction !== this.direction;
-    const fresh = gap >= 110 || reversed;
-    const renewed = this.latched && elapsed >= 140 && magnitude >= 10 && magnitude > this.lastMagnitude * 1.6;
-    const sustained = this.latched && elapsed >= 300 && magnitude >= 8 &&
+    const fresh = gap >= (this.singleStep ? 180 : 110) || reversed;
+    const renewed = !this.singleStep && this.latched && elapsed >= 140 && magnitude >= 10 && magnitude > this.lastMagnitude * 1.6;
+    const sustained = !this.singleStep && this.latched && elapsed >= 300 && magnitude >= 8 &&
       magnitude >= this.peak * .72 && magnitude >= this.lastMagnitude * .9;
     if (fresh || renewed || sustained) {
       this.total = 0;

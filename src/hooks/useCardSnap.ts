@@ -27,7 +27,8 @@ export default function useCardSnap(
     let running = false, disposed = false;
     let queued: -1 | 0 | 1 = 0;
     let movingDirection = 0;
-    const wheelIntent = new VerticalWheelIntent();
+    // Aily's dense cards need one stop per continuous gesture, not an automatic queued follow-up.
+    const wheelIntent = new VerticalWheelIntent(pageKey === 'aily');
     let animation: ReturnType<typeof animate> | undefined;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     const announce = () => window.dispatchEvent(new CustomEvent('portfolio:snap-active', { detail: { pageKey, index: active } }));
