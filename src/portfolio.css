@@ -291,19 +291,30 @@
  .portrait-slot{position:relative;width:100%;height:auto;right:auto;top:auto;margin-top:32px}
  .portrait-image.portrait-photo{width:100%;height:auto;aspect-ratio:4/5;border-radius:20px}
  .mobile-scroll-design-card{aspect-ratio:auto!important;height:auto!important;padding:0!important;background:#e5eaf0}
+ .mobile-design-frame{position:relative;width:100%}
  .mobile-design-scroll{position:relative;width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch}
  .mobile-design-canvas{position:relative;flex-shrink:0}
- .mobile-design-canvas>img{display:block;width:100%;height:100%;object-fit:fill}
+ .mobile-design-canvas>img{display:block;width:100%;height:100%;object-fit:fill;border-radius:0;background:none}
  .mobile-design-canvas>.miaoda-card-title{position:absolute;left:42px;top:42px;z-index:3}
- .mobile-design-hint{position:sticky;left:16px;bottom:12px;display:inline-block;margin:0 0 12px 16px;padding:7px 10px;background:rgb(255 255 255 / .88);border-radius:8px;color:#646a73;font:400 12px/1.5 'PingFang SC',sans-serif;pointer-events:none;transition:opacity .2s}
+ .mobile-design-hint{position:absolute;left:16px;bottom:12px;display:block;margin:0;padding:7px 10px;background:rgb(255 255 255 / .88);border-radius:8px;color:#646a73;font:400 12px/1.5 'PingFang SC',sans-serif;pointer-events:none;transition:opacity .2s;z-index:4}
  .mobile-design-hint.has-scrolled{opacity:0}
- .mobile-core-design{height:auto;aspect-ratio:auto;min-height:0;background:#e5eaf0;padding:24px 20px}
+ .miaoda-core-design.mobile-core-design{height:auto;aspect-ratio:auto;min-height:0;background:#e5eaf0;padding:24px 20px}
  .mobile-core-heading{font:600 16px/1.5 'PingFang SC',sans-serif;margin:0 0 14px}
- .mobile-core-design .core-design-viewport{position:relative;inset:auto;height:350px}
- .mobile-core-design .core-design-slide{height:350px;display:flex;flex-direction:column;gap:16px}
- .mobile-core-design .core-design-slide>.mobile-core-description{font:400 14px/1.75 'PingFang SC',sans-serif;min-height:125px;overflow-wrap:anywhere}
- .mobile-core-design:not(.miaoda-core-execution) .core-design-video,.mobile-core-design.miaoda-core-execution .core-design-video{position:relative;left:0;top:0;width:100%;height:auto;aspect-ratio:16/9;border-radius:12px}
- .mobile-core-design .core-design-controls{position:relative;left:auto;top:auto;translate:0;justify-content:center;margin-top:12px}
+ .mobile-core-design .core-design-viewport{position:relative;inset:auto;height:auto}
+ .mobile-core-design .core-design-track{height:auto;align-items:flex-start}
+ .mobile-core-design .core-design-slide{height:auto;display:flex;flex-direction:column;gap:20px}
+ .mobile-core-design .core-design-slide>.mobile-core-description{font:400 14px/1.75 'PingFang SC',sans-serif;min-height:0;overflow-wrap:anywhere;flex:none}
+ .mobile-core-design:not(.miaoda-core-execution) .core-design-video,.mobile-core-design.miaoda-core-execution .core-design-video{position:relative;left:0;top:0;width:100%;height:auto;aspect-ratio:16/9;border-radius:12px;flex:none}
+ .miaoda-core-design.mobile-core-design .core-design-controls{position:relative;left:auto;top:auto;bottom:auto;translate:0;justify-content:center;align-items:center;gap:16px;height:44px;margin-top:20px}
+ .mobile-core-design .core-design-controls>div{display:flex;align-items:center;justify-content:center;flex:none}
+ .mobile-core-design .core-design-arrow{position:relative;width:36px;height:36px;padding:0;background:var(--card);flex:none}
+ .mobile-core-design .core-design-arrow::before{display:none}
+ .mobile-core-design .core-design-arrow>svg{display:block;width:14px;height:14px}
+ .mobile-core-design .core-design-dots{gap:8px}
+ .mobile-core-design .core-design-dots>button{width:20px;min-width:20px;height:36px;padding:0}
+ .mobile-core-design .core-design-dots span{width:6px;height:6px}
+ .mobile-core-design .core-design-dots [aria-current=true] span{width:20px}
+ .miaoda-main-project .miaoda-core-collaboration.mobile-scroll-design-card{background:linear-gradient(to bottom,#cbd9e0 4.51%,#e5e7de 46.44%,#c9dacb 93.49%)}
  .mobile-core-still{width:100%;height:auto!important;object-fit:contain}
  .mobile-design-canvas .beauty-stage-03-video{border-radius:10px}
  .beauty-stage-04-card .mobile-design-canvas>img{height:calc(676 / 724 * 620px)}

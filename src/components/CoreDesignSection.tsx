@@ -78,6 +78,19 @@ export default function CoreDesignSection({ execution = false, delivery = false,
     element.addEventListener('wheel', wheel, { passive: false });
     return () => { observer.disconnect(); element.removeEventListener('wheel', wheel); };
   }, [count, position, setCorePoint, mobile]);
+  useEffect(() => {
+    const element = viewport.current;
+    if (!mobile || !element || !track.current) return;
+    const slides = Array.from(track.current.children) as HTMLElement[];
+    // Match the tallest caption/media panel at this width; never clip longer text or shrink video.
+    const measure = () => {
+      element.style.height = `${Math.ceil(Math.max(...slides.map(slide => slide.scrollHeight)))}px`;
+    };
+    const observer = new ResizeObserver(measure);
+    slides.forEach(slide => observer.observe(slide));
+    measure();
+    return () => { observer.disconnect(); element.style.removeProperty('height'); };
+  }, [mobile, count]);
   const down = (event: PointerEvent<HTMLDivElement>) => {
     if (event.pointerType === 'mouse' && event.button !== 0) return;
     animation.current?.stop(); window.clearTimeout(finishTimer.current);
