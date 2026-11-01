@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Maximize2, Play, X } from 'lucide-react';
 import { asset, motionSettings } from '@/data/portfolio';
+import useViewportVideo from '@/hooks/useViewportVideo';
 
 export default function CaseVideo({ src, active, title, poster, edgeToEdge = false, displayRatio = 16 / 9 }: { src: string; active: boolean; title: string; poster?: string; edgeToEdge?: boolean; displayRatio?: number }) {
   const inline = useRef<HTMLVideoElement>(null);
@@ -10,32 +11,10 @@ export default function CaseVideo({ src, active, title, poster, edgeToEdge = fal
   const dialog = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const playbackTime = useRef(0);
-  const [visible, setVisible] = useState(false);
-  const [near, setNear] = useState(false);
   const [expanded, setExpanded] = useState(false);
-  const [blocked, setBlocked] = useState(false);
   const [failed, setFailed] = useState(false);
   const reduced = useReducedMotion();
-
-  useEffect(() => {
-    const video = inline.current;
-    if (!video) return;
-    const nearObserver = new IntersectionObserver(([entry]) => setNear(entry.isIntersecting), { rootMargin: '400px 1200px', threshold: 0 });
-    const visibleObserver = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting), { threshold: .2 });
-    nearObserver.observe(video);
-    visibleObserver.observe(video);
-    return () => { nearObserver.disconnect(); visibleObserver.disconnect(); };
-  }, []);
-  useEffect(() => {
-    const video = inline.current;
-    if (!video) return;
-    if (active && visible && near && !expanded) {
-      let cancelled = false;
-      void video.play().then(() => { if (!cancelled) setBlocked(false); }).catch(() => { if (!cancelled) setBlocked(true); });
-      return () => { cancelled = true; video.pause(); };
-    }
-    video.pause();
-  }, [active, visible, near, expanded]);
+  const { source, shouldLoad, near, blocked } = useViewportVideo(inline, asset(src), active && !expanded, playbackTime);
   useEffect(() => {
     const modal = dialog.current;
     if (!expanded || !modal) return;
@@ -45,7 +24,7 @@ export default function CaseVideo({ src, active, title, poster, edgeToEdge = fal
     document.body.style.overflow = 'hidden';
     modal.showModal();
     return () => {
-      player?.pause();
+      if (player) { player.pause(); player.removeAttribute('src'); player.load(); }
       if (modal.open) modal.close();
       document.body.style.overflow = overflow;
       opener?.focus({ preventScroll: true });
@@ -59,7 +38,7 @@ export default function CaseVideo({ src, active, title, poster, edgeToEdge = fal
   };
   const close = () => {
     const time = enlarged.current?.currentTime;
-    if (inline.current && time !== undefined && Number.isFinite(time)) inline.current.currentTime = time;
+    if (time !== undefined && Number.isFinite(time)) playbackTime.current = time;
     dialog.current?.close();
     setExpanded(false);
   };
@@ -72,8 +51,8 @@ export default function CaseVideo({ src, active, title, poster, edgeToEdge = fal
   return <>
     <button ref={trigger} type="button" className={`core-design-video case-video-trigger${edgeToEdge ? ' case-video-edge-to-edge' : ''}`} tabIndex={active ? 0 : -1}
       aria-label={`放大播放：${title}`} aria-haspopup="dialog" onPointerDown={event => event.stopPropagation()} onClick={open}>
-      <video ref={inline} src={(near || expanded) ? asset(src) : undefined} poster={poster ? asset(poster) : undefined} muted autoPlay={active && visible && near && !expanded} loop playsInline preload={!near ? 'none' : (active && visible ? 'auto' : 'metadata')} aria-label={title}
-        onError={() => setFailed(true)} onPlaying={() => setBlocked(false)} />
+      <video ref={inline} src={source} poster={poster && active && near ? asset(poster) : undefined} muted autoPlay={shouldLoad} loop playsInline preload={shouldLoad ? 'auto' : 'none'} aria-label={title}
+        onError={() => { if (source) setFailed(true); }} onLoadedData={() => setFailed(false)} />
       <span className="case-video-expand"><Maximize2/><span>放大播放</span></span>
       {blocked && !failed && <span className="case-video-fallback"><Play/>点击播放并放大</span>}
       {failed && <span className="case-video-fallback" role="status">视频暂时无法播放</span>}

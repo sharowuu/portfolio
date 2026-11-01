@@ -4,6 +4,7 @@ import { asset } from '@/data/portfolio';
 import { WheelIntent } from '@/hooks/wheelIntent';
 import useViewport from '@/hooks/useViewport';
 import cases from '@/data/aily-framework-layout.json';
+import { DeferredImage } from './DeferredImage';
 import CaseVideo from './CaseVideo';
 import AilyTooltips from './AilyTooltips';
 import { ailyArtwork, isAilyTooltip } from '@/data/aily-tooltip-utils';
@@ -74,7 +75,7 @@ export default function AilyFrameworkCases() {
             return block.bold ? <h2 key={i} className="aily-framework-copy" style={style}>{text}</h2> : <p key={i} className="aily-framework-copy aily-framework-annotation" style={style}>{text}</p>;
           })}
           <AilyTooltips art={page.art} active={selected === index} flow={mobile}/>
-          {page.art ? mobile ? <div className="aily-framework-mobile-art"><img src={asset(ailyArtwork(page.art))} alt={page.label} draggable={false}/></div> : <img className="aily-framework-art" src={asset(ailyArtwork(page.art))} alt={page.label} decoding="async" draggable={false}/> : <div className="aily-framework-media" style={mobile ? undefined : at(50, 134, 624, 391)}>
+          {page.art ? mobile ? <div className="aily-framework-mobile-art"><DeferredImage active={selected === index} prefetch={Math.abs(selected - index) === 1} src={asset(ailyArtwork(page.art))} alt={page.label} draggable={false}/></div> : <DeferredImage active={selected === index} prefetch={Math.abs(selected - index) === 1} className="aily-framework-art" src={asset(ailyArtwork(page.art))} alt={page.label} decoding="async" draggable={false}/> : <div className="aily-framework-media" style={mobile ? undefined : at(50, 134, 624, 391)}>
             <CaseVideo src="media/aily-framework-team-management.mp4" active={selected === index} title="编排伙伴之间的调度关系" edgeToEdge displayRatio={1148 / 720}/>
           </div>}
         </div>)}

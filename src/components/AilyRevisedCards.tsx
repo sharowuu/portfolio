@@ -6,6 +6,7 @@ import useViewport from '@/hooks/useViewport';
 import layouts from '@/data/aily-revised-layout.json';
 import AilyFrameworkCases from './AilyFrameworkCases';
 import AilyTooltips from './AilyTooltips';
+import { DeferredImage } from './DeferredImage';
 import CaseVideo from './CaseVideo';
 import { ailyArtwork, isAilyTooltip } from '@/data/aily-tooltip-utils';
 import './AilyRevisedCards.css';
@@ -103,13 +104,13 @@ function MobileCopy({ page }: { page: AilyLayout }) {
     return <p key={index}>{text}</p>;
   })}</div>;
 }
-function MobileVisual({ page, top, bottom = 650, alt, active = true }: { page: AilyLayout; top: number; bottom?: number; alt: string; active?: boolean }) {
+function MobileVisual({ page, top, bottom = 650, alt, active = true, prefetch = false }: { page: AilyLayout; top: number; bottom?: number; alt: string; active?: boolean; prefetch?: boolean }) {
   if (!page.art) return null;
   const labels = page.texts.filter(block => !isMainCopy(block));
   const height = bottom - top;
   const local = { ...page, texts: labels.map(block => ({ ...block, lines: block.lines.map(line => ({ ...line, y: (line.y - top) * 676 / height })) })) };
   return <div className="aily-mobile-visual" style={{ aspectRatio: `724 / ${height}` }}>
-    <img className="aily-mobile-visual-art" src={asset(ailyArtwork(page.art))} alt={alt} draggable={false} style={{ height: `${676 / height * 100}%`, top: `${-top / height * 100}%` }}/>
+    <DeferredImage active={active} prefetch={prefetch} className="aily-mobile-visual-art" src={asset(ailyArtwork(page.art))} alt={alt} draggable={false} style={{ height: `${676 / height * 100}%`, top: `${-top / height * 100}%` }}/>
     <NativeCopy page={local}/>
     <AilyTooltips art={page.art} active={active} top={top} height={height}/>
   </div>;
@@ -198,9 +199,9 @@ function AutomationCases() {
         {automationCases.map((page, index) => <div key={page.page} className="aily-automation-panel" role="group" aria-roledescription="案例" aria-label={`${index + 1} / 3：${automationLabels[index]}`} aria-hidden={selected !== index} inert={selected !== index} data-automation-case={index + 1} data-figma-node={nodes[index + 3]}>
           {mobile ? <>
             <ul className="aily-mobile-case-caption"><li>{page.texts.find(block => /^(表达意图|运行调试|可追踪)：/.test(block.lines[0].text))?.lines.map(line => line.text).join('')}</li></ul>
-            {page.art ? <MobileVisual page={{ ...page, texts: page.texts.filter(block => block.size < 16) }} top={195} bottom={610} alt={automationLabels[index]} active={selected === index}/> : <AutomationTraceVideo active={selected === index} mobile/>}
+            {page.art ? <MobileVisual page={{ ...page, texts: page.texts.filter(block => block.size < 16) }} top={195} bottom={610} alt={automationLabels[index]} active={selected === index} prefetch={Math.abs(selected - index) === 1}/> : <AutomationTraceVideo active={selected === index} mobile/>}
           </> : <>
-            {page.art && <img className="aily-automation-art" src={asset(ailyArtwork(page.art))} alt={automationLabels[index]} decoding="async" draggable={false}/>}
+            {page.art && <DeferredImage active={selected === index} prefetch={Math.abs(selected - index) === 1} className="aily-automation-art" src={asset(ailyArtwork(page.art))} alt={automationLabels[index]} decoding="async" draggable={false}/>}
             <NativeCopy page={{ ...page, texts: page.texts.filter(block => block.lines[0].y >= 150) }}/>
             <AilyTooltips art={page.art} active={selected === index}/>
             {page.page === 6.2 && <AutomationTraceVideo active={selected === index} mobile={false}/>}
@@ -223,7 +224,7 @@ export default function AilyRevisedCards() {
     className={`miaoda-project-hero aily-revised-card${page.page === 5 || page.page === 6 ? ' miaoda-core-design' : ''}`}
     data-figma-node={node} data-aily-page={index + 3} aria-label={`第${index + 3}页：${page.page === 6 ? '自动化任务委派' : title}`}>
     {page.page === 5 ? <AilyFrameworkCases/> : page.page === 6 ? <AutomationCases/> : mobile ? <MobileCardContent page={page} title={title}/> : <>
-      {page.art && <img className="aily-revised-art" src={asset(ailyArtwork(page.art))} alt={page.page === 3 ? '三种伙伴档案与配置界面' : page.page >= 7 && page.page < 8 ? title : page.page === 8 ? '收件箱事件示例与分类关系' : '收件箱改版前后界面与接收设置'} loading="lazy" decoding="async" draggable={false}/>}
+      {page.art && <DeferredImage className="aily-revised-art" src={asset(ailyArtwork(page.art))} alt={page.page === 3 ? '三种伙伴档案与配置界面' : page.page >= 7 && page.page < 8 ? title : page.page === 8 ? '收件箱事件示例与分类关系' : '收件箱改版前后界面与接收设置'} loading="lazy" decoding="async" draggable={false}/>}
       {page.page === 4 && [182, 242, 310, 378].map((width, i) => <div key={i} className="aily-revised-strategy-pill" style={at(50, 189 + i * 88, width, 68)} aria-hidden="true"/>)}
       <NativeCopy page={page}/>
       <AilyTooltips art={page.art}/>

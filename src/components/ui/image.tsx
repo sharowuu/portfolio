@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { cn } from '@/lib/utils';
+import { DeferredImage } from '@/components/DeferredImage';
 type ImageFormat = 'jpg' | 'png' | 'webp' | 'bmp' | 'gif' | 'tiff';
 
 type NativeImgProps = React.ComponentPropsWithoutRef<'img'>;
@@ -119,7 +120,7 @@ export const Image = React.forwardRef<HTMLImageElement, ImageProps>(
     // 当 src 不在白名单时，直接渲染原生 img，保留所有原生属性
     if (typeof src !== 'string' || !isTargetSrc(src)) {
       return (
-        <img
+        <DeferredImage
           {...rest}
           ref={ref}
           src={src}
@@ -159,7 +160,7 @@ export const Image = React.forwardRef<HTMLImageElement, ImageProps>(
     });
 
     return (
-      <img
+      <DeferredImage
         {...rest}
         ref={ref}
         src={baseSrc}

@@ -1,0 +1,534 @@
+{
+  "media/about-portrait.jpg": [
+    1200,
+    1800
+  ],
+  "media/aily-automation-execution-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/aily-automation-intent-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/aily-background-intro.png": [
+    430,
+    270
+  ],
+  "media/aily-background-intro.svg": [
+    430.0,
+    270.0
+  ],
+  "media/aily-background.png": [
+    724,
+    676
+  ],
+  "media/aily-background.svg": [
+    724.0,
+    676.0
+  ],
+  "media/aily-core-partner-1.png": [
+    2880,
+    1800
+  ],
+  "media/aily-core-partner-2.png": [
+    2880,
+    1800
+  ],
+  "media/aily-final-1.png": [
+    640,
+    1800
+  ],
+  "media/aily-final-2.png": [
+    640,
+    1800
+  ],
+  "media/aily-framework-identity-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/aily-framework-skills-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/aily-hero.png": [
+    1448,
+    1352
+  ],
+  "media/aily-home-cover.png": [
+    1194,
+    1224
+  ],
+  "media/aily-inbox-after-label.png": [
+    108,
+    28
+  ],
+  "media/aily-inbox-before-label.png": [
+    116,
+    28
+  ],
+  "media/aily-intro.png": [
+    860,
+    580
+  ],
+  "media/aily-logo.png": [
+    64,
+    62
+  ],
+  "media/aily-partner-after.png": [
+    2880,
+    1800
+  ],
+  "media/aily-partner-before.png": [
+    2880,
+    1800
+  ],
+  "media/aily-proactive-config-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/aily-proactive-result-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/aily-proactive-status-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/aily-revised-03-art-v2.svg": [
+    724.0,
+    676.0
+  ],
+  "media/aily-revised-03-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/aily-revised-08-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/aily-revised-09-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/feishu-card-cover.png": [
+    1194,
+    1224
+  ],
+  "media/feishu-card-hero.svg": [
+    1440.0,
+    900.0
+  ],
+  "media/feishu-card-logo-v2.png": [
+    76,
+    60
+  ],
+  "media/feishu-card-page-2.png": [
+    724,
+    676
+  ],
+  "media/feishu-card-page-2.svg": [
+    724.0,
+    676.0
+  ],
+  "media/feishu-card-visual.png": [
+    724,
+    676
+  ],
+  "media/feishu-card-visual.svg": [
+    724.0,
+    676.0
+  ],
+  "media/logo-china-academy-of-art.png": [
+    1376,
+    248
+  ],
+  "media/logo-lark.svg": [
+    55.99968109576412,
+    16.748325447690377
+  ],
+  "media/logo-tencent-cloud.svg": [
+    80.44826668861867,
+    24.827000000000226
+  ],
+  "media/miaoda-beauty-evaluation-full.svg": [
+    1570.0,
+    242.0
+  ],
+  "media/miaoda-beauty-evolution-intro.svg": [
+    430.0,
+    270.0
+  ],
+  "media/miaoda-beauty-evolution.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-beauty-hero.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-beauty-home-cover.png": [
+    1194,
+    1224
+  ],
+  "media/miaoda-beauty-intro.svg": [
+    430.0,
+    270.0
+  ],
+  "media/miaoda-beauty-stage-01-images-v2.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-beauty-stage-01-intro.svg": [
+    430.0,
+    270.0
+  ],
+  "media/miaoda-beauty-stage-01-perspective-v3.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-beauty-stage-01.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-beauty-stage-02-intro.svg": [
+    430.0,
+    270.0
+  ],
+  "media/miaoda-beauty-stage-02.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-beauty-stage-03-intro.svg": [
+    430.0,
+    270.0
+  ],
+  "media/miaoda-beauty-stage-03.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-beauty-stage-04-intro.svg": [
+    430.0,
+    270.0
+  ],
+  "media/miaoda-beauty-stage-04.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-beauty-stage-05-intro.svg": [
+    430.0,
+    270.0
+  ],
+  "media/miaoda-beauty-stage-05.svg": [
+    724.0,
+    1327.0
+  ],
+  "media/miaoda-clarification-clean-poster.jpg": [
+    1908,
+    1076
+  ],
+  "media/miaoda-clarification-poster.jpg": [
+    1912,
+    1080
+  ],
+  "media/miaoda-core-background.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-core-collaboration.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-core-point-1.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-core-point-2.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-core-point-3.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-core-point-4.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-delivery-background.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-delivery-case-1.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-delivery-case-2.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-delivery-case-3.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-delivery-case-4.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-design-strategy-left.svg": [
+    400.0,
+    210.0
+  ],
+  "media/miaoda-design-strategy-v2.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-design-strategy.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-editing-background.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-editing-case-1.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-editing-case-2.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-editing-case-3.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-execution-background.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-execution-case-1.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-execution-case-2.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-execution-case-3.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-figma-image-0.png": [
+    4096,
+    2363
+  ],
+  "media/miaoda-figma-image-1.png": [
+    4096,
+    2363
+  ],
+  "media/miaoda-figma-image-2.png": [
+    2880,
+    1800
+  ],
+  "media/miaoda-hero.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-home-cover.png": [
+    1194,
+    1224
+  ],
+  "media/miaoda-journey-curve.svg": [
+    899.0,
+    676.0
+  ],
+  "media/miaoda-logo.svg": [
+    140.0,
+    40.0881
+  ],
+  "media/miaoda-mode-app.svg": [
+    38.0,
+    38.0
+  ],
+  "media/miaoda-mode-expert.svg": [
+    38.0,
+    38.0
+  ],
+  "media/miaoda-mode-inspiration.svg": [
+    38.0,
+    38.0
+  ],
+  "media/miaoda-project-introduction-left.svg": [
+    400.0,
+    210.0
+  ],
+  "media/miaoda-project-introduction-v2.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-project-introduction.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-user-analysis.svg": [
+    724.0,
+    676.0
+  ],
+  "media/miaoda-user-journey.svg": [
+    899.0,
+    676.0
+  ],
+  "media/optimized/about-portrait.webp": [
+    900,
+    1350
+  ],
+  "media/optimized/aily-automation-trace-borderless-poster.webp": [
+    960,
+    600
+  ],
+  "media/optimized/aily-automation-trace-poster.webp": [
+    960,
+    602
+  ],
+  "media/optimized/aily-core-partner-1.webp": [
+    1440,
+    900
+  ],
+  "media/optimized/aily-core-partner-2.webp": [
+    1440,
+    900
+  ],
+  "media/optimized/aily-final-1.webp": [
+    640,
+    1800
+  ],
+  "media/optimized/aily-final-2.webp": [
+    640,
+    1800
+  ],
+  "media/optimized/aily-hero.webp": [
+    1448,
+    1352
+  ],
+  "media/optimized/aily-home-cover.webp": [
+    1194,
+    1224
+  ],
+  "media/optimized/aily-partner-after.webp": [
+    1440,
+    900
+  ],
+  "media/optimized/feishu-card-cover-v2.webp": [
+    1194,
+    1224
+  ],
+  "media/optimized/feishu-card-cover-v3.webp": [
+    1194,
+    1224
+  ],
+  "media/optimized/feishu-card-cover-v4.webp": [
+    1194,
+    1224
+  ],
+  "media/optimized/feishu-card-visual-v2.webp": [
+    1448,
+    1352
+  ],
+  "media/optimized/feishu-card-visual.webp": [
+    724,
+    676
+  ],
+  "media/optimized/logo-china-academy-of-art.webp": [
+    690,
+    124
+  ],
+  "media/optimized/miaoda-beauty-hero.svg": [
+    724.0,
+    676.0
+  ],
+  "media/optimized/miaoda-beauty-home-cover.webp": [
+    800,
+    820
+  ],
+  "media/optimized/miaoda-beauty-stage-01-perspective-v3.svg": [
+    724.0,
+    676.0
+  ],
+  "media/optimized/miaoda-beauty-stage-03-intro.svg": [
+    430.0,
+    270.0
+  ],
+  "media/optimized/miaoda-beauty-stage-03.svg": [
+    724.0,
+    676.0
+  ],
+  "media/optimized/miaoda-beauty-stage-05-intro.svg": [
+    430.0,
+    270.0
+  ],
+  "media/optimized/miaoda-beauty-stage-05.svg": [
+    724.0,
+    1327.0
+  ],
+  "media/optimized/miaoda-hero.svg": [
+    724.0,
+    676.0
+  ],
+  "media/optimized/miaoda-home-cover.webp": [
+    1194,
+    1224
+  ],
+  "media/portrait-cutout.png": [
+    1025,
+    2044
+  ],
+  "media/portrait-placeholder.svg": [
+    800.0,
+    800.0
+  ],
+  "media/portrait-transparent.png": [
+    1708,
+    2600
+  ],
+  "media/project-1.jpg": [
+    720,
+    720
+  ],
+  "media/project-2.jpg": [
+    720,
+    720
+  ],
+  "media/project-3.jpg": [
+    720,
+    720
+  ],
+  "media/project-4.jpg": [
+    720,
+    720
+  ],
+  "media/tooltip-layers/aily-automation-intent-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/tooltip-layers/aily-framework-identity-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/tooltip-layers/aily-framework-skills-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/tooltip-layers/aily-proactive-config-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/tooltip-layers/aily-proactive-status-art.svg": [
+    724.0,
+    676.0
+  ],
+  "media/wechat-qr.jpg": [
+    668,
+    668
+  ]
+}
