@@ -27,7 +27,7 @@ export default function useCardSnap(
     let running = false, disposed = false;
     let queued: -1 | 0 | 1 = 0;
     let movingDirection = 0;
-    // Aily's dense cards need one stop per continuous gesture, not an automatic queued follow-up.
+    // Aily accepts live continuation after arrival, but never auto-runs queued wheel momentum.
     const wheelIntent = new VerticalWheelIntent(pageKey === 'aily');
     let animation: ReturnType<typeof animate> | undefined;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -126,7 +126,7 @@ export default function useCardSnap(
       const direction = Math.sign(vertical);
       if (!direction) return;
       // Always feed input to the classifier, including during animations and native tall-card reading.
-      const intent = wheelIntent.consume(vertical, performance.now());
+      const intent = wheelIntent.consume(vertical, performance.now(), !running);
       if (!running && (canReadWithin(direction) || inNativeFlow() || (nativeCard && active === snapCards.length - 1 && direction > 0))) return;
       event.preventDefault();
       if (intent) request(intent);

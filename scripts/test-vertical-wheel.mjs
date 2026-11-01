@@ -36,25 +36,39 @@ test('line-normalized mouse notches still trigger promptly', () => {
   assert.deepEqual(simulate([[3 * 16, 0], [3 * 16, 180]]), [1, 1]);
 });
 
-const simulateSingleStep = entries => {
+const simulateContinuous = entries => {
   const intent = new VerticalWheelIntent(true);
-  return entries.map(([delta, ms]) => intent.consume(delta, ms));
+  let availableAt = -Infinity;
+  return entries.map(([delta, ms]) => {
+    const result = intent.consume(delta, ms, ms >= availableAt);
+    if (result) availableAt = ms + 330;
+    return result;
+  });
 };
-test('Aily: one continuous plateau cannot queue a second card', () => {
+test('Aily: a short continuous push does not auto-queue the next card', () => {
+  const entries = Array.from({ length: 24 }, (_, i) => [40, i * 20]);
+  assert.equal(simulateContinuous(entries).filter(Boolean).length, 1);
+});
+test('Aily: ongoing intentional input continues without requiring a quiet gap', () => {
   const entries = Array.from({ length: 80 }, (_, i) => [40, i * 20]);
-  assert.equal(simulateSingleStep(entries).filter(Boolean).length, 1);
+  const times = simulateContinuous(entries).flatMap((result, i) => result ? [i * 20] : []);
+  assert.deepEqual(times, [0, 480, 960, 1440]);
 });
-test('Aily: uneven momentum and renewed peaks stay within the same gesture', () => {
-  assert.deepEqual(simulateSingleStep([[80, 0], [60, 50], [30, 100], [12, 150], [50, 200], [15, 330], [48, 460], [12, 600]]), [1, 0, 0, 0, 0, 0, 0, 0]);
+test('Aily: renewed deliberate pushes can continue while the tail is still arriving', () => {
+  const entries = [[80, 0], [40, 50], [20, 100], [10, 150], [60, 200], [60, 250], [60, 300], [60, 350], [10, 400], [10, 450], [60, 500], [60, 550], [60, 600], [60, 650], [60, 700]];
+  assert.deepEqual(simulateContinuous(entries).flatMap((result, i) => result ? [entries[i][1]] : []), [0, 350, 700]);
 });
-test('Aily: releasing and making another gesture still advances promptly', () => {
-  assert.deepEqual(simulateSingleStep([[80, 0], [40, 20], [12, 40], [80, 240], [40, 260], [80, 480]]), [1, 0, 0, 1, 0, 1]);
+test('Aily: old animation input never executes later without a new live event', () => {
+  assert.deepEqual(simulateContinuous([[80, 0], [60, 50], [30, 100], [10, 150], [60, 200], [20, 250], [5, 400]]), [1, 0, 0, 0, 0, 0, 0]);
 });
-test('Aily: reversal works without waiting for a pause', () => {
-  assert.deepEqual(simulateSingleStep([[80, 0], [30, 16], [-20, 100], [-40, 130]]), [1, 0, -1, 0]);
+test('Aily: reversal works without waiting for arrival', () => {
+  assert.deepEqual(simulateContinuous([[80, 0], [30, 16], [-20, 100], [-40, 130]]), [1, 0, -1, 0]);
 });
-test('Aily: long decaying tail and tiny noise cannot restart navigation', () => {
+test('Aily: long decaying momentum and small tail bumps do not restart navigation', () => {
   const entries = Array.from({ length: 90 }, (_, i) => [80 * .94 ** i, i * 16]);
-  assert.equal(simulateSingleStep(entries).filter(Boolean).length, 1);
-  assert.deepEqual(simulateSingleStep([[0, 0], [NaN, 1], [2, 20], [2, 40]]), [0, 0, 0, 0]);
+  assert.equal(simulateContinuous(entries).filter(Boolean).length, 1);
+  assert.deepEqual(simulateContinuous([[80, 0], [40, 50], [10, 100], [8, 150], [20, 200], [12, 250], [5, 350]]), [1, 0, 0, 0, 0, 0, 0]);
+});
+test('Aily: short gaps and normal wheel notches remain responsive after arrival', () => {
+  assert.deepEqual(simulateContinuous([[48, 0], [48, 180], [48, 360], [48, 540], [48, 720]]), [1, 0, 1, 0, 1]);
 });
