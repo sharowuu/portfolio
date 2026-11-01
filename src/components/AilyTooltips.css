@@ -1,0 +1,15 @@
+.aily-tooltip-anchor,.aily-tooltip-flow{--aily-tooltip-surface:#f1f4f7;--aily-tooltip-ink:#455e83;pointer-events:none}
+.aily-tooltip-anchor{position:absolute;z-index:3;container-type:normal}
+.aily-tooltip-flow{position:relative}
+.aily-tooltip-dot{position:absolute;inset:0;display:block;width:100%;height:100%;overflow:visible;opacity:0;visibility:hidden;transition:opacity .12s ease,visibility 0s linear .12s}
+.aily-tooltip-flow-dot{inset:5px auto auto -14px;width:8px;height:8px}
+.aily-tooltip-reveal{position:relative;width:100%;height:100%;opacity:0;visibility:hidden;clip-path:inset(0 100% 0 0);transition:opacity .12s ease,visibility 0s linear .12s,clip-path 0s linear .12s}
+/* This right-anchored callout reveals inward from its existing marker; all others stay left-to-right. */
+[data-aily-tooltip="自然语言描述任务确保自由度"][data-visible=false]>.aily-tooltip-reveal{clip-path:inset(0 0 0 100%)}
+/* Stage 1: the stationary marker appears. Stage 2: reveal the stationary bubble from left to right. */
+[data-aily-tooltip][data-visible=true]>.aily-tooltip-dot{opacity:1;visibility:visible;transition:opacity .16s ease-out var(--aily-tooltip-delay),visibility 0s linear var(--aily-tooltip-delay)}
+[data-aily-tooltip][data-visible=true]>.aily-tooltip-reveal{opacity:1;visibility:visible;clip-path:inset(0 0 0 0);transition:clip-path .52s cubic-bezier(.22,1,.36,1) calc(var(--aily-tooltip-delay) + 220ms),opacity 0s linear calc(var(--aily-tooltip-delay) + 220ms),visibility 0s linear calc(var(--aily-tooltip-delay) + 220ms)}
+.aily-tooltip-shape{display:block;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 3px 9px rgb(31 35 41 / .045))}
+.aily-tooltip-text{position:absolute;white-space:pre;line-height:1;font-family:'PingFang SC',sans-serif;font-weight:400;color:var(--aily-tooltip-ink)}
+.aily-tooltip-flow .aily-tooltip-text{position:static;white-space:normal;font:inherit;color:inherit}
+@media(prefers-reduced-motion:reduce){.aily-tooltip-dot,.aily-tooltip-reveal,[data-aily-tooltip][data-visible=true]>.aily-tooltip-dot,[data-aily-tooltip][data-visible=true]>.aily-tooltip-reveal{transition:none}}

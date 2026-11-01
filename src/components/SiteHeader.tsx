@@ -16,9 +16,13 @@ export default function SiteHeader(){
  const aily=project?.detailLayout==='aily';
  const feishuCard=project?.detailLayout==='feishu-card';
  const directProject=miaoda||beauty||aily||feishuCard;
- const [miaodaSection,setMiaodaSection]=useState(0);
+ const [desktopSection,setMiaodaSection]=useState(0);
+ const miaodaSection=mobile?0:desktopSection;
  useEffect(()=>{
   if(!miaoda&&!beauty&&!aily)return;
+  // On phones the project introduction sits in normal document flow.
+  // Changing its height while scrolling would move every card's snap target.
+  if(mobile)return;
   const update=()=>{
    const cards=Array.from(document.querySelectorAll<HTMLElement>('.miaoda-project-sections > section'));
    if(!cards.length)return;
@@ -27,19 +31,19 @@ export default function SiteHeader(){
     const r=card.getBoundingClientRect(),b=cards[best].getBoundingClientRect();
     return Math.abs(r.top+r.height/2-middle)<Math.abs(b.top+b.height/2-middle)?i:best;
    },0);
-   setMiaodaSection(aily?(nearest>=7?4:nearest>=5?3:nearest>=2?2:0):beauty?Math.min(6,nearest):nearest >= 9 ? 8 : nearest === 8 ? 7 : nearest === 7 ? 6 : nearest === 6 ? 5 : nearest === 5 ? 4 : nearest === 4 ? 3 : Math.min(2,nearest));
+   setMiaodaSection(aily?(nearest>=11?5:nearest>=9?4:nearest>=5?3:nearest>=2?2:0):beauty?Math.min(6,nearest):nearest >= 9 ? 8 : nearest === 8 ? 7 : nearest === 7 ? 6 : nearest === 6 ? 5 : nearest === 5 ? 4 : nearest === 4 ? 3 : Math.min(2,nearest));
   };
   const frame=window.requestAnimationFrame(update);
   const snapUpdate=(event:Event)=>{
    const detail=(event as CustomEvent<{pageKey:string;index:number}>).detail;
-   if(aily&&detail?.pageKey==='aily')setMiaodaSection(detail.index>=7?4:detail.index>=5?3:detail.index>=2?2:0);
+   if(aily&&detail?.pageKey==='aily')setMiaodaSection(detail.index>=11?5:detail.index>=9?4:detail.index>=5?3:detail.index>=2?2:0);
    else update();
   };
   window.addEventListener('scroll',update,{passive:true});
   window.addEventListener('resize',update);
   window.addEventListener('portfolio:snap-active',snapUpdate);
   return()=>{window.cancelAnimationFrame(frame);window.removeEventListener('scroll',update);window.removeEventListener('resize',update);window.removeEventListener('portfolio:snap-active',snapUpdate)};
- },[miaoda,beauty,aily]);
+ },[miaoda,beauty,aily,mobile]);
  const copy=async(value:string,label:string)=>{try{await navigator.clipboard.writeText(value);setNotice(`${label}已复制：${value}`)}catch{const input=document.createElement('textarea');input.value=value;input.style.position='fixed';input.style.opacity='0';document.body.appendChild(input);input.select();const copied=document.execCommand('copy');input.remove();setNotice(copied?`${label}已复制：${value}`:`复制失败，请手动复制：${value}`)}};
  const open=(url:string,label:string)=>{if(!url){setNotice(`${label}待补充。请在 src/data/portfolio.ts 中填写你的真实信息。`);return;}if(url.startsWith('mailto:'))window.location.href=url;else if(/^https?:\/\//.test(url))window.open(url,'_blank','noopener,noreferrer')};
  const back=()=>{window.scrollTo({top:0,behavior:'instant'});setInfo(false);setSocial(false);navigate('/')};
@@ -47,19 +51,19 @@ export default function SiteHeader(){
  return <><header className={`site-header ${about?'header-about':''} ${detail?'header-detail':''} ${directProject?'header-miaoda':''} ${beauty?'header-beauty':''} ${feishuCard?'header-feishu-card':''}`}>
   <motion.div className="identity" initial={false} animate={{y:introDone?0:mobile?'36dvh':'8rem',scale:introDone?1:.72}} transition={{duration:1.08,ease:motionSettings.ease}}>
    <AnimatePresence mode="wait"><motion.div key={directProject?(beauty?`beauty-${miaodaSection===0?'intro':'details'}`:`${aily?'aily':feishuCard?'feishu-card':'miaoda'}-${miaodaSection}`):project?.id||'identity'} initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-20}} transition={{duration:.5,ease:motionSettings.ease}}>
-    {feishuCard?<div className="feishu-card-header-intro"><div className="feishu-card-header-title"><img src={asset('media/feishu-card-logo-v2.png')} alt=""/><h1>飞书卡片</h1></div><span>CREADIT CARD</span><p>飞书卡片是一个覆盖从卡片生成到消费完整链路的产品体系，既关注卡片如何被创建，也关注它如何被触达、展示和使用。</p><time>2022 - 2023</time></div>:aily?(miaodaSection===4?<div className="aily-core-intro">
+    {feishuCard?<div className="feishu-card-header-intro"><div className="feishu-card-header-title"><img src={asset('media/feishu-card-logo-v2.png')} alt=""/><h1>飞书卡片</h1></div><span>CREADIT CARD</span><p>飞书卡片是一个覆盖从卡片生成到消费完整链路的产品体系，既关注卡片如何被创建，也关注它如何被触达、展示和使用。</p><time>2022 - 2023</time></div>:aily?(miaodaSection===5?<div className="aily-core-intro aily-revised-intro"><h1>设计与反思</h1><span>HUMAN IN THE LOOP</span></div>:miaodaSection===4?<div className="aily-core-intro aily-revised-intro">
       <h1>核心设计 - <strong>03</strong></h1>
-      <span>USER ANALYSIS</span>
+      <span>HUMAN IN THE LOOP</span>
       <h2>持续运行 但不持续打扰</h2>
       <p>把执行动态，转成用户需要关注的工作</p>
-    </div>:miaodaSection===3?<div className="aily-core-intro">
+    </div>:miaodaSection===3?<div className="aily-core-intro aily-revised-intro">
       <h1>核心设计 - <strong>02</strong></h1>
-      <span>USER ANALYSIS</span>
+      <span>CONTINUOUS WORK</span>
       <h2>把一次请求，变成可管理的持续工作</h2>
       <p>不再每次手动唤起 agent，而是约定什么时候做</p>
-    </div>:miaodaSection===2?<div className="aily-core-intro">
+    </div>:miaodaSection===2?<div className="aily-core-intro aily-revised-intro">
       <h1>核心设计 - <strong>01</strong></h1>
-      <span>USER ANALYSIS</span>
+      <span>AGENT PROFILE</span>
       <h2>先看懂伙伴，再决定如何委托</h2>
       <p>把陌生的 Agent，变成可理解、可配置的工作伙伴</p>
     </div>:<div className="aily-background-intro">
@@ -76,15 +80,16 @@ export default function SiteHeader(){
    {detail?<>
     <Magnetic>{directProject?<button className="icon-button" aria-label="回到首页" onClick={back}><ChevronLeft/><span className="button-label">回到首页</span></button>:<button className={`icon-button ${info?'active':''}`} aria-label="切换项目信息" aria-pressed={info} onClick={()=>setInfo(v=>!v)}><Info/><span className="button-label">项目说明</span></button>}</Magnetic>
     <Magnetic><button className="icon-button" aria-label={aily?'前往 Aily':feishuCard?'前往飞书卡片搭建':miaoda||beauty?'前往妙搭':'查看项目链接'} onClick={()=>open(project?.website||'','项目链接')}><ArrowUpRight/><span className="button-label">{aily?'前往 Aily':feishuCard?'前往飞书卡片搭建':miaoda||beauty?'前往妙搭':'项目链接'}</span></button></Magnetic>
-   </>:<>
-    <Magnetic>{about?<button className="icon-button active round" aria-label="返回首页" onClick={back}><ChevronLeft/></button>:<NavLink to="/about" className="icon-button" aria-label="关于我" onClick={()=>{setSocial(false);setWechatQr(false)}}><UserRound/><span className="button-label">关于我</span></NavLink>}</Magnetic>
-    {!about&&<Magnetic><button className={`icon-button contact-trigger ${social?'active round contact-close':''}`} aria-label={social?'收起联系方式':'展开联系方式'} aria-expanded={social} onClick={()=>{setSocial(v=>!v);setWechatQr(false)}}><motion.span className="contact-trigger-glyph" animate={{rotate:social?-90:0}} transition={{duration:.3,ease:[.785,.135,.15,.86]}}>{social?<X/>:<MessageCircle/>}</motion.span>{!social&&<span className="button-label">联系我</span>}</button></Magnetic>}
-    <AnimatePresence initial={false}>{(about||social)&&<motion.div className="social-links" initial="closed" animate="open" exit="closed" variants={{open:{transition:{staggerChildren:.055,delayChildren:.04}},closed:{transition:{staggerChildren:.045,staggerDirection:-1}}}}>
-     <motion.div variants={{open:{x:0,opacity:1,scale:1},closed:{x:-18,opacity:0,scale:.86}}} transition={{duration:.32,ease:motionSettings.ease}}><Magnetic><button className="icon-button" aria-label="复制邮箱" onClick={()=>void copy(profile.email,'邮箱')}><Mail/><span className="button-label">邮箱</span></button></Magnetic></motion.div>
-     <motion.div variants={{open:{x:0,opacity:1,scale:1},closed:{x:-18,opacity:0,scale:.86}}} transition={{duration:.32,ease:motionSettings.ease}}><Magnetic><div className={`wechat-contact${wechatQr?' is-open':''}`} onMouseEnter={()=>setWechatQr(true)} onMouseLeave={()=>setWechatQr(false)} onFocusCapture={()=>setWechatQr(true)} onBlurCapture={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node))setWechatQr(false)}}><button className="icon-button wechat-button" aria-label="微信二维码" aria-expanded={wechatQr}><svg className="wechat-mark" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M10 4C5.58 4 2 6.91 2 10.5c0 2 1.11 3.79 2.86 4.98L4.2 18l3.02-1.4c.88.26 1.81.4 2.78.4.36 0 .72-.02 1.07-.06A6.05 6.05 0 0 1 10 13.5c0-3.31 2.91-6 6.5-6 .36 0 .71.03 1.05.08C16.22 5.46 13.38 4 10 4Z"/><path d="M22 13.5c0-2.76-2.46-5-5.5-5s-5.5 2.24-5.5 5 2.46 5 5.5 5c.66 0 1.29-.1 1.88-.29L21 19.5l-.58-2.2C21.4 16.38 22 15.02 22 13.5Z"/><path d="M7.5 8.5h.01M12 8.5h.01M14.5 12h.01M18.5 12h.01"/></svg><span className="button-label">微信</span></button><div className="wechat-qr-popover" role="tooltip" aria-hidden={!wechatQr} style={{opacity:wechatQr?1:0,visibility:wechatQr?'visible':'hidden',translate:wechatQr?'-50% 0':'-50% 1rem'}}><img src={asset('media/wechat-qr.jpg')} alt="吴晓媛的微信二维码"/><span>扫码添加微信</span></div></div></Magnetic></motion.div>
-     <motion.div variants={{open:{x:0,opacity:1,scale:1},closed:{x:-18,opacity:0,scale:.86}}} transition={{duration:.32,ease:motionSettings.ease}}><Magnetic><button className="icon-button" aria-label="复制电话" onClick={()=>void copy(profile.phone,'电话')}><Phone/><span className="button-label">电话</span></button></Magnetic></motion.div>
-    </motion.div>}</AnimatePresence>
-   </>}
+   </>:<AnimatePresence mode="wait" initial={false}>
+    <motion.div className="dock-buttons" key={about?'about':social?'contact':'home'} data-dock-state={about?'about':social?'contact':'home'} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:.16,ease:motionSettings.ease}}>
+    {!about&&<Magnetic><NavLink to="/about" className="icon-button" aria-label="关于我" onClick={()=>{setSocial(false);setWechatQr(false)}}><UserRound/><span className="button-label">关于我</span></NavLink></Magnetic>}
+    <Magnetic><button className={`icon-button contact-trigger ${about||social?'active round contact-close':''}`} aria-label={about?'返回首页':social?'收起联系方式':'展开联系方式'} aria-expanded={about||social} onClick={()=>{if(about){back();return;}setSocial(v=>!v);setWechatQr(false)}}><motion.span className="contact-trigger-glyph" initial={false} animate={{rotate:about||social?-90:0}} transition={{duration:.3,ease:[.785,.135,.15,.86]}}>{about?<ChevronLeft style={{rotate:'90deg'}}/>:social?<X/>:<MessageCircle/>}</motion.span>{!about&&!social&&<span className="button-label">联系我</span>}</button></Magnetic>
+    {(about||social)&&<motion.div className="social-links" initial="closed" animate="open" variants={{open:{transition:{staggerChildren:.045,delayChildren:.02}},closed:{}}}>
+     <motion.div variants={{open:{opacity:1,scale:1},closed:{opacity:0,scale:.94}}} transition={{duration:.24,ease:motionSettings.ease}}><Magnetic><button className="icon-button" aria-label="复制邮箱" onClick={()=>void copy(profile.email,'邮箱')}><Mail/><span className="button-label">邮箱</span></button></Magnetic></motion.div>
+     <motion.div variants={{open:{opacity:1,scale:1},closed:{opacity:0,scale:.94}}} transition={{duration:.24,ease:motionSettings.ease}}><Magnetic><div className={`wechat-contact${wechatQr?' is-open':''}`} onMouseEnter={()=>setWechatQr(true)} onMouseLeave={()=>setWechatQr(false)} onFocusCapture={()=>setWechatQr(true)} onBlurCapture={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node))setWechatQr(false)}}><button className="icon-button wechat-button" aria-label="微信二维码" aria-expanded={wechatQr}><svg className="wechat-mark" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M10 4C5.58 4 2 6.91 2 10.5c0 2 1.11 3.79 2.86 4.98L4.2 18l3.02-1.4c.88.26 1.81.4 2.78.4.36 0 .72-.02 1.07-.06A6.05 6.05 0 0 1 10 13.5c0-3.31 2.91-6 6.5-6 .36 0 .71.03 1.05.08C16.22 5.46 13.38 4 10 4Z"/><path d="M22 13.5c0-2.76-2.46-5-5.5-5s-5.5 2.24-5.5 5 2.46 5 5.5 5c.66 0 1.29-.1 1.88-.29L21 19.5l-.58-2.2C21.4 16.38 22 15.02 22 13.5Z"/><path d="M7.5 8.5h.01M12 8.5h.01M14.5 12h.01M18.5 12h.01"/></svg><span className="button-label">微信</span></button><div className="wechat-qr-popover" role="tooltip" aria-hidden={!wechatQr} style={{opacity:wechatQr?1:0,visibility:wechatQr?'visible':'hidden',translate:wechatQr?'-50% 0':'-50% 1rem'}}><img src={asset('media/wechat-qr.jpg')} alt="吴晓媛的微信二维码"/><span>扫码添加微信</span></div></div></Magnetic></motion.div>
+     <motion.div variants={{open:{opacity:1,scale:1},closed:{opacity:0,scale:.94}}} transition={{duration:.24,ease:motionSettings.ease}}><Magnetic><button className="icon-button" aria-label="复制电话" onClick={()=>void copy(profile.phone,'电话')}><Phone/><span className="button-label">电话</span></button></Magnetic></motion.div>
+    </motion.div>}
+    </motion.div></AnimatePresence>}
   </motion.nav>
  </header>
  {detail&&!directProject&&<motion.div className="back-project" initial={{x:70,opacity:0}} animate={{x:0,opacity:1}} transition={{duration:1.2,ease:motionSettings.ease}}><Magnetic><button className="icon-button" aria-label="返回首页" onClick={back}><Minimize2/><span className="button-label">返回首页</span></button></Magnetic></motion.div>}

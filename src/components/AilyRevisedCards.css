@@ -1,0 +1,109 @@
+/* Updated Figma cards share a 724×676 design grid. Copy remains native HTML. */
+.miaoda-project-hero.aily-revised-card{--aily-revised-surface:#e5eaf0;--aily-revised-ink:#1f2329;--aily-revised-muted:#646a73;container-type:inline-size;background:var(--aily-revised-surface);color:var(--aily-revised-ink)}
+.aily-revised-card>.aily-revised-art{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none}
+.aily-revised-card .aily-revised-copy{position:absolute;margin:0;padding:0;line-height:1;letter-spacing:0;z-index:2}
+.aily-revised-copy>span{position:absolute;display:block;white-space:pre;line-height:1}
+.aily-revised-strategy-pill{position:absolute;background:rgb(255 255 255 / .6);border-radius:1.6575cqw 4.696cqw 4.696cqw 1.6575cqw}
+.aily-revised-card .aily-strategy-heading{position:absolute;display:flex;align-items:center;z-index:2;white-space:nowrap}
+.aily-strategy-heading>.aily-strategy-number{display:block;flex:0 0 5.52486cqw;font-family:'DIN Condensed','Arial Narrow',sans-serif;font-size:4.41989cqw;font-weight:700;line-height:1;transform:translateY(.12em)}
+.aily-strategy-heading>.aily-strategy-label{display:block;font-family:'PingFang SC',sans-serif;font-size:2.48619cqw;font-weight:600;line-height:1;color:var(--aily-revised-ink)}
+.aily-revised-video-slot{position:absolute;overflow:hidden;border-radius:2.76243cqw;background:#fff;touch-action:pan-y;user-select:none;z-index:2}
+.aily-revised-video-slot[tabindex="0"]{cursor:grab}
+.aily-revised-video-slot[tabindex="0"]:active{cursor:grabbing}
+.aily-revised-video-slot:focus{outline:none}
+.aily-revised-video-slot:focus-visible{outline:2px solid #8f959e;outline-offset:4px}
+.aily-revised-pending-track{width:100%;height:100%;display:flex;transition:transform .55s cubic-bezier(.32,0,0,1)}
+.aily-revised-pending-panel{flex:0 0 100%;height:100%;display:grid;place-items:center;color:#b1b1b1;font-family:'PingFang SC',sans-serif;font-size:1.9337cqw;line-height:1.5}
+.aily-revised-pagination{position:absolute;z-index:3;display:flex;align-items:center;justify-content:space-between;overflow:visible}
+.aily-revised-arrow{position:relative;display:grid;place-items:center;width:3.315cqw;height:3.315cqw;padding:0;flex:0 0 3.315cqw;border-radius:50%;background:#fff;color:#8f959e}
+.aily-revised-arrow::after{content:'';position:absolute;left:50%;top:50%;width:max(44px,100%);height:max(44px,100%);transform:translate(-50%,-50%)}
+.aily-revised-arrow svg{width:1.658cqw;height:1.658cqw;stroke-width:1.5}
+.aily-revised-arrow:disabled{opacity:.5;cursor:default}
+.aily-revised-dots{display:flex;gap:1.105cqw;align-items:center;justify-content:center}
+.aily-revised-dots button{position:relative;display:grid;place-items:center;height:3.315cqw;padding:0;min-width:1.105cqw;background:none}
+.aily-revised-dots button::after{content:'';position:absolute;inset:-1.5cqw -.5cqw}
+.aily-revised-dots span{display:block;width:1.105cqw;height:1.105cqw;background:#fff;border-radius:100px;transition:width .4s cubic-bezier(.32,0,0,1)}
+.aily-revised-dots [aria-current=true] span{width:3.591cqw}
+.aily-revised-card .aily-revised-unordered-list{list-style:disc outside;padding-left:3.315cqw;line-height:1.5}
+.aily-revised-unordered-list>li{display:list-item;margin:0;padding:0;line-height:1.5}
+.aily-revised-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+/* Framework is one vertical card with three horizontally translating panels. */
+.aily-framework-viewport{position:absolute;inset:0;overflow:hidden;touch-action:pan-y;cursor:grab}
+.aily-framework-viewport:active{cursor:grabbing}
+.aily-framework-viewport:focus{outline:none}
+.aily-framework-viewport:focus-visible{box-shadow:inset 0 0 0 2px var(--aily-revised-muted)}
+.aily-framework-track{display:flex;width:100%;height:100%;transition:transform .55s cubic-bezier(.32,0,0,1);will-change:transform}
+.aily-framework-track.is-dragging{transition:none}
+.aily-framework-panel{position:relative;flex:0 0 100%;width:100%;height:100%;overflow:hidden;min-width:0}
+.aily-framework-copy{position:absolute;margin:0;padding:0;line-height:1;font-family:'PingFang SC',sans-serif;z-index:2;white-space:pre;user-select:text;cursor:text}
+.aily-framework-art{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;user-select:none}
+.aily-framework-empty{position:absolute;display:grid;place-items:center;background:white;border-radius:2.76243cqw;color:#b1b1b1;font:400 1.9337cqw/1.5 'PingFang SC',sans-serif;user-select:none}
+.aily-framework-media{position:absolute;overflow:hidden;background:white;border-radius:2.76243cqw;isolation:isolate}
+.aily-revised-card .aily-framework-media>.core-design-video.case-video-trigger{position:absolute;inset:0;width:100%;height:100%;border:0;outline:0;border-radius:inherit;background:white;box-shadow:none;clip-path:inset(0 round 2.76243cqw)}
+.aily-framework-media .case-video-trigger>video{object-fit:cover;object-position:center;background:white;border:0;outline:0;box-shadow:none;transform:scale(1.01) translateZ(0);backface-visibility:hidden}
+.aily-framework-pagination{z-index:4}
+@media(prefers-reduced-motion:reduce){.aily-framework-track,.aily-framework-pagination{transition:none}}
+@media(max-width:768px){
+ .aily-framework-viewport.is-mobile{position:relative;inset:auto;height:auto}
+ .aily-framework-viewport.is-mobile .aily-framework-track{height:auto;align-items:stretch}
+ .aily-framework-viewport.is-mobile .aily-framework-panel{height:auto}
+ .aily-framework-copy{position:relative;white-space:normal;overflow-wrap:anywhere}
+ h2.aily-framework-copy{font:600 16px/1.5 'PingFang SC',sans-serif}
+ .aily-framework-annotation{font:400 14px/1.7 'PingFang SC',sans-serif;color:#455e83;margin-top:18px;min-height:48px}
+ .aily-framework-mobile-art{position:relative;width:100%;aspect-ratio:724/470;overflow:hidden;margin-top:8px;container-type:inline-size}
+ .aily-framework-mobile-art img{position:absolute;width:100%;height:143.8298%;left:0;top:-25.5319%;pointer-events:none;user-select:none}
+ .aily-framework-empty{position:relative;aspect-ratio:624/391;margin-top:74px;border-radius:12px;font:400 14px/1.5 'PingFang SC',sans-serif}
+ .aily-framework-media{position:relative;width:100%;aspect-ratio:624/391;margin-top:74px;border-radius:12px}
+ .aily-framework-pagination{position:relative;left:auto!important;top:auto!important;width:100%!important;height:44px!important;margin-top:14px;justify-content:center;gap:24px}
+}
+.header-miaoda .identity .aily-core-intro.aily-revised-intro{width:43rem}
+.aily-core-intro.aily-revised-intro>span{font-family:'Monument Extended',sans-serif;font-weight:400;color:#d8dadc;opacity:.3;margin:.1rem 0 5.2rem 1.7rem;white-space:nowrap}
+.header-miaoda .identity .aily-core-intro.aily-revised-intro p{margin-top:1.6rem;color:#646a73}
+.aily-automation-viewport{position:absolute;inset:0;overflow:hidden;clip-path:inset(21% 0 8%);touch-action:pan-y;cursor:grab;user-select:none;z-index:1}
+.aily-automation-viewport:active{cursor:grabbing}
+.aily-automation-viewport:focus{outline:none}
+.aily-automation-viewport:focus-visible{background:rgb(179 194 213 / .12)}
+.aily-automation-track{display:flex;width:100%;height:100%;transition:transform .55s cubic-bezier(.32,0,0,1);will-change:transform}
+.aily-automation-track.is-dragging{transition:none}
+.aily-automation-panel{position:relative;flex:0 0 100%;width:100%;height:100%;overflow:hidden}
+.aily-automation-art{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;user-select:none}
+.aily-automation-empty{display:grid;place-items:center;color:var(--aily-revised-ink);font-size:2.20994cqw;line-height:1.5;pointer-events:none}
+.aily-automation-trace-video{overflow:hidden;background:white;border-radius:2.76243cqw;isolation:isolate}
+.aily-revised-card .aily-automation-trace-video>.core-design-video.case-video-trigger{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:inherit;box-shadow:none}
+.aily-automation-trace-video .case-video-trigger>video{object-fit:cover;background:white;border:0;outline:0}
+.aily-automation-trace-video.is-mobile{position:relative;aspect-ratio:624/390;margin-top:14px;border-radius:12px}
+.aily-automation-pagination{z-index:4}
+@media(prefers-reduced-motion:reduce){.aily-revised-pending-track,.aily-revised-dots span,.aily-automation-track{transition:none}}
+@media(max-width:768px){
+ .miaoda-project-hero.aily-revised-card{aspect-ratio:auto;min-height:0;padding:24px 20px;container-type:normal}
+ .aily-mobile-copy{display:flex;flex-direction:column;gap:14px}
+ .aily-mobile-copy h2{font:600 16px/1.5 'PingFang SC',sans-serif}
+ .aily-mobile-copy p,.aily-mobile-copy li{font:400 14px/1.75 'PingFang SC',sans-serif;color:var(--aily-revised-ink);overflow-wrap:anywhere}
+ .aily-mobile-copy ol{list-style:decimal;padding-left:22px;margin:10px 0 0}
+ .aily-mobile-copy ol li+li{margin-top:8px}
+ .aily-mobile-visual{position:relative;container-type:inline-size;width:100%;overflow:hidden;margin-top:20px;border-radius:12px}
+ .aily-mobile-visual-art{position:absolute;left:0;width:100%;max-width:none;pointer-events:none}
+ .aily-mobile-strategy{display:grid;gap:16px;list-style:none;margin:22px 0 0;padding:0}
+ .aily-mobile-strategy li>div{display:flex;align-items:center;gap:14px;background:rgb(255 255 255 / .6);border-radius:12px;padding:10px 14px}
+ .aily-mobile-strategy li>div span{font:700 28px/1 'DIN Condensed','Arial Narrow',sans-serif;color:#b3c2d5;transform:translateY(.1em)}
+ .aily-mobile-strategy strong{font:600 16px/1.5 'PingFang SC',sans-serif}
+ .aily-mobile-strategy p{margin:8px 8px 0;font:400 14px/1.7 'PingFang SC',sans-serif;color:var(--aily-revised-muted)}
+ .aily-mobile-pending{position:relative;container-type:inline-size;width:100%;aspect-ratio:724/490;margin-top:16px}
+ .aily-mobile-pending .aily-revised-video-slot{top:0!important;height:80%!important;left:0!important;width:100%!important}
+ .aily-mobile-pending .aily-revised-pagination{top:auto!important;bottom:0!important}
+ .aily-mobile-automation{position:relative;inset:auto;height:auto;clip-path:none;margin-top:18px}
+ .aily-mobile-automation .aily-automation-track{align-items:flex-start;height:auto}
+ .aily-mobile-automation .aily-automation-panel{height:auto;min-width:0}
+ .aily-mobile-case-caption{font:400 14px/1.7 'PingFang SC',sans-serif;list-style:disc outside;margin:0;padding:0 0 0 20px;min-height:72px}
+ .aily-mobile-automation .aily-mobile-visual{margin-top:14px}
+ .aily-mobile-empty{display:grid;place-items:center;aspect-ratio:724/415;background:white;border-radius:12px;margin-top:14px;font:400 14px/1.5 'PingFang SC',sans-serif}
+ .aily-automation-pagination{position:relative;left:auto!important;top:auto!important;width:100%!important;height:44px!important;margin-top:14px;justify-content:center;gap:24px}
+ .aily-revised-pagination .aily-revised-arrow{width:36px;height:36px;flex:0 0 36px}
+ .aily-revised-arrow svg{width:14px;height:14px}
+ .aily-revised-dots{gap:8px}
+ .aily-revised-dots button{height:36px;min-width:12px}
+ .aily-revised-dots span{width:6px;height:6px}
+ .aily-revised-dots [aria-current=true] span{width:20px}
+ .header-miaoda .identity .aily-core-intro.aily-revised-intro{width:100%}
+ .aily-core-intro.aily-revised-intro>span{font-size:12px;margin-bottom:16px}
+}

@@ -1,0 +1,1080 @@
+[
+  {
+    "page": 3,
+    "art": "media/aily-revised-03-art-v2.svg",
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 107.75999999999999,
+            "text": "飞书中的伙伴类型不断增加，包括「团队伙伴」、「三方伙伴」、「专家」和「专属伙伴」"
+          },
+          {
+            "x": 50.0,
+            "y": 131.76,
+            "text": "等，能力相近，却各有所长。随着能力持续丰富，单纯叠加入口已难以清晰组织伙伴的能"
+          },
+          {
+            "x": 50.0,
+            "y": 155.76,
+            "text": "力、工作方式与管理配置。伙伴管理不是配置入口的收纳，而是委托关系的起点。用户需要"
+          },
+          {
+            "x": 50.0,
+            "y": 179.76,
+            "text": "先理解一个 Agent 是谁、会什么、如何工作、能访问什么，以及出现问题时由谁管理，才"
+          },
+          {
+            "x": 50.0,
+            "y": 203.76,
+            "text": "可能把持续工作交给它。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 63.760000000000005,
+            "text": "核心问题"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 4,
+    "art": null,
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 107.75999999999999,
+            "text": "用户委托工作前，需要依次确认 Agent 的身份、能力、工作方式与管理边界。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 63.760000000000005,
+            "text": "设计思路"
+          }
+        ]
+      },
+      {
+        "font": "DIN Condensed",
+        "size": 32.0,
+        "color": "#B3C2D5",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 66.0,
+            "y": 233.784,
+            "text": "01"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 18.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 106.0,
+            "y": 229.48000000000002,
+            "text": "它是谁"
+          }
+        ]
+      },
+      {
+        "font": "DIN Condensed",
+        "size": 32.0,
+        "color": "#B3C2D5",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 66.0,
+            "y": 321.784,
+            "text": "02"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 18.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 106.0,
+            "y": 317.48,
+            "text": "它会什么"
+          }
+        ]
+      },
+      {
+        "font": "DIN Condensed",
+        "size": 32.0,
+        "color": "#B3C2D5",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 66.0,
+            "y": 409.784,
+            "text": "03"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 18.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 106.0,
+            "y": 405.48,
+            "text": "它怎么工作"
+          }
+        ]
+      },
+      {
+        "font": "DIN Condensed",
+        "size": 32.0,
+        "color": "#B3C2D5",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 66.0,
+            "y": 497.784,
+            "text": "04"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 18.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 106.0,
+            "y": 493.48,
+            "text": "如何管理"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#646A73",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 252.0,
+            "y": 215.76,
+            "text": "专属伙伴、团队伙伴、专家，还是三方伙伴？"
+          },
+          {
+            "x": 252.0,
+            "y": 239.76,
+            "text": "适用于什么场景？"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#646A73",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 312.0,
+            "y": 304.76,
+            "text": "能调用哪些能力、工具、知识和数据源？"
+          },
+          {
+            "x": 312.0,
+            "y": 328.76,
+            "text": "擅长完成哪类任务？"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#646A73",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 380.0,
+            "y": 392.76,
+            "text": "什么时候主动行动？按什么规则执行？"
+          },
+          {
+            "x": 380.0,
+            "y": 416.76,
+            "text": "结果发送到哪里？失败后如何处理？"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#646A73",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 448.0,
+            "y": 480.76,
+            "text": "谁能看、谁能用、谁能配置？它能"
+          },
+          {
+            "x": 448.0,
+            "y": 504.76,
+            "text": "访问哪些信息？谁对结果负责？"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 5,
+    "art": null,
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 77.76,
+            "text": "统一智能体配置框架"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 6,
+    "art": "media/aily-automation-intent-art.svg",
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 93.76,
+            "text": "自然语言便于表达工作意图，但持续运行需要可核对的执行规则。既不能只给用户一张技"
+          },
+          {
+            "x": 50.0,
+            "y": 117.75999999999999,
+            "text": "术配置表，也不能让一句模糊承诺代替长期任务管理。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 57.760000000000005,
+            "text": "自动化任务委派"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 74.0,
+            "y": 171.76,
+            "text": "表达意图：自然语言描述任务，用结构化配置表达时间、条件、执行对象和投递规则"
+          }
+        ]
+      },
+      {
+        "font": "pingfang sc",
+        "size": 12.0,
+        "color": "#455E83",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 86.0,
+            "y": 572.32,
+            "text": "自然语言描述任务确保自由度"
+          }
+        ]
+      },
+      {
+        "font": "pingfang sc",
+        "size": 12.0,
+        "color": "#455E83",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 457.0,
+            "y": 268.32,
+            "text": "结构化配置保证规则的稳定性"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 6.1,
+    "art": "media/aily-automation-execution-art.svg",
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 93.76,
+            "text": "自然语言便于表达工作意图，但持续运行需要可核对的执行规则。既不能只给用户一张技"
+          },
+          {
+            "x": 50.0,
+            "y": 117.76,
+            "text": "术配置表，也不能让一句模糊承诺代替长期任务管理。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 57.76,
+            "text": "自动化任务委派"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 74.0,
+            "y": 171.76,
+            "text": "运行调试：自动化不承载具体任务，每次触发生成一次 Task 实例"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 6.2,
+    "art": null,
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 93.76,
+            "text": "自然语言便于表达工作意图，但持续运行需要可核对的执行规则。既不能只给用户一张技"
+          },
+          {
+            "x": 50.0,
+            "y": 117.76,
+            "text": "术配置表，也不能让一句模糊承诺代替长期任务管理。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 57.76,
+            "text": "自动化任务委派"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 74.0,
+            "y": 171.76,
+            "text": "可追踪：触发运行均生成日志，支持追踪至每个 Task"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 7,
+    "art": "media/aily-proactive-status-art.svg",
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 103.75999999999999,
+            "text": "主动性首先要被感知。我把主动工作放在伙伴的工作方式里，而不是做成独立功能入口："
+          },
+          {
+            "x": 50.0,
+            "y": 127.75999999999999,
+            "text": "用户能看到这个伙伴是否会主动、当前关注什么，也能在关闭时清楚知道 “它只是不再主"
+          },
+          {
+            "x": 50.0,
+            "y": 151.76,
+            "text": "动发起，而不是忘掉我的工作”。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 67.76,
+            "text": "主动工作 - 状态感知"
+          }
+        ]
+      },
+      {
+        "font": "pingfang sc",
+        "size": 12.0,
+        "color": "#455E83",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 154.0,
+            "y": 639.32,
+            "text": "导航全局位置显示主动工作当前状态"
+          }
+        ]
+      },
+      {
+        "font": "pingfang sc",
+        "size": 12.0,
+        "color": "#455E83",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 337.0,
+            "y": 202.32,
+            "text": "主动工作状态融入伙伴的工作方式中"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 7.1,
+    "art": "media/aily-proactive-config-art.svg",
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 103.75999999999999,
+            "text": "配置上我把主动性拆成三组：关注什么、怎么帮、什么时候打扰。"
+          },
+          {
+            "x": 50.0,
+            "y": 127.75999999999999,
+            "text": "关注范围决定它看得见哪些工作；功能开关决定它提供哪几类帮助；主动程度、推送时间"
+          },
+          {
+            "x": 50.0,
+            "y": 151.76,
+            "text": "和免打扰决定它有多容易打断我。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 67.76,
+            "text": "主动工作 - 配置结构"
+          }
+        ]
+      },
+      {
+        "font": "pingfang sc",
+        "size": 12.0,
+        "color": "#455E83",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 74.0,
+            "y": 220.32,
+            "text": "关注什么"
+          }
+        ]
+      },
+      {
+        "font": "pingfang sc",
+        "size": 12.0,
+        "color": "#455E83",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 394.0,
+            "y": 262.32,
+            "text": "什么时候打扰"
+          }
+        ]
+      },
+      {
+        "font": "pingfang sc",
+        "size": 12.0,
+        "color": "#455E83",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 394.0,
+            "y": 422.32,
+            "text": "通过什么方式"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 7.2,
+    "art": "media/aily-proactive-result-art.svg",
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 103.75999999999999,
+            "text": "当条件成立时，它会带着依据出现 —— 比如会议临近时，结合日程、关联文档和参会人"
+          },
+          {
+            "x": 50.0,
+            "y": 127.75999999999999,
+            "text": "准备会前要点。用户可以采纳、追问或忽略，也可以据此收窄关注范围，让下一次帮助更"
+          },
+          {
+            "x": 50.0,
+            "y": 151.76,
+            "text": "贴近需要。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 67.76,
+            "text": "主动工作 - 主动结果"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 8,
+    "art": "media/aily-revised-08-art.svg",
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 103.75999999999999,
+            "text": "后台工作提醒可能与任务列表重复；每次事件都提醒，不等于帮助用户掌握进展。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 183.76,
+            "text": "Inbox 不是另一个消息列表，而是 Agent 持续工作后，把需要人判断、补充、确认或处"
+          },
+          {
+            "x": 50.0,
+            "y": 207.76,
+            "text": "理异常的节点交还给人的工作台。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 67.76,
+            "text": "核心矛盾"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 147.76,
+            "text": "收件箱定位调整："
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 347.0,
+            "y": 302.76,
+            "text": "状态变更"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 355.0,
+            "y": 396.76,
+            "text": "决策点"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 323.0,
+            "y": 494.76,
+            "text": "评论与 @提及"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 338.5,
+            "y": 588.76,
+            "text": "agent 活动"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 12.0,
+        "color": "#646A73",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 498.0,
+            "y": 395.32,
+            "text": "Agent 无法替用户做判断"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 12.0,
+        "color": "#646A73",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 498.0,
+            "y": 493.32000000000005,
+            "text": "有新的上下文或协作反馈"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 12.0,
+        "color": "#646A73",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 498.0,
+            "y": 587.32,
+            "text": "执行失败，Agent 无法继续"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 9,
+    "art": "media/aily-revised-09-art.svg",
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 67.76,
+            "text": "设计思路"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 12.0,
+        "color": "#8F959E",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 521.0,
+            "y": 405.32,
+            "text": "接收类型"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 545.0,
+            "y": 436.04,
+            "text": "待我确认"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 545.0,
+            "y": 476.04,
+            "text": "新增回复"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 545.0,
+            "y": 516.04,
+            "text": "执行失败"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 12.0,
+        "color": "#8F959E",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 521.0,
+            "y": 561.82,
+            "text": "接收范围"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 545.0,
+            "y": 592.54,
+            "text": "包含自动化任务"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 545.0,
+            "y": 632.54,
+            "text": "包含子任务"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 103.75999999999999,
+            "text": "让接收设置与筛选分开：筛选是“此刻看什么”，接收设置是“以后收什么”。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 127.75999999999999,
+            "text": "按工作聚合，而非堆事件：让用户先看“哪件事有变化”，再进入详情理解上下文"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 10,
+    "art": null,
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 111.75999999999999,
+            "text": "这个项目让我意识到，Agent 产品的设计重点不是把更多能力暴露给用户，而是在自主"
+          },
+          {
+            "x": 50.0,
+            "y": 135.76,
+            "text": "性和可控性之间建立稳定关系。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 179.76,
+            "text": "后续我认为还可以继续优化三点："
+          },
+          {
+            "x": 74.0,
+            "y": 203.76,
+            "text": "在执行前让用户更容易理解 Agent 的计划、依据和影响范围；"
+          },
+          {
+            "x": 74.0,
+            "y": 227.76,
+            "text": "在执行中用更轻量的方式呈现多 Agent 分工与当前状态；"
+          },
+          {
+            "x": 74.0,
+            "y": 251.76,
+            "text": "在执行后提供更清晰的失败原因、权限补齐和一键接管路径。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 295.76,
+            "text": "最终目标不是让 Agent 更频繁地行动，而是让用户在长期委托中形成稳定信任。"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 67.76,
+            "text": "复盘与下一步思考"
+          }
+        ]
+      }
+    ]
+  }
+]

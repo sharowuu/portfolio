@@ -4,10 +4,12 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { asset, miaodaCoreDesign, miaodaCoreExecution, miaodaCoreDelivery, miaodaCoreEditing, motionSettings } from '@/data/portfolio';
 import { usePortfolio } from '@/data/portfolio-context';
 import { WheelIntent } from '@/hooks/wheelIntent';
+import useViewport from '@/hooks/useViewport';
 import Magnetic from './Magnetic';
 import CaseVideo from './CaseVideo';
 
 export default function CoreDesignSection({ execution = false, delivery = false, editing = false }: { execution?: boolean; delivery?: boolean; editing?: boolean }) {
+  const { mobile } = useViewport();
   const context = usePortfolio();
   const corePoint = editing ? context.editingPoint : delivery ? context.deliveryPoint : execution ? context.executionPoint : context.corePoint;
   const setCorePoint = editing ? context.setEditingPoint : delivery ? context.setDeliveryPoint : execution ? context.setExecutionPoint : context.setCorePoint;
@@ -74,7 +76,7 @@ export default function CoreDesignSection({ execution = false, delivery = false,
     observer.observe(element);
     element.addEventListener('wheel', wheel, { passive: false });
     return () => { observer.disconnect(); element.removeEventListener('wheel', wheel); };
-  }, [count, position, setCorePoint]);
+  }, [count, position, setCorePoint, mobile]);
   const down = (event: PointerEvent<HTMLDivElement>) => {
     if (event.pointerType === 'mouse' && event.button !== 0) return;
     animation.current?.stop(); window.clearTimeout(finishTimer.current);
@@ -111,14 +113,16 @@ export default function CoreDesignSection({ execution = false, delivery = false,
       finishTimer.current = window.setTimeout(() => { animation.current?.stop(); position.set(destination); }, 700);
     }
   };
-  return <section className={`miaoda-core-design${grouped ? ' miaoda-core-execution' : ''}${delivery ? ' miaoda-core-delivery' : ''}${editing ? ' miaoda-core-editing' : ''}`} aria-label={`${editing ? '低门槛可视化修改' : delivery ? '阶段性交付' : execution ? '执行可见与用户可控' : '核心设计'}：${count}个案例横向展示`} data-point={corePoint + 1}>
-    {!grouped && <img className="execution-fixed-background" src={asset('media/miaoda-core-background.svg')} alt="" aria-hidden="true"/>}
-    {grouped ? <img className="execution-fixed-background" src={asset(background)} alt="" aria-hidden="true"/> : <p className="miaoda-section-number miaoda-card-title"><strong>05</strong><span>核心设计</span></p>}
+  return <section className={`miaoda-core-design${mobile ? ' mobile-core-design' : ''}${grouped ? ' miaoda-core-execution' : ''}${delivery ? ' miaoda-core-delivery' : ''}${editing ? ' miaoda-core-editing' : ''}`} aria-label={`${editing ? '低门槛可视化修改' : delivery ? '阶段性交付' : execution ? '执行可见与用户可控' : '核心设计'}：${count}个案例横向展示`} data-point={corePoint + 1}>
+    {!mobile && (!grouped ? <img className="execution-fixed-background" src={asset('media/miaoda-core-background.svg')} alt="" aria-hidden="true"/> : <img className="execution-fixed-background" src={asset(background)} alt="" aria-hidden="true"/>)}
+    {mobile && <h2 className="mobile-core-heading">{editing ? '低门槛可视化修改' : delivery ? '阶段性交付' : execution ? '执行可见与用户可控' : '核心设计'}</h2>}
+    {!mobile && !grouped && <p className="miaoda-section-number miaoda-card-title"><strong>05</strong><span>核心设计</span></p>}
     <div ref={viewport} className="core-design-viewport" tabIndex={0} role="region" aria-label={`横向滚动或拖拽切换${editing ? '可视化修改案例' : delivery ? '阶段交付案例' : execution ? '执行协作案例' : '核心设计点'}`} onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up}
       onKeyDown={event => { if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') { event.preventDefault(); event.stopPropagation(); choose(targetIndex.current + (event.key === 'ArrowRight' ? 1 : -1)); } }}>
       <div ref={track} className="core-design-track">
         {points.map((point, index) => <article key={point.image} className="core-design-slide" aria-hidden={index !== corePoint}>
-          <img src={asset(point.image)} alt={`设计点 ${index + 1}：${point.description}${point.video ? '' : '视频待补充。'}`} draggable={false}/>
+          {mobile ? <p className="mobile-core-description">{point.description}</p> : <img src={asset(point.image)} alt={`设计点 ${index + 1}：${point.description}${point.video ? '' : '视频待补充。'}`} draggable={false}/>}
+          {mobile && !point.video && <img className="mobile-core-still" src={asset(point.image)} alt={point.description} draggable={false}/>}
           {point.video && <CaseVideo src={point.video} active={index === corePoint} edgeToEdge={!grouped && index === 2} displayRatio={!grouped && index === 2 ? 1908 / 1076 : 16 / 9} poster={!grouped && index === 2 ? 'media/miaoda-clarification-clean-poster.jpg' : undefined} title={grouped ? `${caseLabel} ${index + 1} · 演示视频` : `设计点 ${index + 1} · ${index === 0 ? '空输入框' : index === 1 ? '模板' : '问题澄清'}演示`}/> }
         </article>)}
       </div>

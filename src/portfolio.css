@@ -12,11 +12,16 @@
 .header-miaoda .identity .miaoda-introduction-left{display:block;width:40rem;height:21rem;max-width:none;object-fit:contain}
 .header-beauty .identity{width:43rem}
 .beauty-project-intro-art{display:block;width:43rem;height:27rem;object-fit:contain;max-width:none}.aily-project-intro-art{display:block;width:43rem;height:29rem;object-fit:contain;max-width:none}.aily-project-hero>img{object-fit:contain}
-.miaoda-project-hero.aily-background-card{background:#e9e9e9;color:#1f2329}
-.aily-background-content{height:100%;padding:8.6rem 5rem;display:flex;flex-direction:column;gap:4.1rem}
+.miaoda-project-hero.aily-background-card{background:#e5eaf0;color:#1f2329}
+.aily-background-content{height:100%;padding:8.6rem 5rem;display:flex;flex-direction:column;gap:4rem}
 .aily-background-block{max-width:62.4rem}
-.aily-background-block h2{margin:0 0 2.6rem;font-size:1.6rem;line-height:1.4;font-weight:600;color:#16181d}
-.aily-background-block p{margin:0;font-size:1.6rem;line-height:2.4rem;font-weight:400;color:#2b2f36;letter-spacing:-.01em}
+.aily-background-block h2{margin:0 0 2rem;font-size:1.6rem;line-height:2.4rem;font-weight:600;color:#000}
+.aily-background-block p{margin:0;font-size:1.6rem;line-height:2.4rem;font-weight:400;color:#1f2329;letter-spacing:0}
+.aily-background-block:last-child p{color:#000}
+.aily-background-block p.aily-background-key-question{margin-top:1rem}
+.aily-background-block strong{font-weight:600;color:inherit}
+.aily-background-line{display:block;white-space:nowrap}
+@media(max-width:768px){.aily-background-line{display:inline;white-space:normal}}
 .aily-background-intro{position:relative;width:43rem;min-height:27rem;color:#1f2329}
 .aily-background-intro h1{display:flex;align-items:center;gap:.65rem!important;padding:0!important;font-size:2.4rem!important;line-height:3rem!important;font-weight:500!important;white-space:nowrap}
 .aily-background-intro h1>span:last-child{color:#8f959e}
@@ -54,6 +59,8 @@
 .header-miaoda .control-dock{position:absolute;top:51.4rem;left:0;transform:none;gap:1.2rem}
 .header-miaoda .icon-button{border-radius:1.6rem}
 .miaoda-project-page{padding:3.2rem 3.2rem 3.2rem 0;min-height:calc(212.4rem + 100dvh)}
+.miaoda-main-project{--miaoda-overview-surface:rgb(233 235 238 / .8);--miaoda-overview-composite:color-mix(in srgb,#e9ebee 80%,var(--background))}
+.miaoda-main-project .miaoda-project-sections :is(.miaoda-positioning-revised,.miaoda-user-analysis,.miaoda-user-journey,.miaoda-design-strategy){background:var(--miaoda-overview-surface)}
 .miaoda-project-sections{margin-left:68.4rem;width:72.4rem;display:flex;flex-direction:column;gap:3.2rem}
 .miaoda-project-hero{--miaoda-hero-radius:5rem;position:relative;width:100%;aspect-ratio:724/676;overflow:hidden;overflow:clip;border-radius:var(--miaoda-hero-radius);clip-path:inset(0 round var(--miaoda-hero-radius));background:transparent;isolation:isolate;contain:paint;transform:translateZ(0)}
 .miaoda-project-hero>img{display:block;width:100%;height:100%;object-fit:contain;border-radius:inherit}
@@ -163,8 +170,8 @@
 .miaoda-journey-artwork>img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;pointer-events:none}
 .miaoda-journey-edge{position:absolute;z-index:3;top:0;bottom:0;width:9rem;opacity:0;pointer-events:none;transition:opacity .28s cubic-bezier(.32,0,0,1)}
 .miaoda-journey-edge.is-visible{opacity:1}
-.miaoda-journey-edge-left{left:0;background:linear-gradient(90deg,#e9edf3 0%,#e9edf3d9 28%,#e9edf366 62%,transparent 100%)}
-.miaoda-journey-edge-right{right:0;background:linear-gradient(270deg,#e9edf3 0%,#e9edf3d9 28%,#e9edf366 62%,transparent 100%)}
+.miaoda-journey-edge-left{left:0;background:linear-gradient(90deg,var(--miaoda-overview-composite) 0%,color-mix(in srgb,var(--miaoda-overview-composite) 85%,transparent) 28%,color-mix(in srgb,var(--miaoda-overview-composite) 40%,transparent) 62%,transparent 100%)}
+.miaoda-journey-edge-right{right:0;background:linear-gradient(270deg,var(--miaoda-overview-composite) 0%,color-mix(in srgb,var(--miaoda-overview-composite) 85%,transparent) 28%,color-mix(in srgb,var(--miaoda-overview-composite) 40%,transparent) 62%,transparent 100%)}
 .miaoda-journey-artwork>.miaoda-journey-curve{transform:translateY(var(--journey-content-offset))}
 .miaoda-journey-insights{position:absolute;inset:0;translate:0 var(--journey-content-offset);z-index:2;pointer-events:none}
 .journey-insight{position:absolute;display:flex;flex-direction:column;gap:.7rem;padding:1.6rem 1.8rem;border-radius:1.6rem;background:#fff;color:#1f2329;box-shadow:0 .4rem 1.4rem #0000000d;font-size:1.2rem;line-height:1.45}
@@ -228,4 +235,116 @@
 .header-feishu-card .identity .feishu-card-header-intro p{width:37rem;margin-top:4rem;font-size:1.6rem;line-height:2.4rem;color:#646A73}
 .feishu-card-header-intro time{display:block;margin-top:2.8rem;font-size:1.6rem;line-height:2.4rem;color:#646A73}
 .header-feishu-card .control-dock{position:absolute;top:51.4rem;left:0;transform:none;gap:1.2rem}
-@media(max-width:768px){.feishu-card-project-page{padding:22rem 2rem 13rem}.feishu-card-project-sections{width:100%;gap:2rem}.feishu-card-visual{width:100%;height:auto;aspect-ratio:724/676;border-radius:3.2rem}.feishu-card-overview-content{padding:3.2rem}.feishu-card-overview-content p{font-size:1.1rem;line-height:1.65rem}.feishu-card-overview-content .feishu-card-overview-lead{margin-bottom:2rem}.feishu-card-overview-content .feishu-card-overview-kicker{margin-bottom:1rem}.feishu-card-overview-content section+section{margin-top:1rem}.feishu-card-overview-content h2{margin-bottom:.5rem;font-size:1.2rem;line-height:1.7rem}.header-feishu-card{left:0}.header-feishu-card .identity{top:8rem;width:calc(100vw - 8rem);text-align:left}.feishu-card-header-title{justify-content:center}.feishu-card-header-intro{width:100%}.header-feishu-card .identity .feishu-card-header-intro p{width:100%;margin-top:1.6rem;font-size:1.25rem;line-height:1.8rem;text-align:center}.feishu-card-header-intro>span{margin-left:0;text-align:center;font-size:1.2rem}.feishu-card-header-intro time{text-align:center;margin-top:1.2rem;font-size:1.25rem}.header-feishu-card .control-dock{top:auto;left:4rem;bottom:4rem}}
+@media(max-width:768px){
+ html{font-size:10px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+ .site-header{padding:32px 24px 0;left:0;right:0;align-items:flex-start}
+ .identity h1{font-size:22px;line-height:1.35;text-align:left}
+ .identity p{font-size:16px;line-height:1.5;text-align:left}
+ .control-dock,.header-detail .control-dock,.header-miaoda .control-dock,.header-feishu-card .control-dock{position:fixed;left:16px;right:auto;top:auto;bottom:calc(16px + env(safe-area-inset-bottom));translate:0;transform:none!important;gap:8px;padding:6px;background:rgb(246 246 246 / .9);border-radius:22px;backdrop-filter:blur(12px);max-width:calc(100vw - 32px);z-index:50}
+ .icon-button,.icon-button.contact-close{width:44px;min-width:44px;height:44px;padding:12px;border-radius:14px}
+ .icon-button svg{width:18px;height:18px}.contact-trigger-glyph{width:20px;height:20px;flex-basis:20px}.wechat-mark{width:21px!important;height:21px!important}
+ .social-links{gap:4px;padding:0;margin:0}.wechat-qr-popover{width:180px;padding:10px}.wechat-qr-popover img{width:160px;height:160px}
+ .content-notice{width:calc(100vw - 32px);font-size:14px;overflow-wrap:anywhere;top:16px}
+ .slider-column{width:min(300px,calc(100vw - 76px));left:50%}
+ .stack-card{width:100%;height:auto;aspect-ratio:1}.cover-title{font-size:16px;left:24px;bottom:24px}
+ .project-dots{right:12px}.project-dots button{width:32px;height:32px}
+ .header-miaoda,.header-feishu-card{position:relative;left:auto;right:auto;top:auto;padding:32px 24px 24px;height:auto;width:100%;min-height:0;align-items:flex-start}
+ .header-miaoda .identity,.header-feishu-card .identity{position:relative;top:auto;left:auto;width:100%;max-width:none;min-height:0;transform:none!important}
+ .header-miaoda .identity>div{min-height:0}
+ .miaoda-project-intro,.aily-background-intro,.feishu-card-header-intro{width:100%;min-height:0}
+ .header-miaoda .identity h1,.header-feishu-card .identity h1{font-size:22px!important;line-height:1.4!important;text-align:left;padding:0!important}
+ .aily-background-intro h1,.feishu-card-header-title{justify-content:flex-start}
+ .header-miaoda .identity p,.header-feishu-card .identity .feishu-card-header-intro p{width:100%;font-size:14px;line-height:1.7;margin-top:16px;text-align:left}
+ .header-miaoda .identity .aily-background-intro p{font-size:14px;line-height:1.7;margin-top:16px;text-align:left;width:100%}
+ .header-miaoda .identity time,.feishu-card-header-intro time{display:block;font-size:14px;line-height:1.5;margin-top:12px;text-align:left}
+ .miaoda-intro-watermark{position:static;display:block;margin:2px 0 0;font-size:12px;line-height:1.5}
+ .aily-background-intro .aily-intro-watermark,.feishu-card-header-intro>span{margin:0;font-size:12px;line-height:1.5;text-align:left}
+ .beauty-project-intro-art{width:100%;max-width:390px;height:auto;aspect-ratio:430/270;object-position:left top}
+ .miaoda-project-page,.feishu-card-project-page{padding:0 16px 110px;min-height:0}
+ .miaoda-project-sections,.feishu-card-project-sections{width:100%;margin-left:0;gap:20px}
+ .miaoda-project-hero,.miaoda-positioning,.miaoda-user-analysis,.miaoda-user-journey,.miaoda-design-strategy,.miaoda-core-design,.miaoda-core-collaboration{--miaoda-hero-radius:20px;border-radius:20px;clip-path:inset(0 round 20px)}
+ .miaoda-project-hero.aily-background-card,.miaoda-project-hero.feishu-card-overview{height:auto;aspect-ratio:auto;min-height:0}
+ .aily-background-content{height:auto;padding:24px 20px;gap:28px}
+ .aily-background-block{max-width:100%}.aily-background-block h2{font-size:16px;line-height:1.5;margin-bottom:14px}.aily-background-block p{font-size:14px;line-height:1.75}
+ .aily-background-line{display:inline;white-space:normal}.aily-background-block p.aily-background-key-question{margin-top:14px}
+ .feishu-card-visual{width:100%;height:auto;aspect-ratio:724/676;border-radius:20px}
+ .feishu-card-visual.feishu-card-overview{height:auto;aspect-ratio:auto;min-height:0}
+ .feishu-card-overview-content{height:auto;padding:24px 20px}
+ .feishu-card-overview-content p{font-size:14px;line-height:1.75}.feishu-card-overview-content h2{font-size:16px;line-height:1.5;margin-bottom:10px}
+ .feishu-card-overview-content .feishu-card-overview-lead{margin-bottom:24px}.feishu-card-overview-content .feishu-card-overview-kicker{margin-bottom:16px}
+ .feishu-card-overview-content section+section{margin-top:24px}.feishu-card-project-sections>.feishu-card-progress-note{margin:0 0 0 20px;font-size:12px}
+ .miaoda-section-number{font-size:12px;line-height:1.5}
+ .miaoda-user-analysis>.miaoda-card-title,.miaoda-user-journey>.miaoda-card-title,.miaoda-design-strategy>.miaoda-card-title,.miaoda-core-design>.miaoda-card-title{left:24px;top:20px}
+ .core-design-controls{gap:4px}.core-design-arrow>svg{width:14px;height:14px}.core-design-arrow::before{width:28px;height:28px}
+ .beauty-stage-03-video,.beauty-stage-04-video{border-radius:10px}
+ .header-about{position:relative;height:auto;padding:32px 24px 24px}
+ .about-page{padding:8px 24px 110px}
+ .about-content{width:100%;margin:0;gap:36px}.about-content p{font-size:16px;line-height:1.75}.about-block{gap:16px}.career-section{width:100%;margin-top:0}
+ .career-item,.career-item:nth-child(2),.career-item:last-child{grid-template-columns:88px 20px minmax(0,1fr);min-height:0;padding-bottom:32px}
+ .career-brand{height:40px;align-items:flex-start;padding-top:4px}
+ .career-logo-0{width:88px;height:28px;margin:0}.career-logo-1{width:72px;height:28px;margin:0}.career-logo-2{width:68px;height:26px;margin:0}
+ .career-axis,.career-item:nth-child(2) .career-axis,.career-item:last-child .career-axis{min-height:0}
+ .career-dot{width:6px;height:6px;left:7px;top:9px;margin:0;box-shadow:none}
+ .career-axis::after,.career-item:nth-child(2) .career-axis::after{left:9.5px;top:22px;bottom:-20px;width:1px}.career-item:last-child .career-axis::after{display:none}
+ .career-detail{padding:0 0 0 4px;font-size:14px;line-height:1.7}.career-detail time{font-size:18px;line-height:1.5;margin-bottom:12px;overflow-wrap:anywhere}
+ .career-detail h3,.career-detail p,.career-detail li{font-size:14px;line-height:1.7}.career-detail ul,.career-detail p+ul{margin-top:12px;gap:6px}
+ .portrait-slot{position:relative;width:100%;height:auto;right:auto;top:auto;margin-top:32px}
+ .portrait-image.portrait-photo{width:100%;height:auto;aspect-ratio:4/5;border-radius:20px}
+ .mobile-scroll-design-card{aspect-ratio:auto!important;height:auto!important;padding:0!important;background:#e5eaf0}
+ .mobile-design-scroll{position:relative;width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch}
+ .mobile-design-canvas{position:relative;flex-shrink:0}
+ .mobile-design-canvas>img{display:block;width:100%;height:100%;object-fit:fill}
+ .mobile-design-canvas>.miaoda-card-title{position:absolute;left:42px;top:42px;z-index:3}
+ .mobile-design-hint{position:sticky;left:16px;bottom:12px;display:inline-block;margin:0 0 12px 16px;padding:7px 10px;background:rgb(255 255 255 / .88);border-radius:8px;color:#646a73;font:400 12px/1.5 'PingFang SC',sans-serif;pointer-events:none;transition:opacity .2s}
+ .mobile-design-hint.has-scrolled{opacity:0}
+ .mobile-core-design{height:auto;aspect-ratio:auto;min-height:0;background:#e5eaf0;padding:24px 20px}
+ .mobile-core-heading{font:600 16px/1.5 'PingFang SC',sans-serif;margin:0 0 14px}
+ .mobile-core-design .core-design-viewport{position:relative;inset:auto;height:350px}
+ .mobile-core-design .core-design-slide{height:350px;display:flex;flex-direction:column;gap:16px}
+ .mobile-core-design .core-design-slide>.mobile-core-description{font:400 14px/1.75 'PingFang SC',sans-serif;min-height:125px;overflow-wrap:anywhere}
+ .mobile-core-design:not(.miaoda-core-execution) .core-design-video,.mobile-core-design.miaoda-core-execution .core-design-video{position:relative;left:0;top:0;width:100%;height:auto;aspect-ratio:16/9;border-radius:12px}
+ .mobile-core-design .core-design-controls{position:relative;left:auto;top:auto;translate:0;justify-content:center;margin-top:12px}
+ .mobile-core-still{width:100%;height:auto!important;object-fit:contain}
+ .mobile-design-canvas .beauty-stage-03-video{border-radius:10px}
+ .beauty-stage-04-card .mobile-design-canvas>img{height:calc(676 / 724 * 620px)}
+ .beauty-stage-04-card .mobile-design-canvas .beauty-stage-04-video{top:calc(405 / 724 * 620px);height:calc(304 / 724 * 620px)}
+ .case-video-dialog{padding:64px 16px}.case-video-expand{right:6px;bottom:6px;padding:6px;border-radius:8px}
+}
+/* About copy comes from Figma; identity, dock and entrance layout follow the reference site. */
+.dock-buttons{display:flex;align-items:center;gap:.4rem;flex:none;isolation:isolate}
+.home-slider-layer{position:fixed;inset:0;overflow:clip;pointer-events:none;z-index:1}
+.home-slider-layer .project-dots{pointer-events:auto}
+.slider-away{clip-path:inset(-100vh 0)}
+.site-header:not(.header-detail) .control-dock{flex:none;height:5.4rem}
+.about-page{padding-top:calc(50dvh + 25rem)}
+.about-page .about-content{margin-left:25.7rem;width:54.3rem;gap:48px;font-family:'PingFang SC',sans-serif;color:#646a73}
+.about-page .about-intro{max-width:100%;gap:0}
+.about-name{font:600 2.4rem/3.4rem 'PingFang SC',sans-serif;color:#000;margin:0 0 2rem}
+.about-experience{display:flex;align-items:baseline;gap:0;min-height:2.8rem;margin:0 0 2rem;color:#000}
+.about-experience-item{display:inline-flex;align-items:baseline;gap:.5rem;white-space:nowrap}
+.about-experience-item:first-child{flex:0 0 19rem}
+.about-experience-number{font:600 calc(2rem * 8 / 7)/2.8rem 'PingFang SC',sans-serif}
+.about-experience-label{font:600 1.6rem/2.2rem 'PingFang SC',sans-serif}
+.about-page .about-intro-copy{font:400 1.4rem/2.2rem 'PingFang SC',sans-serif;color:#646a73}
+.about-page .career-section{margin-top:0;width:100%}
+/* Keep a fixed 48px gap between the introduction and timeline, without extra timeline margin. */
+/* Center logo artwork, axis dot and date on the same horizontal header line. */
+.about-page .career-brand{height:5.8rem;align-items:center;padding:0}
+.about-page .career-logo{margin:0}
+.about-page .career-dot{top:2.6rem;margin:0}
+@media(max-width:768px){
+ .about-page .career-brand{height:27px;align-items:center;padding:0}
+ .about-page .career-dot{top:10.5px}
+ .header-about{padding:32px 24px 0;height:auto}
+ .site-header:not(.header-detail) .control-dock{height:56px}
+ .icon-button.contact-close{border-radius:50%}
+ .dock-buttons{gap:8px}
+ .about-page{padding-top:calc(20dvh + 10rem)}
+ .about-page .about-content{margin:0;width:100%;gap:48px}
+ .about-name{font-size:24px;line-height:34px;margin-bottom:20px}
+ .about-experience{min-height:28px;margin-bottom:20px;flex-wrap:wrap;row-gap:8px}
+ .about-experience-item{gap:5px}.about-experience-item:first-child{flex-basis:190px}
+ .about-experience-number{font-size:calc(20px * 8 / 7);line-height:28px}
+ .about-experience-label{font-size:16px;line-height:22px}
+ .about-page .about-intro-copy{font-size:14px;line-height:22px}
+}

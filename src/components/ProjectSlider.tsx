@@ -16,6 +16,7 @@ export default function ProjectSlider(){
   window.addEventListener('wheel',wheel,{passive:false});window.addEventListener('keydown',key);return()=>{window.removeEventListener('wheel',wheel);window.removeEventListener('keydown',key)};
  },[home,introDone,setCursor]);
  const offset=(d:number)=>d===0?0:Math.sign(d)*(height*(mobile?.37:.4)+(Math.abs(d)-1)*(mobile?43:35));
+ const aboutExitX=mobile?width:Math.max(width*.6,420);
  return <><div className={`slider-column ${home?'':'slider-away'}`} role="region" aria-label="项目滚动卡片" aria-hidden={!home} inert={!home} style={{pointerEvents:home?'auto':'none'}}
   onPointerDown={e=>{if(e.pointerType==='mouse'&&e.button!==0)return;dragging.current={id:e.pointerId,x:e.clientX,y:e.clientY,moved:false,time:0}}}
   onPointerMove={e=>{const d=dragging.current;if(d.id!==e.pointerId)return;const dy=e.clientY-d.y;if(Math.abs(dy)>=45&&Math.abs(dy)>Math.abs(e.clientX-d.x)&&performance.now()-d.time>=170){e.currentTarget.setPointerCapture(e.pointerId);setCursor(n=>n+(dy>0?-1:1));d.moved=true;d.y=e.clientY;d.x=e.clientX;d.time=performance.now()}}}
@@ -24,9 +25,9 @@ export default function ProjectSlider(){
    {Array.from({length:7},(_,i)=>cursor+i-3).map(key=>{const d=key-cursor;const idx=((key%4)+4)%4;const p=projects[idx];const current=d===0;const rotate=d===0?0:Math.sign(d)*(mobile?93:98);
     return <motion.li key={key} className="stack-card" data-distance={d} data-project={p.id}
      initial={current&&introDone?false:{y:Math.sign(d||-1)*height*.6,rotateX:rotate,scale:mobile?.76:.8}}
-     animate={{y:!introDone?offset(current?-1:d):home?offset(d):current?0:Math.sign(d)*height*.6,rotateX:!introDone&&current?-(mobile?93:98):rotate,scale:current&&introDone?1:mobile?.76:.8,x:about&&current?Math.max(width*.6,420)+(mobile?40:0):0,opacity:home||about?1:current?1:0}}
+     animate={{y:!introDone?offset(current?-1:d):home?offset(d):current?0:Math.sign(d)*height*.6,rotateX:!introDone&&current?-(mobile?93:98):rotate,scale:current&&introDone?1:mobile?.76:.8,x:about&&current?aboutExitX:0,opacity:home||about?1:current?1:0}}
      exit={{y:Math.sign(d)*height*.6,opacity:0}}
-     transition={home&&introDone?motionSettings.spring:{duration:mobile?.8:1.2,ease:motionSettings.ease}}
+     transition={home&&introDone?{...motionSettings.spring,x:{duration:motionSettings.routeDuration,ease:motionSettings.ease}}:{duration:mobile?.8:1.2,ease:motionSettings.ease}}
      style={{zIndex:current?8:4-Math.abs(d)}}>
       <Magnetic enabled={home&&current&&introDone} className="magnetic-card">
        <motion.div layoutId={current&&home?`project-${p.id}`:undefined} className="card-surface" style={{borderRadius:32}} transition={{layout:{duration:1.2,ease:motionSettings.ease}}}>

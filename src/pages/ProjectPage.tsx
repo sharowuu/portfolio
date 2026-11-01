@@ -1,24 +1,24 @@
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
+import { lazy, Suspense, useRef } from 'react';
 import useCardSnap from '@/hooks/useCardSnap';
 import { Navigate,useParams } from 'react-router-dom';
 import { usePortfolio } from '@/data/portfolio-context';
 import { projects,motionSettings } from '@/data/portfolio';
 import Media from '@/components/Media';
-import MiaodaProjectPage from './MiaodaProjectPage';
-import BeautyProjectPage from './BeautyProjectPage';
-import AilyProjectPage from './AilyProjectPage';
-import FeishuCardProjectPage from './FeishuCardProjectPage';
+const MiaodaProjectPage = lazy(() => import('./MiaodaProjectPage'));
+const BeautyProjectPage = lazy(() => import('./BeautyProjectPage'));
+const AilyProjectPage = lazy(() => import('./AilyProjectPage'));
+const FeishuCardProjectPage = lazy(() => import('./FeishuCardProjectPage'));
 import useViewport from '@/hooks/useViewport';
 export default function ProjectPage(){
  const {id}=useParams();const project=projects.find(p=>p.id===id);const {info,setInfo}=usePortfolio();const {mobile}=useViewport();
  const mainRef=useRef<HTMLElement>(null);
  useCardSnap(mainRef, '.project-sections > .detail-card', id||'');
  if(!project)return <Navigate to="/" replace/>;
- if(project.detailLayout==='miaoda')return <MiaodaProjectPage/>;
- if(project.detailLayout==='beauty')return <BeautyProjectPage/>;
- if(project.detailLayout==='aily')return <AilyProjectPage/>;
- if(project.detailLayout==='feishu-card')return <FeishuCardProjectPage/>;
+ if(project.detailLayout==='miaoda')return <Suspense fallback={<main aria-busy="true" aria-label="项目加载中"/>}><MiaodaProjectPage/></Suspense>;
+ if(project.detailLayout==='beauty')return <Suspense fallback={<main aria-busy="true" aria-label="项目加载中"/>}><BeautyProjectPage/></Suspense>;
+ if(project.detailLayout==='aily')return <Suspense fallback={<main aria-busy="true" aria-label="项目加载中"/>}><AilyProjectPage/></Suspense>;
+ if(project.detailLayout==='feishu-card')return <Suspense fallback={<main aria-busy="true" aria-label="项目加载中"/>}><FeishuCardProjectPage/></Suspense>;
  return <main ref={mainRef} className="project-page" aria-label={`${project.title}详情`}><div className="project-sections">
   {project.sections.map((section,index)=><motion.button key={`${project.id}-${index}`} type="button" className={`detail-card ${index===0?'detail-hero':''}`} layoutId={index===0?`project-${project.id}`:undefined}
    style={{borderRadius:mobile?32:64}} initial={false} transition={{duration:1.2,ease:motionSettings.ease,layout:{duration:1.2,ease:motionSettings.ease}}}

@@ -3,11 +3,7 @@ import { motion } from 'framer-motion';
 import { Image } from '@/components/ui/image';
 import { asset, motionSettings } from '@/data/portfolio';
 import useCardSnap from '@/hooks/useCardSnap';
-import AilyCoreCases from '@/components/AilyCoreCases';
-import AilyBeforeAfter from '@/components/AilyBeforeAfter';
-import AilyCoreTwo from '@/components/AilyCoreTwo';
-import AilyProactiveWork from '@/components/AilyProactiveWork';
-import AilyInboxFinal from '@/components/AilyInboxFinal';
+import AilyRevisedCards from '@/components/AilyRevisedCards';
 
 export default function AilyProjectPage() {
   const mainRef = useRef<HTMLElement>(null);
@@ -21,31 +17,16 @@ export default function AilyProjectPage() {
         <div className="aily-background-content">
           <section className="aily-background-block" aria-labelledby="aily-background-title">
             <h2 id="aily-background-title">项目背景</h2>
-            <p>随着 AI 从即时问答走向任务执行，人与 AI 的协作开始超出单次对话：一项工作需要持续迭代，多项工作需要并行管理，不同 Agent 的能力与工作方式也需要被理解和配置。Aily 从个人助手转向企业办公场景的 AI 工作台，旨在将飞书中的轻量 Bot 延伸为可持续的工作协作。</p>
+            <p>{['当 AI 从即时问答走向持续执行，用户面对的不再是一次回答是否满意，而是能否把一项', '长期工作放心交给 Agent：它是否理解目标、按什么规则执行、能否访问正确的信息、', '何时需要人确认、出错后能否追溯和接管。Aily 工作伙伴面向企业办公场景，将飞书中的', '轻量 Bot 延伸为可持续协作的工作伙伴。'].map(line => <span className="aily-background-line" key={line}>{line}</span>)}</p>
+            <p className="aily-background-key-question">本案例聚焦的核心问题是：<strong>如何让 Agent 持续工作，同时让人掌握委托规则与关键节点</strong></p>
           </section>
           <section className="aily-background-block" aria-labelledby="aily-scope-title">
             <h2 id="aily-scope-title">我的范围</h2>
-            <p>当 AI 从回答走向持续执行工作，设计的重点也随之变化：不只是帮助用户发起一次请求，而是让他们理解执行者、明确工作规则，并在需要判断时重新参与。围绕这一问题，我主导了自动化任务、伙伴管理、个人伙伴详情页框架与详细配置，主动工作以及 Inbox 的体验设计。以下按“建立协作预期—委托持续工作—在关键节点参与”的体验关系展开。</p>
+            <p>{['围绕这一问题，我主导了自动化任务、伙伴管理、个人伙伴详情页框架与详细配置、主动', '工作及 Inbox 的体验设计。设计重点是帮助用户理解执行者、明确工作规则，并在需要', '判断时重新参与。'].map(line => <span className="aily-background-line" key={line}>{line}</span>)}<span className="aily-background-line">以下按「<strong>建立协作预期 — 委托持续工作 — 在关键节点参与</strong>」的体验脉络展开。</span></p>
           </section>
         </div>
       </motion.section>
-      <motion.section className="miaoda-project-hero aily-core-card" aria-label="核心设计 01：先看懂伙伴，再决定如何委托" initial={false}>
-        <div className="aily-core-copy">
-          <h2>核心问题</h2>
-          <p>飞书中的伙伴类型不断增加，包括「团队伙伴」、「三方伙伴」、「专家」和「专属伙伴」等，能力相近，却各有所长。随着能力持续丰富，单纯叠加入口已难以清晰组织伙伴的能力、工作方式与管理配置。因此，首要任务是建立统一的伙伴管理框架：让用户看懂伙伴，让配置者高效调整伙伴。</p>
-        </div>
-        <div className="aily-core-visual" aria-label="个人伙伴与团队伙伴界面示例">
-          <span className="aily-core-shadow aily-core-shadow-one" aria-hidden="true"/>
-          <span className="aily-core-shadow aily-core-shadow-two" aria-hidden="true"/>
-          <img className="aily-core-screen aily-core-screen-one" src={asset('media/aily-core-partner-1.png')} alt="个人伙伴 Lydia 的档案和配置界面"/>
-          <img className="aily-core-screen aily-core-screen-two" src={asset('media/aily-core-partner-2.png')} alt="团队伙伴小鹿听你说的档案和事项界面"/>
-        </div>
-      </motion.section>
-      <AilyCoreCases/>
-      <AilyBeforeAfter/>
-      <AilyCoreTwo/>
-      <AilyProactiveWork/>
-      <AilyInboxFinal/>
+      <AilyRevisedCards/>
     </div>
   </main>;
 }

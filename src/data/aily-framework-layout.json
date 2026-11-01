@@ -1,0 +1,99 @@
+[
+  {
+    "page": 5.0,
+    "node": "664-47751",
+    "label": "身份信息",
+    "art": "media/aily-framework-identity-art.svg",
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 67.76,
+            "text": "统一智能体配置框架"
+          }
+        ]
+      },
+      {
+        "font": "pingfang sc",
+        "size": 12.0,
+        "color": "#455E83",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 265.0,
+            "y": 115.32,
+            "text": "它是谁：首页展示智能体身份信息"
+          }
+        ]
+      }
+    ],
+    "controlsY": 624
+  },
+  {
+    "page": 5.1,
+    "node": "2136-42229",
+    "label": "技能连接器",
+    "art": "media/aily-framework-skills-art.svg",
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 67.76,
+            "text": "统一智能体配置框架"
+          }
+        ]
+      },
+      {
+        "font": "pingfang sc",
+        "size": 12.0,
+        "color": "#455E83",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 265.0,
+            "y": 115.32,
+            "text": "它会什么：技能、连接器"
+          }
+        ]
+      }
+    ],
+    "controlsY": 624
+  },
+  {
+    "page": 5.2,
+    "node": "1985-38965",
+    "label": "伙伴调度",
+    "art": null,
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 77.76,
+            "text": "编排伙伴之间的调度关系"
+          }
+        ]
+      }
+    ],
+    "controlsY": 573
+  }
+]
