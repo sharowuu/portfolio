@@ -18,10 +18,12 @@ export class VerticalWheelIntent {
     const gap = now - this.lastInput;
     const elapsed = now - this.lastTrigger;
     const reversed = this.direction !== 0 && direction !== this.direction;
-    const fresh = gap >= 110 || reversed;
-    const renewed = this.latched && elapsed >= 140 && magnitude >= 10 &&
+    // Continuous mode keeps accepting input while a card is still animating,
+    // so the next flick can hand over immediately instead of being swallowed.
+    const fresh = gap >= (this.continuous ? 90 : 110) || reversed;
+    const renewed = this.latched && elapsed >= (this.continuous ? 80 : 140) && magnitude >= 10 &&
       magnitude > this.lastMagnitude * 1.6 && (!this.continuous || magnitude >= this.peak * .65);
-    const sustained = this.latched && elapsed >= (this.continuous ? 400 : 300) && magnitude >= 8 &&
+    const sustained = this.latched && elapsed >= (this.continuous ? 240 : 300) && magnitude >= 8 &&
       magnitude >= this.peak * (this.continuous ? .8 : .72) && magnitude >= this.lastMagnitude * .9 &&
       (!this.continuous || navigationReady);
     if (fresh || renewed || sustained) {
@@ -43,10 +45,8 @@ export class VerticalWheelIntent {
     }
     this.total += magnitude;
     const threshold = this.continuous && this.continuation ? 200 : reversed ? 8 : 12;
-    if (this.total < threshold || elapsed < (reversed ? 70 : 140)) return 0;
-    // Same-direction input must still be live after arrival. Never queue wheel motion
-    // for automatic execution onComplete; reversals can interrupt immediately.
-    if (this.continuous && !navigationReady && !reversed) return 0;
+    const minGap = this.continuous ? (reversed ? 55 : 95) : (reversed ? 70 : 140);
+    if (this.total < threshold || elapsed < minGap) return 0;
     this.latched = true;
     this.total = 0;
     this.lastTrigger = now;

@@ -11,8 +11,8 @@ import CaseVideo from './CaseVideo';
 import { ailyArtwork, isAilyTooltip } from '@/data/aily-tooltip-utils';
 import './AilyRevisedCards.css';
 
-const nodes = ['660-21610', '1970-38915', '664-47751', '678-55865', '1987-38992', '2033-42161', '664-50778', '2031-40420', '2033-41828', '1991-39275', '688-31222', '1989-39051'];
-const titles = ['核心问题', '设计思路', '统一智能体配置框架', '自动化任务委派 - 表达意图', '自动化任务委派 - 运行调试', '自动化任务委派 - 可追踪', '主动工作 - 状态感知', '主动工作 - 配置结构', '主动工作 - 主动结果', '核心矛盾与收件箱定位', '收件箱设计思路', '写在最后的思考'];
+const nodes = ['660-21610', '1970-38915', '664-47751', '4014-43460', '678-55865', '1987-38992', '2033-42161', '4026-43549', '664-50778', '2031-40420', '1991-39275', '688-31222', '1989-39051'];
+const titles = ['核心问题', '设计思路', '统一智能体配置框架', 'Aily 中的三种委派', '自动化任务委派 - 表达意图', '自动化任务委派 - 运行调试', '自动化任务委派 - 可追踪', '主动工作 - 落地场景', '主动工作 - 状态感知', '主动工作 - 配置结构', '核心矛盾与收件箱定位', '收件箱设计思路', '写在最后的思考'];
 const at = (x: number, y: number, width?: number, height?: number): CSSProperties => ({
   left: `${x / 724 * 100}%`, top: `${y / 676 * 100}%`,
   ...(width === undefined ? {} : { width: `${width / 724 * 100}%` }),
@@ -21,7 +21,8 @@ const at = (x: number, y: number, width?: number, height?: number): CSSPropertie
 
 function NativeCopy({ page }: { page: typeof layouts[number] }) {
   return <>{page.texts.map((block, index) => {
-    if (isAilyTooltip(block)) return null;
+    // Page 12 already ships its bubble shape inside the artwork, so its copy must stay native.
+    if (page.page !== 12 && isAilyTooltip(block)) return null;
     const first = block.lines[0];
     // Keep each strategy number and label in one centered row, not on separate font baselines.
     if (page.page === 4 && block.font === 'DIN Condensed' && /^0[1-4]$/.test(first.text)) {
@@ -104,13 +105,17 @@ function MobileCopy({ page }: { page: AilyLayout }) {
     return <p key={index}>{text}</p>;
   })}</div>;
 }
-function MobileVisual({ page, top, bottom = 650, alt, active = true, prefetch = false }: { page: AilyLayout; top: number; bottom?: number; alt: string; active?: boolean; prefetch?: boolean }) {
+function MobileVisual({ page, top, bottom = 650, alt, active = true, prefetch = false, allCopy = false }: { page: AilyLayout; top: number; bottom?: number; alt: string; active?: boolean; prefetch?: boolean; allCopy?: boolean }) {
   if (!page.art) return null;
-  const labels = page.texts.filter(block => !isMainCopy(block));
+  const labels = allCopy ? page.texts : page.texts.filter(block => !isMainCopy(block));
   const height = bottom - top;
   const local = { ...page, texts: labels.map(block => ({ ...block, lines: block.lines.map(line => ({ ...line, y: (line.y - top) * 676 / height })) })) };
   return <div className="aily-mobile-visual" style={{ aspectRatio: `724 / ${height}` }}>
     <DeferredImage active={active} prefetch={prefetch} className="aily-mobile-visual-art" src={asset(ailyArtwork(page.art))} alt={alt} draggable={false} style={{ height: `${676 / height * 100}%`, top: `${-top / height * 100}%` }}/>
+    {page.page === 11 && <div className="aily-delegation-base-bar" style={{ left: `${50 / 724 * 100}%`, top: `${(552 - top) / height * 100}%`, width: `${614 / 724 * 100}%`, height: `${34 / height * 100}%` }} aria-hidden="true"/>}
+    {page.page === 12 && <DeferredImage className="aily-revised-native-shot" active={active} prefetch={prefetch}
+      src={asset('media/aily-revised-12-shot.webp')} alt="" draggable={false}
+      style={{ left: `${50 / 724 * 100}%`, top: `${(193 - top) / height * 100}%`, width: `${635 / 724 * 100}%`, height: `${483 / height * 100}%` }}/>}
     <NativeCopy page={local}/>
     <AilyTooltips art={page.art} active={active} top={top} height={height}/>
   </div>;
@@ -125,6 +130,13 @@ function MobileCardContent({ page, title }: { page: AilyLayout; title: string })
     </li>)}</ol></>;
   }
   if (page.page === 5) return <><MobileCopy page={page}/><div className="aily-mobile-pending"><PendingVideos page={5} top={134} controlsY={573}/></div></>;
+  // The delegation map keeps its title block above the crop so the card copy is not repeated.
+  if (page.page === 11) {
+    const intro = page.texts.filter(block => block.lines[0].x === 50 && block.lines[0].y < 120);
+    return <><MobileCopy page={{ ...page, texts: intro }}/><MobileVisual page={page} top={120} bottom={676} alt={title} allCopy/></>;
+  }
+  // The proactive-work opener keeps its title block above the crop, like the delegation map.
+  if (page.page === 12) return <><MobileCopy page={{ ...page, texts: page.texts.filter(block => block.lines[0].x === 50) }}/><MobileVisual page={page} top={150} bottom={676} alt={title}/></>;
   const visualTop = page.page === 3 ? 224 : page.page === 8 ? 250 : page.page === 9 ? 160 : 180;
   return <><MobileCopy page={page}/><MobileVisual page={page} top={visualTop} bottom={page.page === 7 ? 665 : 650} alt={title}/></>;
 }
@@ -224,7 +236,9 @@ export default function AilyRevisedCards() {
     className={`miaoda-project-hero aily-revised-card${page.page === 5 || page.page === 6 ? ' miaoda-core-design' : ''}`}
     data-figma-node={node} data-aily-page={index + 3} aria-label={`第${index + 3}页：${page.page === 6 ? '自动化任务委派' : title}`}>
     {page.page === 5 ? <AilyFrameworkCases/> : page.page === 6 ? <AutomationCases/> : mobile ? <MobileCardContent page={page} title={title}/> : <>
-      {page.art && <DeferredImage className="aily-revised-art" src={asset(ailyArtwork(page.art))} alt={page.page === 3 ? '三种伙伴档案与配置界面' : page.page >= 7 && page.page < 8 ? title : page.page === 8 ? '收件箱事件示例与分类关系' : '收件箱改版前后界面与接收设置'} loading="lazy" decoding="async" draggable={false}/>}
+      {page.art && <DeferredImage className="aily-revised-art" src={asset(ailyArtwork(page.art))} alt={page.page === 3 ? '三种伙伴档案与配置界面' : page.page === 11 ? 'Aily 中的三种委派：发起一次任务、自动化任务、主动工作，委托深度从目标到规则再到边界递增' : page.page === 12 ? '主动工作的落地场景：个人助手主动卡与每日前瞻、团队助手到点提醒，以及条件成立时带着依据出现' : page.page >= 7 && page.page < 8 ? title : page.page === 8 ? '收件箱事件示例与分类关系' : '收件箱改版前后界面与接收设置'} loading="lazy" decoding="async" draggable={false}/>}
+      {page.page === 11 && <div className="aily-delegation-base-bar" style={at(50, 552, 614, 34)} aria-hidden="true"/>}
+      {page.page === 12 && <DeferredImage className="aily-revised-native-shot" src={asset('media/aily-revised-12-shot.webp')} alt="" loading="lazy" decoding="async" draggable={false} style={at(50, 193, 635, 483)}/>}
       {page.page === 4 && [182, 242, 310, 378].map((width, i) => <div key={i} className="aily-revised-strategy-pill" style={at(50, 189 + i * 88, width, 68)} aria-hidden="true"/>)}
       <NativeCopy page={page}/>
       <AilyTooltips art={page.art}/>

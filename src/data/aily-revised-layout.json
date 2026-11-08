@@ -296,6 +296,359 @@
     ]
   },
   {
+    "page": 11,
+    "art": "media/aily-revised-11-delegation-art.svg",
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 67.76,
+            "text": "Aily 中的三种委派"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 101.76,
+            "text": "一次任务委托一件事，自动化委托一类事的规则，主动工作委托一段持续判断。"
+          }
+        ]
+      },
+      {
+        "font": "DIN Condensed",
+        "size": 32.0,
+        "color": "#B3C2D5",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 219.3,
+            "text": "01"
+          }
+        ]
+      },
+      {
+        "font": "DIN Condensed",
+        "size": 32.0,
+        "color": "#B3C2D5",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 342.29999999999995,
+            "text": "02"
+          }
+        ]
+      },
+      {
+        "font": "DIN Condensed",
+        "size": 32.0,
+        "color": "#B3C2D5",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50.0,
+            "y": 465.29999999999995,
+            "text": "03"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 18.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 90.0,
+            "y": 200.48,
+            "text": "发起一次任务"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 18.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 90.0,
+            "y": 323.48,
+            "text": "自动化任务"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 18.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 90.0,
+            "y": 446.48,
+            "text": "主动工作"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#8394A9",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 90.0,
+            "y": 228.04,
+            "text": "人定义目标"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#8394A9",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 90.0,
+            "y": 351.04,
+            "text": "人定义规则"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#8394A9",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 90.0,
+            "y": 474.04,
+            "text": "人定义边界"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#8394A9",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 314.0,
+            "y": 228.04,
+            "text": "系统：执行者"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#8394A9",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 314.0,
+            "y": 255.04,
+            "text": "人：验收权"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#8394A9",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 314.0,
+            "y": 351.04,
+            "text": "系统：调度者"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#8394A9",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 314.0,
+            "y": 378.04,
+            "text": "人：治理权"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#8394A9",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 314.0,
+            "y": 474.04,
+            "text": "系统：判断者"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 14.0,
+        "color": "#8394A9",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 314.0,
+            "y": 501.04,
+            "text": "人：校准权"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 314.0,
+            "y": 200.76,
+            "text": "我说，你马上做"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 314.0,
+            "y": 323.76,
+            "text": "我说一次，你每次做"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 314.0,
+            "y": 446.76,
+            "text": "我定边界，你看着办"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 12.0,
+        "color": "#8394A9",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 661.0,
+            "y": 197.32,
+            "text": "委"
+          },
+          {
+            "x": 661.0,
+            "y": 217.32,
+            "text": "托"
+          },
+          {
+            "x": 661.0,
+            "y": 237.32,
+            "text": "深"
+          },
+          {
+            "x": 661.0,
+            "y": 257.32,
+            "text": "度"
+          },
+          {
+            "x": 661.0,
+            "y": 277.32,
+            "text": "递"
+          },
+          {
+            "x": 661.0,
+            "y": 297.32,
+            "text": "增"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 12.0,
+        "color": "white",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 213.0,
+            "y": 573.32,
+            "text": "同一个工作视图·同一套任务与产物·同一套权限与身份"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 12.0,
+        "color": "white",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 66.0,
+            "y": 573.32,
+            "text": "共享底座"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "page": 6,
     "art": "media/aily-automation-intent-art.svg",
     "texts": [
@@ -483,6 +836,59 @@
     ]
   },
   {
+    "page": 12,
+    "art": "media/aily-revised-12-proactive-art.svg",
+    "texts": [
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "black",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 50,
+            "y": 67.76,
+            "text": "主动工作"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 16.0,
+        "color": "#1F2329",
+        "opacity": 1.0,
+        "bold": false,
+        "lines": [
+          {
+            "x": 50,
+            "y": 103.75999999999999,
+            "text": "主动工作在企业中尝试落地几个场景：个人助手实时主动卡、每日前瞻、每日回顾、会议"
+          },
+          {
+            "x": 50,
+            "y": 127.75999999999999,
+            "text": "前准备；团队助手群内适时开口、事项到点提醒、@ 时懂团队"
+          }
+        ]
+      },
+      {
+        "font": "PingFang SC",
+        "size": 12.0,
+        "color": "#455E83",
+        "opacity": 1.0,
+        "bold": true,
+        "lines": [
+          {
+            "x": 417,
+            "y": 172.32,
+            "text": "当条件成立时，它会带着依据出现"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "page": 7,
     "art": "media/aily-proactive-status-art.svg",
     "texts": [
@@ -635,50 +1041,6 @@
             "x": 394.0,
             "y": 422.32,
             "text": "通过什么方式"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "page": 7.2,
-    "art": "media/aily-proactive-result-art.svg",
-    "texts": [
-      {
-        "font": "PingFang SC",
-        "size": 16.0,
-        "color": "#1F2329",
-        "opacity": 1.0,
-        "bold": false,
-        "lines": [
-          {
-            "x": 50.0,
-            "y": 103.75999999999999,
-            "text": "当条件成立时，它会带着依据出现 —— 比如会议临近时，结合日程、关联文档和参会人"
-          },
-          {
-            "x": 50.0,
-            "y": 127.75999999999999,
-            "text": "准备会前要点。用户可以采纳、追问或忽略，也可以据此收窄关注范围，让下一次帮助更"
-          },
-          {
-            "x": 50.0,
-            "y": 151.76,
-            "text": "贴近需要。"
-          }
-        ]
-      },
-      {
-        "font": "PingFang SC",
-        "size": 16.0,
-        "color": "black",
-        "opacity": 1.0,
-        "bold": true,
-        "lines": [
-          {
-            "x": 50.0,
-            "y": 67.76,
-            "text": "主动工作 - 主动结果"
           }
         ]
       }

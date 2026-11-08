@@ -32,12 +32,12 @@ export default function SiteHeader(){
     const r=card.getBoundingClientRect(),b=cards[best].getBoundingClientRect();
     return Math.abs(r.top+r.height/2-middle)<Math.abs(b.top+b.height/2-middle)?i:best;
    },0);
-   setMiaodaSection(aily?(nearest>=11?5:nearest>=9?4:nearest>=5?3:nearest>=2?2:0):beauty?Math.min(6,nearest):nearest >= 9 ? 8 : nearest === 8 ? 7 : nearest === 7 ? 6 : nearest === 6 ? 5 : nearest === 5 ? 4 : nearest === 4 ? 3 : Math.min(2,nearest));
+   setMiaodaSection(aily?(nearest>=14?5:nearest>=12?4:nearest>=5?3:nearest>=2?2:0):beauty?Math.min(6,nearest):nearest >= 9 ? 8 : nearest === 8 ? 7 : nearest === 7 ? 6 : nearest === 6 ? 5 : nearest === 5 ? 4 : nearest === 4 ? 3 : Math.min(2,nearest));
   };
   const frame=window.requestAnimationFrame(update);
   const snapUpdate=(event:Event)=>{
    const detail=(event as CustomEvent<{pageKey:string;index:number}>).detail;
-   if(aily&&detail?.pageKey==='aily')setMiaodaSection(detail.index>=11?5:detail.index>=9?4:detail.index>=5?3:detail.index>=2?2:0);
+   if(aily&&detail?.pageKey==='aily')setMiaodaSection(detail.index>=14?5:detail.index>=12?4:detail.index>=5?3:detail.index>=2?2:0);
    else update();
   };
   window.addEventListener('scroll',update,{passive:true});

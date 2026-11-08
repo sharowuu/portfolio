@@ -27,8 +27,10 @@ export default function useCardSnap(
     let running = false, disposed = false;
     let queued: -1 | 0 | 1 = 0;
     let movingDirection = 0;
+    let stepStartedAt = 0, stepDurationMs = 0;
     // Aily accepts live continuation after arrival, but never auto-runs queued wheel momentum.
-    const wheelIntent = new VerticalWheelIntent(pageKey === 'aily');
+    const continuous = pageKey === 'aily';
+    const wheelIntent = new VerticalWheelIntent(continuous);
     let animation: ReturnType<typeof animate> | undefined;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     const announce = () => window.dispatchEvent(new CustomEvent('portfolio:snap-active', { detail: { pageKey, index: active } }));
@@ -90,7 +92,9 @@ export default function useCardSnap(
         // One pending intent only: immediately continue, but never skip reading a tall card.
         if (next && fits(snapCards[active]) && active + next >= 0 && active + next < snapCards.length) snap(active + next);
       };
-      const duration = Math.max(.2, Math.min(.36, .22 + Math.abs(distance) / window.innerHeight * .16));
+      const duration = Math.max(.17, Math.min(.28, .19 + Math.abs(distance) / window.innerHeight * .1));
+      stepStartedAt = performance.now();
+      stepDurationMs = duration * 1000;
       animation = animate(window.scrollY, destination, {
         duration, ease: [.22, .65, .3, 1],
         onUpdate: value => { if (token === generation) window.scrollTo({ top: value, behavior: 'instant' }); },
@@ -99,11 +103,15 @@ export default function useCardSnap(
       animationTimer = window.setTimeout(() => { if (token === generation) { animation?.stop(); finish(); } }, duration * 1000 + 100);
     };
     const request = (direction: -1 | 1) => {
+      const next = Math.max(0, Math.min(snapCards.length - 1, active + direction));
       if (running && direction === movingDirection) {
+        // Hand over mid-flight once the current step is mostly done, so fast repeated
+        // flicks read as one continuous motion instead of a wait-then-jump.
+        const progress = stepDurationMs ? (performance.now() - stepStartedAt) / stepDurationMs : 1;
+        if (progress > .5 && next !== active && fits(snapCards[active]) && fits(snapCards[next])) { snap(next); return; }
         queued = direction; // Coalesce repeated input; no unbounded backlog after the user stops.
         return;
       }
-      const next = Math.max(0, Math.min(snapCards.length - 1, active + direction));
       if (next === active && !running && Math.abs(window.scrollY - target(snapCards[active])) < 1) return;
       snap(next); // A reversal responds immediately from the current position.
     };
@@ -129,6 +137,9 @@ export default function useCardSnap(
       const intent = wheelIntent.consume(vertical, performance.now(), !running);
       if (!running && (canReadWithin(direction) || inNativeFlow() || (nativeCard && active === snapCards.length - 1 && direction > 0))) return;
       event.preventDefault();
+      // Other project pages keep the original "one card per gesture" pacing; only Aily
+      // hands wheel input over while a card is still moving.
+      if (!continuous && running) return;
       if (intent) request(intent);
     };
     const key = (event: KeyboardEvent) => {

@@ -3,7 +3,10 @@
 .aily-revised-card>.aily-revised-art{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none}
 .aily-revised-card .aily-revised-copy{position:absolute;margin:0;padding:0;line-height:1;letter-spacing:0;z-index:2}
 .aily-revised-copy>span{position:absolute;display:block;white-space:pre;line-height:1}
+/* Text-dense screenshots ship as native images so Retina scaling stays sharp. */
+.aily-revised-native-shot{position:absolute;z-index:1;display:block;object-fit:cover;border-radius:1.3812cqw;background:#fff;pointer-events:none;user-select:none}
 .aily-revised-strategy-pill{position:absolute;background:rgb(255 255 255 / .6);border-radius:1.6575cqw 4.696cqw 4.696cqw 1.6575cqw}
+.aily-delegation-base-bar{position:absolute;z-index:1;background:#323232;border-radius:.829cqw;pointer-events:none}
 .aily-revised-card .aily-strategy-heading{position:absolute;display:flex;align-items:center;z-index:2;white-space:nowrap}
 .aily-strategy-heading>.aily-strategy-number{display:block;flex:0 0 5.52486cqw;font-family:'DIN Condensed','Arial Narrow',sans-serif;font-size:4.41989cqw;font-weight:700;line-height:1;transform:translateY(.12em)}
 .aily-strategy-heading>.aily-strategy-label{display:block;font-family:'PingFang SC',sans-serif;font-size:2.48619cqw;font-weight:600;line-height:1;color:var(--aily-revised-ink)}
