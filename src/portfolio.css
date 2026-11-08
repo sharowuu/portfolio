@@ -13,13 +13,20 @@
 .header-beauty .identity{width:43rem}
 .beauty-project-intro-art{display:block;width:43rem;height:27rem;object-fit:contain;max-width:none}.aily-project-intro-art{display:block;width:43rem;height:29rem;object-fit:contain;max-width:none}.aily-project-hero>img{object-fit:contain}
 .miaoda-project-hero.aily-background-card{background:#e5eaf0;color:#1f2329}
-.aily-background-content{height:100%;padding:8.6rem 5rem;display:flex;flex-direction:column;gap:4rem}
-.aily-background-block{max-width:62.4rem}
-.aily-background-block h2{margin:0 0 2rem;font-size:1.6rem;line-height:2.4rem;font-weight:600;color:#000}
-.aily-background-block p{margin:0;font-size:1.6rem;line-height:2.4rem;font-weight:400;color:#1f2329;letter-spacing:0}
-.aily-background-block:last-child p{color:#000}
-.aily-background-block p.aily-background-key-question{margin-top:1rem}
-.aily-background-block strong{font-weight:600;color:inherit}
+.aily-background-content{height:100%;padding:8rem 4.4rem 0 5rem;display:flex;flex-direction:column;align-items:flex-start;box-sizing:border-box}
+.aily-background-title{margin:0;font-size:1.6rem;line-height:2.4rem;font-weight:600;color:#000;letter-spacing:0}
+.aily-background-title.is-scope{margin-top:4.8rem}
+.aily-background-timeline{width:100%;margin:2.7rem 0 0;padding:1.2rem 2rem 1.3rem;display:grid;grid-template-columns:202fr 197fr 139fr;column-gap:2.6rem;background:#f6f7f9;border-radius:.8rem;box-sizing:border-box}
+.aily-background-timeline-head{display:flex;align-items:center;gap:2.4rem;height:2.4rem;min-width:0}
+.aily-background-timeline-year{font-size:1.6rem;line-height:2.4rem;font-weight:600;color:#626e7c;letter-spacing:.01em;flex:0 0 auto}
+.aily-background-timeline-rule{position:relative;flex:1 1 auto;min-width:0;height:1px;background:#ccd5e1}
+.aily-background-timeline-rule::before,.aily-background-timeline-rule::after{content:'';position:absolute;top:50%;translate:0 -50%;width:.3rem;height:.3rem;border-radius:50%;background:#ccd5e1}
+.aily-background-timeline-rule::before{left:0}
+.aily-background-timeline-rule::after{right:0}
+.aily-background-timeline-stage{margin:1rem 0 0;font-size:1.6rem;line-height:2.4rem;font-weight:400;color:#1f2329;letter-spacing:-.01em;white-space:nowrap}
+.aily-background-timeline-note{margin:.3rem 0 0;font-size:1.2rem;line-height:2rem;font-weight:400;color:#8f959e;letter-spacing:0;white-space:nowrap}
+.aily-background-text{margin:2.3rem 0 0;font-size:1.6rem;line-height:2.4rem;font-weight:400;color:#1f2329;letter-spacing:0}
+.aily-background-text.is-scope{color:#000;margin-top:2rem}
 .aily-background-line{display:block;white-space:nowrap}
 @media(max-width:768px){.aily-background-line{display:inline;white-space:normal}}
 .aily-background-intro{position:relative;width:43rem;min-height:27rem;color:#1f2329}
@@ -46,7 +53,7 @@
 .aily-core-intro>span{display:block;margin:.1rem 0 5.2rem 1.6rem;font-size:1.8rem;line-height:2rem;font-weight:600;color:#eef0f2}
 .aily-core-intro h2{margin:0;font-size:1.6rem;line-height:2.4rem;font-weight:500;color:#1f2329}
 .header-miaoda .identity .aily-core-intro p{margin-top:2rem;width:43rem;font-size:1.6rem;line-height:2.4rem;color:#8f959e}
-@media(max-width:768px){.header-beauty .identity{width:100%}.beauty-project-intro-art{width:100%;height:auto;aspect-ratio:430/270}.aily-background-content{padding:4.8rem 3.2rem;gap:3rem}.aily-background-block h2{font-size:1.4rem;margin-bottom:1.8rem}.aily-background-block p{font-size:1.25rem;line-height:1.9rem}.aily-background-intro{width:100%;min-height:0;text-align:left}.aily-background-intro h1{justify-content:center;font-size:1.8rem!important;line-height:2.4rem!important}.aily-background-intro .aily-intro-watermark{margin-left:0;text-align:center;font-size:1.25rem}.header-miaoda .identity .aily-background-intro p{margin-top:1.6rem;width:100%;font-size:1.25rem;line-height:1.8rem;text-align:center}.aily-background-intro time{margin-top:1.2rem;font-size:1.25rem;line-height:1.8rem;text-align:center}.aily-brand-logo{width:2rem!important;height:2rem!important}.aily-core-copy{left:3.2rem;right:3.2rem;top:4.5rem}.aily-core-copy h2{font-size:1.35rem;line-height:1.9rem;margin-bottom:1.5rem}.aily-core-copy p{font-size:1.2rem;line-height:1.75rem}.aily-core-screen{width:58%;height:38%;border-radius:.8rem}.aily-core-screen-one{left:5%;top:43%}.aily-core-screen-two{left:35%;top:55%}.aily-core-shadow{display:none}.aily-core-intro{width:100%;text-align:left}.aily-core-intro h1{font-size:1.8rem!important;line-height:2.4rem!important}.aily-core-intro>span{margin-bottom:1.6rem;font-size:1.25rem;line-height:1.6rem}.aily-core-intro h2{font-size:1.25rem;line-height:1.8rem;text-align:center}.header-miaoda .identity .aily-core-intro p{margin-top:1.2rem;width:100%;font-size:1.2rem;line-height:1.7rem;text-align:center}}
+@media(max-width:768px){.header-beauty .identity{width:100%}.beauty-project-intro-art{width:100%;height:auto;aspect-ratio:430/270}.aily-background-content{padding:4.8rem 3.2rem;height:auto}.aily-background-title{font-size:1.6rem;line-height:1.5}.aily-background-title.is-scope{margin-top:3.6rem}.aily-background-timeline{margin-top:2rem;padding:2rem;grid-template-columns:1fr;row-gap:2.4rem;column-gap:0}.aily-background-timeline-head{gap:1.2rem}.aily-background-timeline-stage{font-size:1.4rem;line-height:1.7}.aily-background-timeline-note{font-size:1.2rem;line-height:1.6}.aily-background-text{font-size:1.4rem;line-height:1.75}.aily-background-intro{width:100%;min-height:0;text-align:left}.aily-background-intro h1{justify-content:center;font-size:1.8rem!important;line-height:2.4rem!important}.aily-background-intro .aily-intro-watermark{margin-left:0;text-align:center;font-size:1.25rem}.header-miaoda .identity .aily-background-intro p{margin-top:1.6rem;width:100%;font-size:1.25rem;line-height:1.8rem;text-align:center}.aily-background-intro time{margin-top:1.2rem;font-size:1.25rem;line-height:1.8rem;text-align:center}.aily-brand-logo{width:2rem!important;height:2rem!important}.aily-core-copy{left:3.2rem;right:3.2rem;top:4.5rem}.aily-core-copy h2{font-size:1.35rem;line-height:1.9rem;margin-bottom:1.5rem}.aily-core-copy p{font-size:1.2rem;line-height:1.75rem}.aily-core-screen{width:58%;height:38%;border-radius:.8rem}.aily-core-screen-one{left:5%;top:43%}.aily-core-screen-two{left:35%;top:55%}.aily-core-shadow{display:none}.aily-core-intro{width:100%;text-align:left}.aily-core-intro h1{font-size:1.8rem!important;line-height:2.4rem!important}.aily-core-intro>span{margin-bottom:1.6rem;font-size:1.25rem;line-height:1.6rem}.aily-core-intro h2{font-size:1.25rem;line-height:1.8rem;text-align:center}.header-miaoda .identity .aily-core-intro p{margin-top:1.2rem;width:100%;font-size:1.2rem;line-height:1.7rem;text-align:center}}
 
 @media(max-width:768px){.header-miaoda .identity .miaoda-introduction-left{width:100%;height:auto;aspect-ratio:400/210}}
 .header-miaoda .identity p{font-size:1.6rem;line-height:2.4rem;color:#646a73;opacity:1;margin-top:6.1rem;width:30.4rem}
@@ -264,9 +271,9 @@
  .miaoda-project-sections,.feishu-card-project-sections{width:100%;margin-left:0;gap:20px}
  .miaoda-project-hero,.miaoda-positioning,.miaoda-user-analysis,.miaoda-user-journey,.miaoda-design-strategy,.miaoda-core-design,.miaoda-core-collaboration{--miaoda-hero-radius:20px;border-radius:20px;clip-path:inset(0 round 20px)}
  .miaoda-project-hero.aily-background-card,.miaoda-project-hero.feishu-card-overview{height:auto;aspect-ratio:auto;min-height:0}
- .aily-background-content{height:auto;padding:24px 20px;gap:28px}
- .aily-background-block{max-width:100%}.aily-background-block h2{font-size:16px;line-height:1.5;margin-bottom:14px}.aily-background-block p{font-size:14px;line-height:1.75}
- .aily-background-line{display:inline;white-space:normal}.aily-background-block p.aily-background-key-question{margin-top:14px}
+ .aily-background-content{height:auto;padding:24px 20px}
+ .aily-background-title{font-size:16px;line-height:1.5}.aily-background-title.is-scope{margin-top:32px}.aily-background-timeline{margin-top:18px;padding:18px;grid-template-columns:1fr;row-gap:22px;column-gap:0}.aily-background-timeline-head{gap:12px;height:auto}.aily-background-timeline-stage{font-size:14px;line-height:1.7;margin-top:4px}.aily-background-timeline-note{font-size:12px;line-height:1.6}.aily-background-text{font-size:14px;line-height:1.75}
+ .aily-background-line{display:inline;white-space:normal}
  .feishu-card-visual{width:100%;height:auto;aspect-ratio:724/676;border-radius:20px}
  .feishu-card-visual.feishu-card-overview{height:auto;aspect-ratio:auto;min-height:0}
  .feishu-card-overview-content{height:auto;padding:24px 20px}
