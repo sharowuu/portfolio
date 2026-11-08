@@ -5,13 +5,6 @@ import { asset, motionSettings } from '@/data/portfolio';
 import useCardSnap from '@/hooks/useCardSnap';
 import AilyRevisedCards from '@/components/AilyRevisedCards';
 
-// 设计稿 654-21346「项目背景」：2023 / 2024 / 2025 三段式时间轴
-const AILY_TIMELINE = [
-  { year: '2023', stage: '角色 + 飞书 bot', note: '建立员工与 AI 的协作关系' },
-  { year: '2024', stage: 'RAG 知识库 + Workflow', note: '企业落地确定性场景' },
-  { year: '2025', stage: '工作助手 + 任务模式', note: '企业 agent 解决复杂问题' }
-];
-
 const AILY_BACKGROUND_LINES = [
   '当 AI 从即时问答走向持续执行，用户面对的不再是一次回答是否满意，而是能否把一项',
   '长期工作放心交给 Agent：它是否理解目标、按什么规则执行、能否访问正确的信息、',
@@ -36,15 +29,8 @@ export default function AilyProjectPage() {
       <motion.section className="miaoda-project-hero aily-background-card" aria-label="Aily 项目背景与我的范围" initial={false}>
         <div className="aily-background-content">
           <h2 className="aily-background-title" id="aily-background-title">项目背景</h2>
-          <div className="aily-background-timeline" role="list" aria-label="Aily 的产品重心演进">
-            {AILY_TIMELINE.map(item => <div className="aily-background-timeline-item" role="listitem" key={item.year}>
-              <div className="aily-background-timeline-head">
-                <span className="aily-background-timeline-year">{item.year}</span>
-                <span className="aily-background-timeline-rule" aria-hidden="true"/>
-              </div>
-              <p className="aily-background-timeline-stage">{item.stage}</p>
-              <p className="aily-background-timeline-note">{item.note}</p>
-            </div>)}
+          <div className="aily-background-timeline">
+            <Image src={asset('media/aily-background-timeline.webp')} alt="Aily 产品重心演进：2023 角色 + 飞书 bot，建立员工与 AI 的协作关系；2024 RAG 知识库 + Workflow，企业落地确定性场景；2025 工作助手 + 任务模式，企业 agent 解决复杂问题" width={630} height={106} loading="lazy"/>
           </div>
           <p className="aily-background-text">{AILY_BACKGROUND_LINES.map(line => <span className="aily-background-line" key={line}>{line}</span>)}</p>
           <h2 className="aily-background-title is-scope" id="aily-scope-title">我的范围</h2>
