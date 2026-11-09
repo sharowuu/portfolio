@@ -30,7 +30,7 @@ export default function AilyProjectPage() {
         <div className="aily-background-content">
           <h2 className="aily-background-title" id="aily-background-title">项目背景</h2>
           <div className="aily-background-timeline">
-            <Image src={asset('media/aily-background-timeline.webp')} alt="Aily 产品重心演进：2023 角色 + 飞书 bot，建立员工与 AI 的协作关系；2024 RAG 知识库 + Workflow，企业落地确定性场景；2025 工作助手 + 任务模式，企业 agent 解决复杂问题" width={630} height={106} loading="lazy"/>
+            <Image src={asset('media/aily-background-timeline.webp')} alt="Aily 产品重心演进：2023 角色 + 飞书 bot，建立员工与 AI 的协作关系；2024 RAG 知识库 + Workflow，企业落地确定性场景；2025 工作助手 + 任务模式，企业 agent 解决复杂问题" width={630} height={114} loading="lazy"/>
           </div>
           <p className="aily-background-text">{AILY_BACKGROUND_LINES.map(line => <span className="aily-background-line" key={line}>{line}</span>)}</p>
           <h2 className="aily-background-title is-scope" id="aily-scope-title">我的范围</h2>
