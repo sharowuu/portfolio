@@ -11,8 +11,8 @@ import CaseVideo from './CaseVideo';
 import { ailyArtwork, isAilyTooltip } from '@/data/aily-tooltip-utils';
 import './AilyRevisedCards.css';
 
-const nodes = ['660-21610', '1970-38915', '664-47751', '4014-43460', '678-55865', '1987-38992', '2033-42161', '4026-43549', '664-50778', '2031-40420', '1991-39275', '688-31222', '1989-39051'];
-const titles = ['核心问题', '设计思路', '统一智能体配置框架', 'Aily 中的三种委派', '自动化任务委派 - 表达意图', '自动化任务委派 - 运行调试', '自动化任务委派 - 可追踪', '主动工作 - 落地场景', '主动工作 - 状态感知', '主动工作 - 配置结构', '核心矛盾与收件箱定位', '收件箱设计思路', '写在最后的思考'];
+const nodes = ['660-21610', '1970-38915', '664-47751', '4014-43460', '678-55865', '1987-38992', '2033-42161', '4026-43549', '664-50778', '2031-40420', '1991-39275', '688-31222', '1989-39051', '4121-51669', '4087-43771'];
+const titles = ['核心问题', '设计思路', '统一智能体配置框架', 'Aily 中的三种委派', '自动化任务委派 - 表达意图', '自动化任务委派 - 运行调试', '自动化任务委派 - 可追踪', '主动工作 - 落地场景', '主动工作 - 状态感知', '主动工作 - 配置结构', '核心矛盾与收件箱定位', '收件箱设计思路', '移动端设计 - 任务', '移动端设计 - 团队', '写在最后的思考'];
 const at = (x: number, y: number, width?: number, height?: number): CSSProperties => ({
   left: `${x / 724 * 100}%`, top: `${y / 676 * 100}%`,
   ...(width === undefined ? {} : { width: `${width / 724 * 100}%` }),
@@ -137,6 +137,8 @@ function MobileCardContent({ page, title }: { page: AilyLayout; title: string })
   }
   // The proactive-work opener keeps its title block above the crop, like the delegation map.
   if (page.page === 12) return <><MobileCopy page={{ ...page, texts: page.texts.filter(block => block.lines[0].x === 50) }}/><MobileVisual page={page} top={150} bottom={676} alt={title}/></>;
+  // The mobile-design pages ship as one finished 724×676 frame, so the whole artwork keeps its original crop.
+  if (page.page >= 13) return <MobileVisual page={page} top={0} bottom={676} alt={title}/>;
   const visualTop = page.page === 3 ? 224 : page.page === 8 ? 250 : page.page === 9 ? 160 : 180;
   return <><MobileCopy page={page}/><MobileVisual page={page} top={visualTop} bottom={page.page === 7 ? 665 : 650} alt={title}/></>;
 }
@@ -236,7 +238,7 @@ export default function AilyRevisedCards() {
     className={`miaoda-project-hero aily-revised-card${page.page === 5 || page.page === 6 ? ' miaoda-core-design' : ''}`}
     data-figma-node={node} data-aily-page={index + 3} aria-label={`第${index + 3}页：${page.page === 6 ? '自动化任务委派' : title}`}>
     {page.page === 5 ? <AilyFrameworkCases/> : page.page === 6 ? <AutomationCases/> : mobile ? <MobileCardContent page={page} title={title}/> : <>
-      {page.art && <DeferredImage className="aily-revised-art" src={asset(ailyArtwork(page.art))} alt={page.page === 3 ? '三种伙伴档案与配置界面' : page.page === 11 ? 'Aily 中的三种委派：发起一次任务、自动化任务、主动工作，委托深度从目标到规则再到边界递增' : page.page === 12 ? '主动工作的落地场景：个人助手主动卡与每日前瞻、团队助手到点提醒，以及条件成立时带着依据出现' : page.page >= 7 && page.page < 8 ? title : page.page === 8 ? '收件箱事件示例与分类关系' : '收件箱改版前后界面与接收设置'} loading="lazy" decoding="async" draggable={false}/>}
+      {page.art && <DeferredImage className="aily-revised-art" src={asset(ailyArtwork(page.art))} alt={page.page >= 13 ? (page.page === 13 ? '移动端任务列表与任务详情界面' : '移动端团队成员与伙伴能力界面') : page.page === 3 ? '三种伙伴档案与配置界面' : page.page === 11 ? 'Aily 中的三种委派：发起一次任务、自动化任务、主动工作，委托深度从目标到规则再到边界递增' : page.page === 12 ? '主动工作的落地场景：个人助手主动卡与每日前瞻、团队助手到点提醒，以及条件成立时带着依据出现' : page.page >= 7 && page.page < 8 ? title : page.page === 8 ? '收件箱事件示例与分类关系' : '收件箱改版前后界面与接收设置'} loading="lazy" decoding="async" draggable={false}/>}
       {page.page === 11 && <div className="aily-delegation-base-bar" style={at(50, 552, 614, 34)} aria-hidden="true"/>}
       {page.page === 12 && <DeferredImage className="aily-revised-native-shot" src={asset('media/aily-revised-12-shot.webp')} alt="" loading="lazy" decoding="async" draggable={false} style={at(50, 193, 635, 483)}/>}
       {page.page === 4 && [182, 242, 310, 378].map((width, i) => <div key={i} className="aily-revised-strategy-pill" style={at(50, 189 + i * 88, width, 68)} aria-hidden="true"/>)}
