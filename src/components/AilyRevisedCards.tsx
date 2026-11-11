@@ -9,6 +9,7 @@ import AilyTooltips from './AilyTooltips';
 import { DeferredImage } from './DeferredImage';
 import CaseVideo from './CaseVideo';
 import { ailyArtwork, isAilyTooltip } from '@/data/aily-tooltip-utils';
+import useViewportVideo from '@/hooks/useViewportVideo';
 import './AilyRevisedCards.css';
 
 const nodes = ['660-21610', '1970-38915', '664-47751', '4014-43460', '678-55865', '1987-38992', '2033-42161', '4026-43549', '664-50778', '2031-40420', '1991-39275', '688-31222', '1989-39051', '4121-51669', '4087-43771'];
@@ -240,6 +241,14 @@ function AutomationCases() {
   </>;
 }
 
+function MobileScreenVideo({ src }: { src: string }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const { source, shouldLoad } = useViewportVideo(ref, asset(src), true);
+  return <div className="aily-mobile-screen" aria-hidden="true">
+    <video ref={ref} src={source} muted autoPlay={shouldLoad} loop playsInline preload={shouldLoad ? 'auto' : 'none'}/>
+  </div>;
+}
+
 export default function AilyRevisedCards() {
   const { mobile } = useViewport();
   return <>{visibleCards.map(({ page, node, title }, index) => <section key={page.page}
@@ -254,5 +263,6 @@ export default function AilyRevisedCards() {
       <AilyTooltips art={page.art}/>
     </>}
     {page.page >= 13 && <DeferredImage className="aily-mobile-phone" src={asset(page.page === 13 ? 'media/aily-mobile-phone.webp' : 'media/aily-mobile-team-phone.webp')} alt="" loading="lazy" decoding="async" draggable={false}/>}
+    {page.page === 13 && <MobileScreenVideo src="media/aily-mobile-task-screen.mp4"/>}
   </section>)}</>;
 }
