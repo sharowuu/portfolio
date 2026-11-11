@@ -115,10 +115,10 @@
    任务页的手机白壳是卡片外的独立图层（333×680，相对卡片 -136/-57）；导出件 826×1520 四周各带 40px 阴影留白，
    因此按导出整图定位：left -176/724、top -97/566、width 413/724。卡片自身不再裁切，圆角由 art 承担。 */
 .miaoda-project-hero.aily-revised-card.is-card-566{aspect-ratio:724/566;margin-top:120px}
-.miaoda-project-hero.aily-revised-card.is-card-566[data-aily-page="16"]{margin-bottom:120px}
-/* 收尾页（写在最后的思考）只承载一段文字，卡片收短到 360，文字块上下留白各 69（等比居中）。 */
+/* 收尾页（写在最后的思考）只承载一段文字，卡片收短到 360，文字块上下留白各 81（等比居中）。
+   上边距 85：与团队页卡的间距 = 列 gap 32 + 85 = 117；手机白壳在卡底再探出 57，净空 60。 */
 @media(min-width:769px){
- .miaoda-project-hero.aily-revised-card.is-card-reflect{aspect-ratio:724/360}
+ .miaoda-project-hero.aily-revised-card.is-card-reflect{aspect-ratio:724/360;margin-top:85px}
 }
 .miaoda-project-hero.aily-revised-card.is-phone-outset{overflow:visible;clip-path:none;contain:none}
 .aily-revised-card.is-phone-outset>.aily-revised-art{border-radius:var(--miaoda-hero-radius);clip-path:inset(0 round var(--miaoda-hero-radius))}
@@ -127,4 +127,4 @@
    白壳、阴影、圆角仍是同一张 Figma 导出件，容器尺寸不动；视频铺满该矩形（object-fit:fill，不裁不补）。 */
 .aily-mobile-screen{position:absolute;left:-17.403%;top:-9.011%;width:43.163%;height:114.664%;z-index:3;overflow:hidden;border-radius:4.696cqw;background:#fff;pointer-events:none}
 .aily-mobile-screen>video{display:block;width:100%;height:100%;object-fit:fill;background:#fff}
-@media(max-width:768px){.aily-revised-card.is-card-566{aspect-ratio:auto;margin-block:0}.aily-revised-card.is-phone-outset>.aily-mobile-phone,.aily-revised-card.is-phone-outset>.aily-mobile-screen{display:none}}
+@media(max-width:768px){.aily-revised-card.is-card-566{aspect-ratio:auto;margin-block:0}.aily-revised-card.is-card-reflect{margin-top:0}.aily-revised-card.is-phone-outset>.aily-mobile-phone,.aily-revised-card.is-phone-outset>.aily-mobile-screen{display:none}}
