@@ -235,7 +235,7 @@ function AutomationCases() {
 export default function AilyRevisedCards() {
   const { mobile } = useViewport();
   return <>{visibleCards.map(({ page, node, title }, index) => <section key={page.page}
-    className={`miaoda-project-hero aily-revised-card${page.page === 5 || page.page === 6 ? ' miaoda-core-design' : ''}${page.page === 13 ? ' is-phone-outset' : ''}${page.page >= 13 ? ' is-card-566' : ''}`}
+    className={`miaoda-project-hero aily-revised-card${page.page === 5 || page.page === 6 ? ' miaoda-core-design' : ''}${page.page >= 13 ? ' is-phone-outset' : ''}${page.page >= 13 ? ' is-card-566' : ''}`}
     data-figma-node={node} data-aily-page={index + 3} aria-label={`第${index + 3}页：${page.page === 6 ? '自动化任务委派' : title}`}>
     {page.page === 5 ? <AilyFrameworkCases/> : page.page === 6 ? <AutomationCases/> : mobile ? <MobileCardContent page={page} title={title}/> : <>
       {page.art && <DeferredImage className="aily-revised-art" src={asset(ailyArtwork(page.art))} alt={page.page >= 13 ? (page.page === 13 ? '移动端设计：PC 首页的任务与目标，在手机上继续推进' : '移动端设计：团队成员关系与伙伴能力界面') : page.page === 3 ? '三种伙伴档案与配置界面' : page.page === 11 ? 'Aily 中的三种委派：发起一次任务、自动化任务、主动工作，委托深度从目标到规则再到边界递增' : page.page === 12 ? '主动工作的落地场景：个人助手主动卡与每日前瞻、团队助手到点提醒，以及条件成立时带着依据出现' : page.page >= 7 && page.page < 8 ? title : page.page === 8 ? '收件箱事件示例与分类关系' : '收件箱改版前后界面与接收设置'} loading="lazy" decoding="async" draggable={false}/>}
@@ -245,6 +245,6 @@ export default function AilyRevisedCards() {
       <NativeCopy page={page}/>
       <AilyTooltips art={page.art}/>
     </>}
-    {page.page === 13 && <DeferredImage className="aily-mobile-phone" src={asset('media/aily-mobile-phone.webp')} alt="" loading="lazy" decoding="async" draggable={false}/>}
+    {page.page >= 13 && <DeferredImage className="aily-mobile-phone" src={asset(page.page === 13 ? 'media/aily-mobile-phone.webp' : 'media/aily-mobile-team-phone.webp')} alt="" loading="lazy" decoding="async" draggable={false}/>}
   </section>)}</>;
 }
