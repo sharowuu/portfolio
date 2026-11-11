@@ -114,8 +114,8 @@
 /* 移动端设计两页（任务 1989-39051 / 团队 4121-51669）：Figma 里卡片已调成 724×566。
    任务页的手机白壳是卡片外的独立图层（333×680，相对卡片 -136/-57）；导出件 826×1520 四周各带 40px 阴影留白，
    因此按导出整图定位：left -176/724、top -97/566、width 413/724。卡片自身不再裁切，圆角由 art 承担。 */
-.miaoda-project-hero.aily-revised-card.is-card-566{aspect-ratio:724/566;margin-top:80px}
-.miaoda-project-hero.aily-revised-card.is-card-566[data-aily-page="16"]{margin-bottom:80px}
+.miaoda-project-hero.aily-revised-card.is-card-566{aspect-ratio:724/566;margin-top:120px}
+.miaoda-project-hero.aily-revised-card.is-card-566[data-aily-page="16"]{margin-bottom:120px}
 .miaoda-project-hero.aily-revised-card.is-phone-outset{overflow:visible;clip-path:none;contain:none}
 .aily-revised-card.is-phone-outset>.aily-revised-art{border-radius:var(--miaoda-hero-radius);clip-path:inset(0 round var(--miaoda-hero-radius))}
 .aily-revised-card.is-phone-outset>.aily-mobile-phone{position:absolute;left:-24.31%;top:-17.14%;width:57.04%;height:auto;z-index:2;pointer-events:none;user-select:none;-webkit-user-select:none}
