@@ -32,12 +32,12 @@ export default function SiteHeader(){
     const r=card.getBoundingClientRect(),b=cards[best].getBoundingClientRect();
     return Math.abs(r.top+r.height/2-middle)<Math.abs(b.top+b.height/2-middle)?i:best;
    },0);
-   setMiaodaSection(aily?(nearest>=15?5:nearest>=14?4:nearest>=7?3:nearest>=2?2:0):beauty?Math.min(6,nearest):nearest >= 9 ? 8 : nearest === 8 ? 7 : nearest === 7 ? 6 : nearest === 6 ? 5 : nearest === 5 ? 4 : nearest === 4 ? 3 : Math.min(2,nearest));
+   setMiaodaSection(aily?(nearest>=14?5:nearest>=12?6:nearest>=7?3:nearest>=2?2:0):beauty?Math.min(6,nearest):nearest >= 9 ? 8 : nearest === 8 ? 7 : nearest === 7 ? 6 : nearest === 6 ? 5 : nearest === 5 ? 4 : nearest === 4 ? 3 : Math.min(2,nearest));
   };
   const frame=window.requestAnimationFrame(update);
   const snapUpdate=(event:Event)=>{
    const detail=(event as CustomEvent<{pageKey:string;index:number}>).detail;
-   if(aily&&detail?.pageKey==='aily')setMiaodaSection(detail.index>=15?5:detail.index>=14?4:detail.index>=7?3:detail.index>=2?2:0);
+   if(aily&&detail?.pageKey==='aily')setMiaodaSection(detail.index>=14?5:detail.index>=12?6:detail.index>=7?3:detail.index>=2?2:0);
    else update();
   };
   window.addEventListener('scroll',update,{passive:true});
@@ -52,7 +52,10 @@ export default function SiteHeader(){
  return <><header className={`site-header ${about?'header-about':''} ${detail?'header-detail':''} ${directProject?'header-miaoda':''} ${beauty?'header-beauty':''} ${feishuCard?'header-feishu-card':''}`}>
   <motion.div className="identity" initial={false} animate={{y:introDone?0:mobile?'36dvh':'8rem',scale:introDone?1:.72}} transition={{duration:1.08,ease:motionSettings.ease}}>
    <AnimatePresence mode="wait"><motion.div key={directProject?(beauty?`beauty-${miaodaSection===0?'intro':'details'}`:`${aily?'aily':feishuCard?'feishu-card':'miaoda'}-${miaodaSection}`):project?.id||'identity'} initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-20}} transition={{duration:.5,ease:motionSettings.ease}}>
-    {feishuCard?<div className="feishu-card-header-intro"><div className="feishu-card-header-title"><DeferredImage src={asset('media/feishu-card-logo-v2.png')} alt=""/><h1>飞书卡片</h1></div><span>CREADIT CARD</span><p>飞书卡片是一个覆盖从卡片生成到消费完整链路的产品体系，既关注卡片如何被创建，也关注它如何被触达、展示和使用。</p><time>2022 - 2023</time></div>:aily?(miaodaSection===5?<div className="aily-core-intro aily-revised-intro"><h1>设计与反思</h1><span>HUMAN IN THE LOOP</span></div>:miaodaSection===4?<div className="aily-core-intro aily-revised-intro">
+    {feishuCard?<div className="feishu-card-header-intro"><div className="feishu-card-header-title"><DeferredImage src={asset('media/feishu-card-logo-v2.png')} alt=""/><h1>飞书卡片</h1></div><span>CREADIT CARD</span><p>飞书卡片是一个覆盖从卡片生成到消费完整链路的产品体系，既关注卡片如何被创建，也关注它如何被触达、展示和使用。</p><time>2022 - 2023</time></div>:aily?(miaodaSection===6?<div className="aily-core-intro aily-revised-intro">
+      <h1>移动端设计</h1>
+      <span>MOBILE</span>
+    </div>:miaodaSection===5?<div className="aily-core-intro aily-revised-intro"><h1>设计与反思</h1><span>HUMAN IN THE LOOP</span></div>:miaodaSection===4?<div className="aily-core-intro aily-revised-intro">
       <h1>核心设计 - <strong>03</strong></h1>
       <span>HUMAN IN THE LOOP</span>
       <h2>持续运行 但不持续打扰</h2>
