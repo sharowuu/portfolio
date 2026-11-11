@@ -263,6 +263,6 @@ export default function AilyRevisedCards() {
       <AilyTooltips art={page.art}/>
     </>}
     {page.page >= 13 && <DeferredImage className="aily-mobile-phone" src={asset(page.page === 13 ? 'media/aily-mobile-phone.webp' : 'media/aily-mobile-team-phone.webp')} alt="" loading="lazy" decoding="async" draggable={false}/>}
-    {page.page === 13 && <MobileScreenVideo src="media/aily-mobile-task-screen.mp4"/>}
+    {page.page === 13 && <MobileScreenVideo src="media/aily-mobile-task-screen-v2.mp4"/>}
   </section>)}</>;
 }
