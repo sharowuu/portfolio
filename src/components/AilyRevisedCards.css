@@ -131,6 +131,9 @@
    屏幕层只到 1390 会在壳底露出一条旧截图的残影（“漏缝”）。这里按团队页真实屏幕底边把覆盖层加高到 116.34%，
    视频随之多铺满这 9.5px，壳本身尺寸不动。 */
 .aily-mobile-screen.is-team{height:116.34%}
+/* 团队页的录屏在源片最底边就把一行文字切了一半（帧 1068→1080 只剩字头），铺满屏幕后正好贴着白壳底缘，看着像漏了一条缝。
+   这里把这块视频放大 1.45% 并上移 2px（顶部 1px 灰边继续被裁掉），让源片底部那 14px 半截字落到屏幕外，底边收在白底上。 */
+.aily-mobile-screen.is-team>video{transform:translateY(-2px) scale(1.012,1.0145);transform-origin:50% 0}
 /* 录屏源文件四周各有 1px 的浅灰抗锯齿边（裁自 1x 录屏），等比放大到屏幕后会在白壳上露出一圈深灰细线，看着像黑框。
    把视频每边多铺 1px（-1px 外边距）再让容器裁掉，正好把这条边裁出去，内容尺寸与铺满方式都不变。 */
 .aily-mobile-screen>video{display:block;width:100%;height:100%;object-fit:fill;background:#fff;transform:scale(1.012,1.006);transform-origin:50% 50%}
