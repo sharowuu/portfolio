@@ -241,10 +241,10 @@ function AutomationCases() {
   </>;
 }
 
-function MobileScreenVideo({ src }: { src: string }) {
+function MobileScreenVideo({ src, className }: { src: string; className?: string }) {
   const ref = useRef<HTMLVideoElement>(null);
   const { source, shouldLoad } = useViewportVideo(ref, asset(src), true);
-  return <div className="aily-mobile-screen" aria-hidden="true">
+  return <div className={`aily-mobile-screen${className ? ` ${className}` : ''}`} aria-hidden="true">
     <video ref={ref} src={source} muted autoPlay={shouldLoad} loop playsInline preload={shouldLoad ? 'auto' : 'none'}/>
   </div>;
 }
@@ -264,6 +264,6 @@ export default function AilyRevisedCards() {
     </>}
     {page.page >= 13 && <DeferredImage className="aily-mobile-phone" src={asset(page.page === 13 ? 'media/aily-mobile-phone.webp' : 'media/aily-mobile-team-phone.webp')} alt="" loading="lazy" decoding="async" draggable={false}/>}
     {page.page === 13 && <MobileScreenVideo src="media/aily-mobile-task-screen-v2.mp4"/>}
-    {page.page === 14 && <MobileScreenVideo src="media/aily-mobile-team-screen-v2.mp4"/>}
+    {page.page === 14 && <MobileScreenVideo className="is-team" src="media/aily-mobile-team-screen-v2.mp4"/>}
   </section>)}</>;
 }

@@ -127,6 +127,10 @@
 /* 任务页手机里的界面换成实拍视频：只盖住白壳内的屏幕矩形（导出件 826×1520 内 100/92/625/1298），
    白壳、阴影、圆角仍是同一张 Figma 导出件，容器尺寸不动；视频铺满该矩形（object-fit:fill，不裁不补）。 */
 .aily-mobile-screen{position:absolute;left:-17.403%;top:-9.011%;width:43.163%;height:114.664%;z-index:3;overflow:hidden;border-radius:4.696cqw;background:#fff;pointer-events:none}
+/* 团队页那块白壳导出件里的屏幕比任务页高 19px（826×1520 里 92→1409，而任务页是 92→1390），
+   屏幕层只到 1390 会在壳底露出一条旧截图的残影（“漏缝”）。这里按团队页真实屏幕底边把覆盖层加高到 116.34%，
+   视频随之多铺满这 9.5px，壳本身尺寸不动。 */
+.aily-mobile-screen.is-team{height:116.34%}
 /* 录屏源文件四周各有 1px 的浅灰抗锯齿边（裁自 1x 录屏），等比放大到屏幕后会在白壳上露出一圈深灰细线，看着像黑框。
    把视频每边多铺 1px（-1px 外边距）再让容器裁掉，正好把这条边裁出去，内容尺寸与铺满方式都不变。 */
 .aily-mobile-screen>video{display:block;width:100%;height:100%;object-fit:fill;background:#fff;transform:scale(1.012,1.006);transform-origin:50% 50%}
