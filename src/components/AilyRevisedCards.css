@@ -116,10 +116,10 @@
    因此按导出整图定位：left -176/724、top -97/566、width 413/724。卡片自身不再裁切，圆角由 art 承担。 */
 .miaoda-project-hero.aily-revised-card.is-card-566{aspect-ratio:724/566;margin-top:120px}
 /* 收尾页（写在最后的思考）只承载一段文字，卡片收短到 360，文字块上下留白各 81（等比居中）。
-   上边距 120：与团队页卡的间距 = 列 gap 32 + 120 = 152，与页内其他卡片间距一致；
-   手机白壳在卡底再探出 57，壳到收尾卡顶净空 95，与任务页↔团队页那处一致。 */
+   上边距 140：与团队页卡的间距 = 列 gap 32 + 140 = 172，比页内其他卡片间距再拉开 20；
+   手机白壳在卡底再探出 57，壳到收尾卡顶净空 115。 */
 @media(min-width:769px){
- .miaoda-project-hero.aily-revised-card.is-card-reflect{aspect-ratio:724/360;margin-top:120px}
+ .miaoda-project-hero.aily-revised-card.is-card-reflect{aspect-ratio:724/360;margin-top:140px}
 }
 .miaoda-project-hero.aily-revised-card.is-phone-outset{overflow:visible;clip-path:none;contain:none}
 .aily-revised-card.is-phone-outset>.aily-revised-art{border-radius:var(--miaoda-hero-radius);clip-path:inset(0 round var(--miaoda-hero-radius))}
