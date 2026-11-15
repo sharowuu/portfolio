@@ -115,12 +115,6 @@
    任务页的手机白壳是卡片外的独立图层（333×680，相对卡片 -136/-57）；导出件 826×1520 四周各带 40px 阴影留白，
    因此按导出整图定位：left -176/724、top -97/566、width 413/724。卡片自身不再裁切，圆角由 art 承担。 */
 .miaoda-project-hero.aily-revised-card.is-card-566{aspect-ratio:724/566;margin-top:120px}
-/* 收尾页（写在最后的思考）只承载一段文字，卡片收短到 360，文字块上下留白各 81（等比居中）。
-   上边距 140：与团队页卡的间距 = 列 gap 32 + 140 = 172，比页内其他卡片间距再拉开 20；
-   手机白壳在卡底再探出 57，壳到收尾卡顶净空 115。 */
-@media(min-width:769px){
- .miaoda-project-hero.aily-revised-card.is-card-reflect{aspect-ratio:724/360;margin-top:140px}
-}
 .miaoda-project-hero.aily-revised-card.is-phone-outset{overflow:visible;clip-path:none;contain:none}
 .aily-revised-card.is-phone-outset>.aily-revised-art{border-radius:var(--miaoda-hero-radius);clip-path:inset(0 round var(--miaoda-hero-radius))}
 .aily-revised-card.is-phone-outset>.aily-mobile-phone{position:absolute;left:-24.31%;top:-17.14%;width:57.04%;height:auto;z-index:2;pointer-events:none;user-select:none;-webkit-user-select:none}
@@ -137,4 +131,4 @@
 /* 录屏源文件四周各有 1px 的浅灰抗锯齿边（裁自 1x 录屏），等比放大到屏幕后会在白壳上露出一圈深灰细线，看着像黑框。
    把视频每边多铺 1px（-1px 外边距）再让容器裁掉，正好把这条边裁出去，内容尺寸与铺满方式都不变。 */
 .aily-mobile-screen>video{display:block;width:100%;height:100%;object-fit:fill;background:#fff;transform:scale(1.012,1.006);transform-origin:50% 50%}
-@media(max-width:768px){.aily-revised-card.is-card-566{aspect-ratio:auto;margin-block:0}.aily-revised-card.is-card-reflect{margin-top:0}.aily-revised-card.is-phone-outset>.aily-mobile-phone,.aily-revised-card.is-phone-outset>.aily-mobile-screen{display:none}}
+@media(max-width:768px){.aily-revised-card.is-card-566{aspect-ratio:auto;margin-block:0}.aily-revised-card.is-phone-outset>.aily-mobile-phone,.aily-revised-card.is-phone-outset>.aily-mobile-screen{display:none}}

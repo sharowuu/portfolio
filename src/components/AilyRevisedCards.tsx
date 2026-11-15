@@ -12,22 +12,16 @@ import { ailyArtwork, isAilyTooltip } from '@/data/aily-tooltip-utils';
 import useViewportVideo from '@/hooks/useViewportVideo';
 import './AilyRevisedCards.css';
 
-const nodes = ['660-21610', '1970-38915', '664-47751', '4014-43460', '678-55865', '1987-38992', '2033-42161', '4026-43549', '664-50778', '2031-40420', '1991-39275', '688-31222', '1989-39051', '4121-51669', '4087-43771'];
-const titles = ['核心问题', '设计思路', '统一智能体配置框架', 'Aily 中的三种委派', '自动化任务委派 - 表达意图', '自动化任务委派 - 运行调试', '自动化任务委派 - 可追踪', '主动工作 - 落地场景', '主动工作 - 状态感知', '主动工作 - 配置结构', '核心矛盾与收件箱定位', '收件箱设计思路', '移动端设计 - 任务', '移动端设计 - 团队', '写在最后的思考'];
+const nodes = ['660-21610', '1970-38915', '664-47751', '4014-43460', '678-55865', '1987-38992', '2033-42161', '4026-43549', '664-50778', '2031-40420', '1991-39275', '688-31222', '1989-39051', '4121-51669'];
+const titles = ['核心问题', '设计思路', '统一智能体配置框架', 'Aily 中的三种委派', '自动化任务委派 - 表达意图', '自动化任务委派 - 运行调试', '自动化任务委派 - 可追踪', '主动工作 - 落地场景', '主动工作 - 状态感知', '主动工作 - 配置结构', '核心矛盾与收件箱定位', '收件箱设计思路', '移动端设计 - 任务', '移动端设计 - 团队'];
 const at = (x: number, y: number, width?: number, height?: number): CSSProperties => ({
   left: `${x / 724 * 100}%`, top: `${y / 676 * 100}%`,
   ...(width === undefined ? {} : { width: `${width / 724 * 100}%` }),
   ...(height === undefined ? {} : { height: `${height / 676 * 100}%` }),
 });
-// The closing card is only 360 tall (design 676): its copy keeps design px spacing and is centred vertically.
-const REFLECT_HEIGHT = 360;
-const REFLECT_SHIFT = 26;
-
 function NativeCopy({ page }: { page: typeof layouts[number] }) {
-  const baseHeight = page.page === 10 ? REFLECT_HEIGHT : 676;
-  const yShift = page.page === 10 ? REFLECT_SHIFT : 0;
   const place = (x: number, y: number): CSSProperties => ({
-    left: `${x / 724 * 100}%`, top: `${(y + yShift) / baseHeight * 100}%`,
+    left: `${x / 724 * 100}%`, top: `${y / 676 * 100}%`,
   });
   return <>{page.texts.map((block, index) => {
     // Page 12 already ships its bubble shape inside the artwork, so its copy must stay native.
@@ -62,7 +56,7 @@ function NativeCopy({ page }: { page: typeof layouts[number] }) {
     const content: ReactNode = block.lines.map((line, lineIndex) => <span key={lineIndex} style={{
       left: `${(line.x - first.x) / 724 * 100}cqw`,
       top: `${(line.y - first.y) / 724 * 100}cqw`,
-    }}>{page.page === 10 && lineIndex > 0 && index === 1 ? `${lineIndex}. ` : ''}{line.text}</span>);
+    }}>{line.text}</span>);
     return block.bold && block.size === 16
       ? <h2 key={index} className="aily-revised-copy" style={style}>{content}</h2>
       : <p key={index} className="aily-revised-copy" style={style}>{content}</p>;
@@ -110,7 +104,6 @@ function MobileCopy({ page }: { page: AilyLayout }) {
   return <div className="aily-mobile-copy">{orderedCopy(page).filter(isMainCopy).map((block, index) => {
     const text = block.lines.map(line => line.text).join('');
     if (block.bold) return <h2 key={index}>{text}</h2>;
-    if (page.page === 10 && block.lines.length === 4 && block.lines[0].text.startsWith('后续')) return <div key={index}><p>{block.lines[0].text}</p><ol>{block.lines.slice(1).map(line => <li key={line.text}>{line.text}</li>)}</ol></div>;
     return <p key={index}>{text}</p>;
   })}</div>;
 }
@@ -155,7 +148,7 @@ function MobileCardContent({ page, title }: { page: AilyLayout; title: string })
 const automationCases = layouts.filter(page => page.page >= 6 && page.page < 7);
 const automationLabels = ['表达意图', '运行调试', '可追踪'];
 const visibleCards = layouts.map((page, index) => ({ page, node: nodes[index], title: titles[index] }))
-  .filter(({ page }) => page.page !== 6.1 && page.page !== 6.2);
+  .filter(({ page }) => page.page !== 6.1 && page.page !== 6.2 && page.page !== 10);
 
 function AutomationTraceVideo({ active, mobile }: { active: boolean; mobile: boolean }) {
   return <div className={`aily-automation-trace-video${mobile ? ' is-mobile' : ' aily-revised-video-slot'}`} style={mobile ? undefined : at(50, 212, 624, 390)}>
@@ -252,7 +245,7 @@ function MobileScreenVideo({ src, className }: { src: string; className?: string
 export default function AilyRevisedCards() {
   const { mobile } = useViewport();
   return <>{visibleCards.map(({ page, node, title }, index) => <section key={page.page}
-    className={`miaoda-project-hero aily-revised-card${page.page === 5 || page.page === 6 ? ' miaoda-core-design' : ''}${page.page >= 13 ? ' is-phone-outset' : ''}${page.page >= 13 ? ' is-card-566' : ''}${page.page === 10 ? ' is-card-reflect' : ''}`}
+    className={`miaoda-project-hero aily-revised-card${page.page === 5 || page.page === 6 ? ' miaoda-core-design' : ''}${page.page >= 13 ? ' is-phone-outset' : ''}${page.page >= 13 ? ' is-card-566' : ''}`}
     data-figma-node={node} data-aily-page={index + 3} aria-label={`第${index + 3}页：${page.page === 6 ? '自动化任务委派' : title}`}>
     {page.page === 5 ? <AilyFrameworkCases/> : page.page === 6 ? <AutomationCases/> : mobile ? <MobileCardContent page={page} title={title}/> : <>
       {page.art && <DeferredImage className="aily-revised-art" src={asset(ailyArtwork(page.art))} alt={page.page >= 13 ? (page.page === 13 ? '移动端设计：PC 首页的任务与目标，在手机上继续推进' : '移动端设计：团队成员关系与伙伴能力界面') : page.page === 3 ? '三种伙伴档案与配置界面' : page.page === 11 ? 'Aily 中的三种委派：发起一次任务、自动化任务、主动工作，委托深度从目标到规则再到边界递增' : page.page === 12 ? '主动工作的落地场景：个人助手主动卡与每日前瞻、团队助手到点提醒，以及条件成立时带着依据出现' : page.page >= 7 && page.page < 8 ? title : page.page === 8 ? '收件箱事件示例与分类关系' : '收件箱改版前后界面与接收设置'} loading="lazy" decoding="async" draggable={false}/>}
