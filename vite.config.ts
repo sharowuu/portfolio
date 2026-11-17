@@ -50,6 +50,22 @@ function miaodaOutputPlugin(): Plugin {
           recursive: true,
         });
       }
+      // 把首屏 CSS 内联进 index.html：少一次跨网络往返，首屏不必等样式文件
+      const htmlPath = path.join(output, 'index.html');
+      if (fs.existsSync(htmlPath)) {
+        const html = fs.readFileSync(htmlPath, 'utf8');
+        const inlined = html.replace(/<link[^>]*rel="stylesheet"[^>]*>/g, (tag) => {
+          const href = /href="([^"]+)"/.exec(tag)?.[1];
+          if (!href) return tag;
+          const rel = href.includes('/assets/')
+            ? href.slice(href.indexOf('/assets/') + 1)
+            : href.replace(/^\.?\//, '');
+          const cssFile = path.join(outputResource, rel);
+          if (!fs.existsSync(cssFile)) return tag;
+          return `<style>${fs.readFileSync(cssFile, 'utf8')}</style>`;
+        });
+        if (inlined !== html) fs.writeFileSync(htmlPath, inlined);
+      }
       // routes.json：扫描 src 内 <Route path> 生成路由枚举（TNS 按此遍历送审）；
       // SPA 场景各路由均由 index.html 服务
       const routes = collectRoutePaths(
